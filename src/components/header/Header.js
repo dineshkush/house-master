@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
@@ -23,39 +24,39 @@ function Header() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  <NavLink className="nav-link" aria-current="page" to="/">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <NavLink className="nav-link" to="/about-us">
                     About
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <p className="nav-link" href="/">
                     Services
-                  </a>
+                  </p>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <NavLink className="nav-link" to="/faqs">
                     Faq's
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/">
+                  <NavLink className="nav-link" to="/projects">
                     Projects
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item header_btn">
-                  <a className="nav-link" href="/">
+                  <NavLink className="nav-link" to="/payment">
                     Payment
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item header_btn">
-                  <a className="nav-link" href="/">
+                  <NavLink className="nav-link" to="/book-inspection">
                     Book Inspection
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

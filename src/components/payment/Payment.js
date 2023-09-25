@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Faqs() {
+function Payment() {
   return (
     <div>
-      Faq's
+      Payment
     </div>
   )
 }
 
-export default Faqs
+export default Payment
