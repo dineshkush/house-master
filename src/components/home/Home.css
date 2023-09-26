@@ -1,0 +1,107 @@
+.home_banner .carousel-inner .carousel-item {
+    background-color: #f2f6f7;
+}
+.home_banner .carousel-caption {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #071c1f;
+    text-align: left;
+}
+.home_banner .carousel-caption .row {
+    padding: 110px 0px;
+}
+.banner_content {
+    padding-right: 200px;
+}
+.banner_content h3 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.banner_content p {
+    padding-left: 30px;
+    color: #5c727d;
+    border-left: 1px solid #576466;
+}
+.banner_content .site_btn {
+    margin-top: 30px;
+}
+.site_btn {
+    background-color: #ff5a3c;
+    color: #fff;
+    border-radius: 0;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 17px 40px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    z-index: 1;
+    margin-right: 15px;
+}
+.site_btn:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: all 0.3s;
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+.site_btn:hover {
+    color: #071c1f;
+    background-color: #000;
+}
+.site_btn:hover::after {
+    width: 100%;
+}
+.home_banner .carousel-control-next, .home_banner .carousel-control-prev {
+    position: absolute;
+    top: 50% !important;
+    bottom: auto !important;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px;
+    padding: 0;
+    color: #071c1f !important;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: 1 !important;
+    border: 1px solid #071c1f;
+    transition: opacity .15s ease;
+}
+.home_banner .carousel-control-prev {
+    left: 30px;
+}
+.home_banner .carousel-control-next {
+    right: 30px;
+}
+.home_banner .carousel-control-next i, .home_banner .carousel-control-prev i {
+    font-size: 25px;
+}
+.home_banner .carousel-indicators [data-bs-target] {
+    background-color: #071c1f;
+}
+
+.counter_area .row {
+    box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
+    padding: 40px;
+    background-color: #fff !important;
+    margin-top: -70px;
+    position: relative;
+}
