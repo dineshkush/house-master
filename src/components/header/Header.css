@@ -40,6 +40,10 @@
 }
 .header_social_media > ul > li a {
     color: #fff;
+    transition: all 0.5s;
+}
+.header_social_media > ul > li a:hover {
+    color: #ff5a3c;
 }
 
 .nav_header ul.navbar-nav li a, .nav_header ul.navbar-nav li p {
