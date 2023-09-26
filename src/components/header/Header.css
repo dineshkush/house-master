@@ -38,11 +38,11 @@
     font-size: 14px;
     font-weight: 700;
 }
-.header_social_media > ul > li a {
+.header_social_media > ul > li a, .header_social_media > ul > li a i {
     color: #fff;
     transition: all 0.5s;
 }
-.header_social_media > ul > li a:hover {
+.header_social_media > ul > li a:hover, .header_social_media > ul > li a i:hover {
     color: #ff5a3c;
 }
 
