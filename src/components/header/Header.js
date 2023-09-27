@@ -101,19 +101,46 @@ function Header() {
                         About
                       </NavLink>
                     </li>
-                    <li className="nav-item">
-                      <p className="nav-link" href="/">
+                    <li className="nav-item dropdown">
+                      <p
+                        className="nav-link dropdown-toggle"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
                         Services
                       </p>
-                    </li>
-                    <li className="nav-item">
-                      <NavLink className="nav-link" to="/faqs">
-                        Faq's
-                      </NavLink>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <NavLink className="dropdown-item" to="/services/home-inspaction">
+                          HomeInspaction
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink className="dropdown-item" to="/services/water-leakage">
+                          WaterLeakage
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink className="dropdown-item" to="/services/electrical-safety">
+                          Electrical Safety
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink className="dropdown-item" to="/services/industry-energy">
+                          Industry Energy
+                          </NavLink>
+                        </li>
+                      </ul>
                     </li>
                     <li className="nav-item">
                       <NavLink className="nav-link" to="/projects">
                         Projects
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link" to="/faqs">
+                        Faq's
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">

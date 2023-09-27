@@ -3,9 +3,11 @@ import React from "react";
 import "./Home.css";
 import banner_image from "../../images/banner-img.png";
 import homeAbout from "../../images/home-about.png";
-import serviceIcon from "../../images/service-icon.png";
+// import serviceIcon from "../../images/service-icon.png";
 import Counter from "../shared/counter/Counter";
 import { Link } from "react-router-dom";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 function Home() {
   return (
@@ -190,7 +192,7 @@ function Home() {
                 </p>
 
                 <Link className="btn site_btn" to="/about-us" tabindex="0">
-                  Read More
+                  Teams
                 </Link>
               </div>
             </div>
@@ -198,7 +200,174 @@ function Home() {
         </div>
       </section>
 
-      <section className="services_sec">
+      <section className="services_area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="site_title_box text-center">
+                <h6 className="sub_title">Our Services</h6>
+                <h3 className="main_heading">Our Main Focus</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-12">
+              <Tabs
+                defaultActiveKey="homeInspaction"
+                id="uncontrolled-tab-example"
+                className="services_tab justify-content-center"
+                justify
+              >
+                {/* tab 1 */}
+                <Tab eventKey="homeInspaction" title="Home Inspaction">
+                  <div className="service_content">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <div className="site_title_box">
+                          <h6 className="sub_title">Home Inspaction</h6>
+                          <h3 className="main_heading">
+                            A Home Is a Large Investment. Don't Go in Blind.
+                          </h3>
+                        </div>
+                        <p>
+                          Buying a new home means purchasing every problem
+                          associated with it. In many cases, these seemingly
+                          insignificant problems may accumulate into more
+                          significant issues and hefty costs. Home inspection is
+                          a type of protective net that keeps you from sinking
+                          into a bad investment. Any issues spotted during a
+                          home inspection—which the seller didn’t disclose
+                          earlier—can put ....
+                        </p>
+
+                        <Link className="btn site_btn" to="/" tabindex="0">
+                          Read More
+                        </Link>
+                      </div>
+                      <div className="col-lg-6">
+                        <img
+                          src={banner_image}
+                          alt="House"
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Tab>
+
+                {/* tab 2 */}
+                <Tab eventKey="waterLeakage" title="Water Leakage">
+                  <div className="service_content">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <div className="site_title_box">
+                          <h6 className="sub_title">Water Leakage</h6>
+                          <h3 className="main_heading">
+                            Water Leakage and Seepage Detection
+                          </h3>
+                        </div>
+                        <p>
+                          For many home or business owners, their property is
+                          one of their most valuable investments. However, a
+                          simple plumbing leak can cause serious damage to your
+                          property—especially if it goes unnoticed for awhile.
+                          Don’t let this happen to your investment.
+                        </p>
+
+                        <Link className="btn site_btn" to="/" tabindex="0">
+                          Read More
+                        </Link>
+                      </div>
+                      <div className="col-lg-6">
+                        <img
+                          src={banner_image}
+                          alt="House"
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Tab>
+
+                {/* tab 3 */}
+                <Tab
+                  eventKey="electricalSafety"
+                  title="Electrical Safety Inspection"
+                >
+                  <div className="service_content">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <div className="site_title_box">
+                          <h6 className="sub_title">Electrical Safety</h6>
+                          <h3 className="main_heading">
+                            Electrical Safety Audit / Inspection Services
+                          </h3>
+                        </div>
+                        <p>
+                          An electrical inspection examines the state of the
+                          electrical wiring throughout your property, and checks
+                          if an installation meets safety standards. Once the
+                          inspection is completed, you are issued an Electrical
+                          Installation Condition Report (EICR). This outlines
+                          whether your installation is satisfactory, or whether
+                          any issues have been found.
+                        </p>
+
+                        <Link className="btn site_btn" to="/" tabindex="0">
+                          Read More
+                        </Link>
+                      </div>
+                      <div className="col-lg-6">
+                        <img
+                          src={banner_image}
+                          alt="House"
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Tab>
+
+                {/* tab 4 */}
+                <Tab
+                  eventKey="industryEnergy"
+                  title="Industry Energy And Safety"
+                >
+                  <div className="service_content">
+                    <div className="row align-items-center">
+                      <div className="col-lg-6">
+                        <div className="site_title_box">
+                          <h6 className="sub_title">Industry Energy</h6>
+                          <h3 className="main_heading">
+                          Industry Energy And Safety
+                          </h3>
+                        </div>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore repudiandae fugit dolore accusamus. Veritatis ab natus magni pariatur dolor maiores laborum est. Ut dolor enim velit illo corrupti. Consectetur dolor iste eaque. Incidunt, similique!
+                        </p>
+
+                        <Link className="btn site_btn" to="/" tabindex="0">
+                          Read More
+                        </Link>
+                      </div>
+                      <div className="col-lg-6">
+                        <img
+                          src={banner_image}
+                          alt="House"
+                          className="img-fluid"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </Tab>
+              </Tabs>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="services_sec">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -295,11 +464,14 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="home_inspection_sec">
         <div className="container">
           <div className="row align-items-center">
+            <div className="col-lg-6">
+              <img src={banner_image} alt="House" className="img-fluid" />
+            </div>
             <div className="col-lg-6">
               <div className="site_title_box">
                 <h6 className="sub_title">Home Inspection</h6>
@@ -322,9 +494,6 @@ function Home() {
                   <li>Facing structural damage issues etc</li>
                 </ul>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <img src={banner_image} alt="House" className="img-fluid" />
             </div>
           </div>
         </div>
