@@ -3,13 +3,18 @@ import React from "react";
 import "./Home.css";
 import banner_image from "../../images/banner-img.png";
 import homeAbout from "../../images/home-about.png";
-// import serviceIcon from "../../images/service-icon.png";
+import buildingBack from "../../images/building-back.png";
+import inspectionCoverage from "../../images/inspection-coverage-image.png";
+import homeInspaction from "../../images/Home-Inspection-Image.png";
 import Counter from "../shared/counter/Counter";
 import { Link } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import TestimonialSlider from "../shared/testimonials-slider/TestimonialSlider";
+// import React from "react";
 
 function Home() {
+
   return (
     <>
       <section className="home_banner">
@@ -32,7 +37,7 @@ function Home() {
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/book-inspection"
-                          tabindex="0"
+                          tabIndex="0"
                         >
                           Make An Enquiry
                         </Link>
@@ -66,7 +71,7 @@ function Home() {
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/book-inspection"
-                          tabindex="0"
+                          tabIndex="0"
                         >
                           Make An Enquiry
                         </Link>
@@ -100,7 +105,7 @@ function Home() {
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/book-inspection"
-                          tabindex="0"
+                          tabIndex="0"
                         >
                           Make An Enquiry
                         </Link>
@@ -124,7 +129,7 @@ function Home() {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
           >
-            <i class="fa-solid fa-angle-left"></i>
+            <i className="fa-solid fa-angle-left"></i>
             <span className="visually-hidden">Previous</span>
           </button>
           <button
@@ -133,7 +138,7 @@ function Home() {
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next"
           >
-            <i class="fa-solid fa-angle-right"></i>
+            <i className="fa-solid fa-angle-right"></i>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
@@ -191,7 +196,7 @@ function Home() {
                   versions of Lorem Ipsum.
                 </p>
 
-                <Link className="btn site_btn" to="/about-us" tabindex="0">
+                <Link className="btn site_btn" to="/about-us" tabIndex="0">
                   Teams
                 </Link>
               </div>
@@ -241,7 +246,7 @@ function Home() {
                           earlier—can put ....
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabindex="0">
+                        <Link className="btn site_btn" to="/" tabIndex="0">
                           Read More
                         </Link>
                       </div>
@@ -275,7 +280,7 @@ function Home() {
                           Don’t let this happen to your investment.
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabindex="0">
+                        <Link className="btn site_btn" to="/" tabIndex="0">
                           Read More
                         </Link>
                       </div>
@@ -314,7 +319,7 @@ function Home() {
                           any issues have been found.
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabindex="0">
+                        <Link className="btn site_btn" to="/" tabIndex="0">
                           Read More
                         </Link>
                       </div>
@@ -340,14 +345,18 @@ function Home() {
                         <div className="site_title_box">
                           <h6 className="sub_title">Industry Energy</h6>
                           <h3 className="main_heading">
-                          Industry Energy And Safety
+                            Industry Energy And Safety
                           </h3>
                         </div>
                         <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore repudiandae fugit dolore accusamus. Veritatis ab natus magni pariatur dolor maiores laborum est. Ut dolor enim velit illo corrupti. Consectetur dolor iste eaque. Incidunt, similique!
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Labore repudiandae fugit dolore accusamus.
+                          Veritatis ab natus magni pariatur dolor maiores
+                          laborum est. Ut dolor enim velit illo corrupti.
+                          Consectetur dolor iste eaque. Incidunt, similique!
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabindex="0">
+                        <Link className="btn site_btn" to="/" tabIndex="0">
                           Read More
                         </Link>
                       </div>
@@ -393,8 +402,8 @@ function Home() {
                     over 1 million+ homes for sale available on the website, we
                     can match you with a house you will want to call home.
                   </p>
-                  <Link class="text_btn" to="/">
-                    Find A Home <i class="fa-solid fa-arrow-right-long"></i>
+                  <Link className="text_btn" to="/">
+                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
@@ -414,8 +423,8 @@ function Home() {
                     over 1 million+ homes for sale available on the website, we
                     can match you with a house you will want to call home.
                   </p>
-                  <Link class="text_btn" to="/">
-                    Find A Home <i class="fa-solid fa-arrow-right-long"></i>
+                  <Link className="text_btn" to="/">
+                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
@@ -435,8 +444,8 @@ function Home() {
                     over 1 million+ homes for sale available on the website, we
                     can match you with a house you will want to call home.
                   </p>
-                  <Link class="text_btn" to="/">
-                    Find A Home <i class="fa-solid fa-arrow-right-long"></i>
+                  <Link className="text_btn" to="/">
+                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
@@ -456,8 +465,8 @@ function Home() {
                     over 1 million+ homes for sale available on the website, we
                     can match you with a house you will want to call home.
                   </p>
-                  <Link class="text_btn" to="/">
-                    Find A Home <i class="fa-solid fa-arrow-right-long"></i>
+                  <Link className="text_btn" to="/">
+                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
@@ -466,11 +475,35 @@ function Home() {
         </div>
       </section> */}
 
+      <section className="cta-section">
+        <div
+          className="pattern-layer"
+          style={{ backgroundImage: `url(${buildingBack})` }}
+        ></div>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <h2>
+                Looking to Buy a New Property or <br />
+                Sell an Existing One?
+              </h2>
+            </div>
+            <div className="col-lg-6">
+              <div className="btn-box text-end">
+                <a href="/" className="btn site_btn">
+                  Rent Properties
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="home_inspection_sec">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={banner_image} alt="House" className="img-fluid" />
+              <img src={homeInspaction} alt="House" className="img-fluid" />
             </div>
             <div className="col-lg-6">
               <div className="site_title_box">
@@ -546,7 +579,15 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-4"></div>
+            <div className="col-lg-4">
+              <div className="inspection_coverage_image">
+                <img
+                  src={inspectionCoverage}
+                  alt="About Us"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
             <div className="col-lg-4">
               <div className="inspection_coverage_item text-start">
                 <h4>Brand Check</h4>
@@ -585,6 +626,8 @@ function Home() {
           </div>
         </div>
       </section>
+
+      <TestimonialSlider />
     </>
   );
 }

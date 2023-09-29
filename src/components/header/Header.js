@@ -110,7 +110,7 @@ function Header() {
                       >
                         Services
                       </p>
-                      <ul class="dropdown-menu">
+                      <ul className="dropdown-menu">
                         <li>
                           <NavLink className="dropdown-item" to="/services/home-inspaction">
                           HomeInspaction
