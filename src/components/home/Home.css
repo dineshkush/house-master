@@ -58,6 +58,7 @@
 }
 .home_banner .carousel-control-next i, .home_banner .carousel-control-prev i {
     font-size: 25px;
+    color: #071c1f;
 }
 .home_banner .carousel-indicators [data-bs-target] {
     background-color: #071c1f;
@@ -95,6 +96,7 @@
     font-size: 45px;
     line-height: 55px;
     font-weight: 800;
+    color: #071c1f;
 }
 .counter_item h5 {
     font-size: 18px;
@@ -125,11 +127,82 @@
     padding: 70px 0px;
 }
 .inspection_coverage_item {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 .inspection_coverage_item h4 {
     font-size: 22px;
     line-height: 32px;
     font-weight: 800;
     margin-bottom: 5px;
+}
+.services_area {
+    background-color: #f2f6f7;
+    padding: 70px 0px;
+}
+.service_content {
+    padding: 50px 0px;
+}
+.services_tab {
+    border: none;
+    position: relative;
+    margin-top: 20px;
+}
+.services_tab:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ff5a3c;
+    top: 50%;
+}
+.services_tab li.nav-item {
+    margin-right: 80px;
+    position: relative;
+}
+.services_tab li.nav-item:last-child {
+    margin-right: 0px;
+}
+.services_tab li.nav-item button {
+    background-color: #fff !important;
+    border: 1px solid #ff5a3c !important;
+    margin: 0px;
+    border-radius: 0;
+    color: #ff5a3c !important;
+}
+.services_tab li.nav-item button.active, .services_tab li.nav-item button:hover {
+    background-color: #ff5a3c !important;
+    border: 1px solid #ff5a3c !important;
+    color: #fff !important;
+}
+
+.cta-section {
+    position: relative;
+    padding: 95px 0px;
+    background-color: #1b1d21;
+}
+.cta-section .pattern-layer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat-x;
+    animation: slide 100s linear infinite;
+    -webkit-animation: slide 100s linear infinite;
+}
+@keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 1920px 0;
+    }
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 50px;
+    margin-bottom: 0px;
 }
