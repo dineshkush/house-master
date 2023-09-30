@@ -5,6 +5,10 @@
   font-size: 16px;
   color: #5c727d;
 }
+a {
+  text-decoration: none;
+  transition: all 0.5s;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #071c1f;
 }
@@ -39,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site_btn:hover {
   color: #071c1f;
-  background-color: #000;
+  background-color: #0b2c3d;
 }
 .site_btn:hover::after {
   width: 100%;
@@ -151,4 +155,20 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+.inner_banner {
+  background-color: #0b2c3d;
+  padding: 50px 0px;
+}
+.inner_banner_content h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff !important;
+  line-height: 50px;
+}
+.inner_banner_content p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0px;
+  color: #fff;
 }

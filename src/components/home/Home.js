@@ -14,7 +14,6 @@ import TestimonialSlider from "../shared/testimonials-slider/TestimonialSlider";
 // import React from "react";
 
 function Home() {
-
   return (
     <>
       <section className="home_banner">
@@ -181,22 +180,28 @@ function Home() {
                   </h3>
                 </div>
                 <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
+                  Housemaster is a home inspection company founded by alumni of
+                  IIT Roorkee. It provides wide range of house related services
+                  like home inspection, property documents verification,
+                  commercial inspection etc. In India its very difficult to get
+                  a perfect house from property seller. But Buying a new home
+                  and if there is any problem in the house means purchasing
+                  problem associated with it. In many cases, these seemingly
+                  insignificant problems may accumulate into more significant
+                  issues and hefty costs. Which may cause unwanted expenditure
+                  and stress in a healthy mind .
                 </p>
                 <p>
-                  It was popularised in the 1960s with the release of Letraset
-                  sheets containing Lorem Ipsum passages, and more recently with
-                  desktop publishing software like Aldus PageMaker including
-                  versions of Lorem Ipsum.
+                  Home inspection is a type of protective net that keeps you
+                  from sinking into a bad investment. issues always spotted
+                  during a home inspection—which the seller didn’t disclose
+                  earlier.
                 </p>
 
                 <Link className="btn site_btn" to="/about-us" tabIndex="0">
+                  Read More
+                </Link>
+                <Link className="btn site_btn" to="/" tabIndex="0">
                   Teams
                 </Link>
               </div>
@@ -499,39 +504,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="home_inspection_sec">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <img src={homeInspaction} alt="House" className="img-fluid" />
-            </div>
-            <div className="col-lg-6">
-              <div className="site_title_box">
-                <h6 className="sub_title">Home Inspection</h6>
-                <h3 className="main_heading">
-                  When is the best time to have your home inspection
-                </h3>
-              </div>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s.
-              </p>
-              <div className="site_list">
-                <ul>
-                  <li>Before possession of new house or apartment</li>
-                  <li>Before/After of renovating your home </li>
-                  <li>Before purchasing a re-sale house</li>
-                  <li>Quality check for on-going home construction</li>
-                  <li>Facing issues of leakage, seepage & dampness</li>
-                  <li>Facing structural damage issues etc</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="inspection_coverage">
         <div className="container">
           <div className="row">
@@ -621,6 +593,39 @@ function Home() {
                   switchboards, D.B accessories, findings include faulty /
                   loosely connected / old /under gauge wire, etc.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="home_inspection_sec">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6">
+              <img src={homeInspaction} alt="House" className="img-fluid" />
+            </div>
+            <div className="col-lg-6">
+              <div className="site_title_box">
+                <h6 className="sub_title">Home Inspection</h6>
+                <h3 className="main_heading">
+                  When is the best time to have your home inspection
+                </h3>
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s.
+              </p>
+              <div className="site_list">
+                <ul>
+                  <li>Before possession of new house or apartment</li>
+                  <li>Before/After of renovating your home </li>
+                  <li>Before purchasing a re-sale house</li>
+                  <li>Quality check for on-going home construction</li>
+                  <li>Facing issues of leakage, seepage & dampness</li>
+                  <li>Facing structural damage issues etc</li>
+                </ul>
               </div>
             </div>
           </div>
