@@ -1,8 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 
-function Header() {
+function Header(props) {
   return (
     <header className="header_area">
       <div className="top_header">
@@ -12,14 +12,13 @@ function Header() {
               <div className="top_bar_contact">
                 <ul>
                   <li>
-                    <a href="mailto:info@housemaster.in">
-                      <i className="fa-solid fa-envelope"></i>{" "}
-                      info@housemaster.in
+                    <a href={`mailto:${props.email}`}>
+                      <i className="fa-solid fa-envelope"></i> {props.email}
                     </a>
                   </li>
                   <li>
-                    <a href="tel:+919896442289">
-                      <i className="fa-solid fa-phone"></i> +91 989 644 2289
+                    <a href={`tel:${props.phone}`}>
+                      <i className="fa-solid fa-phone"></i> {props.phone}
                     </a>
                   </li>
                 </ul>
@@ -30,7 +29,7 @@ function Header() {
                 <ul>
                   <li>
                     <a
-                      href="https://www.facebook.com/tuna-theme"
+                      href={props.facebook}
                       title="Facebook"
                     >
                       <i className="fab fa-facebook-f"></i>
@@ -38,7 +37,7 @@ function Header() {
                   </li>
                   <li>
                     <a
-                      href="https://www.twitter.com/tuna-theme"
+                      href={props.twitter}
                       title="Twitter"
                     >
                       <i className="fab fa-twitter"></i>
@@ -46,7 +45,7 @@ function Header() {
                   </li>
                   <li>
                     <a
-                      href="https://www.instagram.com/tuna-theme"
+                      href={props.instagram}
                       title="Instagram"
                     >
                       <i className="fab fa-instagram"></i>
@@ -54,7 +53,7 @@ function Header() {
                   </li>
                   <li>
                     <a
-                      href="https://www.dribble.com/tuna-theme"
+                      href={props.dribbble}
                       title="Dribbble"
                     >
                       <i className="fab fa-dribbble"></i>
@@ -72,9 +71,9 @@ function Header() {
           <div className="row">
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" to="/">
                   Logo
-                </a>
+                </Link>
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -113,12 +112,12 @@ function Header() {
                       <ul className="dropdown-menu">
                         <li>
                           <NavLink className="dropdown-item" to="/services/home-inspaction">
-                          HomeInspaction
+                          Home Inspaction
                           </NavLink>
                         </li>
                         <li>
                           <NavLink className="dropdown-item" to="/services/water-leakage">
-                          WaterLeakage
+                          Water Leakage
                           </NavLink>
                         </li>
                         <li>
@@ -144,12 +143,12 @@ function Header() {
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">
-                      <NavLink className="nav-link" to="/payment">
+                      <NavLink className="nav-link site_btn" to="/payment">
                         Payment
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">
-                      <NavLink className="nav-link" to="/book-inspection">
+                      <NavLink className="nav-link site_btn" to="/book-inspection">
                         Book Inspection
                       </NavLink>
                     </li>

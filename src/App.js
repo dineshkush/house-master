@@ -14,12 +14,26 @@ import Payment from "./components/payment/Payment";
 import BookInspection from "./components/book-inspection/BookInspection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+
+
+const phoneNumber = '+919896442289';
+const emailId = 'info@housemaster.in';
+
+const socialMedia = [
+  "https://www.facebook.com/tuna-theme",
+  "https://www.twitter.com/tuna-theme",
+  "https://www.instagram.com/tuna-theme",
+  "https://www.dribble.com/tuna-theme"
+]
+
 function App() {
+
+  const [facebookLink, twitterLink, instagramLink, dribbbleLink] = socialMedia;
   
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
 
         <Routes>
           <Route path="/" exact element={<Home />} />
@@ -34,7 +48,7 @@ function App() {
           <Route path="/book-inspection" exact element={<BookInspection />} />
         </Routes>
 
-        <Footer />
+        <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
       </BrowserRouter>
     </>
   );
