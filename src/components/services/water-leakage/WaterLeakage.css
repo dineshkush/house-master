@@ -1,0 +1,10 @@
+.video_section {
+    padding: 50px 0px;
+    background-color: #f2f6f7;
+}
+.water_leakage_services .service_item {
+    min-height: 530px;
+}
+.service_item {
+    min-height: auto;
+}

@@ -12,6 +12,16 @@ a {
 h1, h2, h3, h4, h5, h6 {
   color: #071c1f;
 }
+h2 {
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 45px;
+}
+h4 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 800;
+}
 .site_btn {
   background-color: #ff5a3c;
   color: #fff;
@@ -160,7 +170,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #0b2c3d;
   padding: 50px 0px;
 }
-.inner_banner_content h2 {
+.inner_banner_content h2, .inner_banner_content h1 {
   font-size: 40px;
   font-weight: 800;
   color: #fff !important;

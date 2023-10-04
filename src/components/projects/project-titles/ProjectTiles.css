@@ -1,0 +1,47 @@
+.project_area {
+    padding: 50px 0px;
+}
+.project_item {
+    position: relative;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.15);
+    border-radius: 20px;
+}
+.project_item img {
+    position: relative;
+    transition: opacity .35s, transform .35s;
+}
+.project_item:hover img {
+    transition-delay: .15s;
+    transform: translate3d(0, 0, 0) scale(1.1, 1.1);
+    opacity: .7;
+}
+/* .project_item:hover::after {
+    position: absolute;
+    content: "";
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+} */
+.project_item h4 {
+    position: absolute;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
+    background-color: #ff5a3c;
+    padding: 5px 10px;
+    transition: all .3s ease-in-out;
+    bottom: 5%;
+    z-index: 1;
+}
+.project_item:hover h4 {
+    position: absolute;
+    bottom: 48%;
+}
