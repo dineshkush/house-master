@@ -5,3 +5,6 @@
 .services_sec {
     background-color: transparent;
 }
+.service_item {
+    min-height: 485px;
+}
