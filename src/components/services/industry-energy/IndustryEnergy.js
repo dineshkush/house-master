@@ -1,17 +1,15 @@
 import React from 'react'
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 function IndustryEnergy() {
   return (
     <>
-    <HelmetProvider>
         <Helmet>
           <title>Industry Energy</title>
           <link rel="canonical" href="https://www.housemaster.in/services/industry-energy" />
 
           <meta property="og:title" content="Industry Energy" />
         </Helmet>
-      </HelmetProvider>
 
     <section className="inner_banner">
         <div className="container">

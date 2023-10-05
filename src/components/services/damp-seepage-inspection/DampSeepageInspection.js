@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import "./DampSeepageInspection.css";
 import homeAbout from "../../../images/home-about.png";
 import serviceIcon from "../../../images/service-icon.png";
@@ -8,7 +8,6 @@ import serviceIcon from "../../../images/service-icon.png";
 function DampSeepageInspection() {
   return (
     <>
-    <HelmetProvider>
         <Helmet>
           <title>Water Leakage/ Seepage Detection | Housemaster | Gurugram</title>
           <meta
@@ -23,7 +22,6 @@ function DampSeepageInspection() {
             content='Seepage source detection, water leakage solution, dampness soultion, roof leakage solution and identification of real source'
           />
         </Helmet>
-      </HelmetProvider>
       
       <section className="inner_banner">
         <div className="container">

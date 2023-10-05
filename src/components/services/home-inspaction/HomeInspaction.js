@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import "./HomeInspaction.css";
 import homeAbout from "../../../images/home-about.png";
 import homeInspection from "../../../images/home-inspection-img.webp";
@@ -9,7 +9,6 @@ import serviceIcon from "../../../images/service-icon.png";
 function HomeInspaction() {
   return (
     <>
-    <HelmetProvider>
         <Helmet>
           <title>Home Inspection | Housemaster | Gurugram</title>
           <meta
@@ -24,7 +23,6 @@ function HomeInspaction() {
             content='Housemaster home inspection provides wide range of house related services like home inspection, property documents verification, commercial inspection etc. In india its very difficult to get a perfect house from property seller. ut Buying a new home and if there is any problem in the house means pu'
           />
         </Helmet>
-      </HelmetProvider>
       
 
       <section className="inner_banner">

@@ -1,12 +1,23 @@
 import React from "react";
+import "./ContactDetails.css";
 
-function ContactDetails({phone, email, facebook, twitter, instagram, dribbble}) {
+function ContactDetails({
+  phone,
+  email,
+  facebook,
+  twitter,
+  instagram,
+  dribbble,
+}) {
   return (
     <div className="payment_content">
-      <h2>Contact Us</h2>
-      <h4>HOUSEMASTER HOME INSPECTIONS</h4>
-      <div className="footer_contact">
-        <ul className="foot_contact">
+      <h3>Contact Us</h3>
+      <div className="contact_details">
+        <ul className="contact_list">
+          <li>
+            <i class="fa-solid fa-location-arrow"></i> 1st Floor, Landmark cyber
+            Park, sec-67, Gurgaon, Haryana
+          </li>
           <li>
             <i className="fa-solid fa-phone"></i>{" "}
             <a href={`tel:${phone}`}>{phone}</a>
@@ -17,7 +28,7 @@ function ContactDetails({phone, email, facebook, twitter, instagram, dribbble}) 
           </li>
         </ul>
 
-        <div className="footer_sm">
+        <div className="contact_sm">
           <ul>
             <li>
               <a href={facebook} title="Facebook">
