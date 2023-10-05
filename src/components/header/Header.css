@@ -57,7 +57,7 @@
     font-weight: 600;
 }
 .nav_header ul.navbar-nav li a.active {
-    color: #ff5a3c !important;
+    color: #ff5a3c;
 }
 .nav_header ul.navbar-nav li a:hover, .nav_header ul.navbar-nav li p:hover {
     color: #ff5a3c !important;
@@ -78,7 +78,6 @@
     background: #0b2c3d;
 }
 .nav_header ul.navbar-nav li ul.dropdown-menu {
-    width: 250px;
     margin: 0px;
     padding: 0px;
     border: none;
@@ -93,5 +92,8 @@
 }
 .nav_header ul.navbar-nav li ul.dropdown-menu a.dropdown-item:hover, .nav_header ul.navbar-nav li ul.dropdown-menu a.active {
     background-color: #ff5a3c;
+    color: #fff !important;
+}
+.header_btn .site_btn.active {
     color: #fff !important;
 }

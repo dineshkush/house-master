@@ -1,10 +1,20 @@
 import React from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./ElectricalSafety.css";
 import homeAbout from "../../../images/home-about.png";
 
 function ElectricalSafety() {
   return (
     <>
+    <HelmetProvider>
+        <Helmet>
+          <title>Electrical inspection of building , Electric fault detection</title>
+          <link rel="canonical" href="https://www.housemaster.in/services/electrical-safety" />
+
+          <meta property="og:title" content="Electrical inspection of building , Electric fault detection" />
+        </Helmet>
+      </HelmetProvider>
+
       <section className="inner_banner">
         <div className="container">
           <div className="row">
