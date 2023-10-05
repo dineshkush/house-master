@@ -1,28 +1,26 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import "./AboutUs.css";
 import homeAbout from "../../images/home-about.png";
 
 function AboutUs() {
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>ABOUT | Housemaster</title>
-          <meta
-            name="description"
-            content="Founders of Housemaster home inspections Pankaj Panchal and Prem Singh are from IIT Roorkee  having post graduation in Structure Dynamics and Seismic Vulnerability and Risk Assessment. both are also having good experience in building design and construction with different parametrs and considera"
-          />
-          <link rel="canonical" href="https://www.housemaster.in/about" />
+      <Helmet>
+        <title>ABOUT | Housemaster</title>
+        <meta
+          name="description"
+          content="Founders of Housemaster home inspections Pankaj Panchal and Prem Singh are from IIT Roorkee  having post graduation in Structure Dynamics and Seismic Vulnerability and Risk Assessment. both are also having good experience in building design and construction with different parametrs and considera"
+        />
+        <link rel="canonical" href="https://www.housemaster.in/about" />
 
-          <meta property="og:title" content="ABOUT | Housemaster " />
-          <meta
-            property="og:description"
-            content='Founders of Housemaster home inspections "Pankaj Panchal and Prem Singh" are from IIT Roorkee  having post graduation in "Structure Dynamics and Seismic Vulnerability and Risk Assessment". both are also having good experience in building design and construction with different parametrs and considera'
-          />
-        </Helmet>
-      </HelmetProvider>
+        <meta property="og:title" content="ABOUT | Housemaster " />
+        <meta
+          property="og:description"
+          content='Founders of Housemaster home inspections "Pankaj Panchal and Prem Singh" are from IIT Roorkee  having post graduation in "Structure Dynamics and Seismic Vulnerability and Risk Assessment". both are also having good experience in building design and construction with different parametrs and considera'
+        />
+      </Helmet>
       <section className="inner_banner">
         <div className="container">
           <div className="row">

@@ -1,19 +1,17 @@
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import ProjectTiles from "./project-titles/ProjectTiles";
 import CommercialInspection from "./commercial-inspection/CommercialInspection";
 
 function Projects() {
   return (
     <>
-    <HelmetProvider>
         <Helmet>
           <title>PROJECTS | Housemaster</title>
           <link rel="canonical" href="https://www.housemaster.in/projects" />
 
           <meta property="og:title" content="PROJECTS | Housemaster" />
         </Helmet>
-      </HelmetProvider>
 
       <section className="inner_banner">
         <div className="container">

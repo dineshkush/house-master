@@ -1,0 +1,48 @@
+.payment_content {
+	padding: 30px 40px;
+}
+.payment_content h3, .payment_content h4, .payment_content a {
+	color: #fff;
+}
+.contact_list {
+    padding: 0px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+.contact_list li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.contact_list li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #ff5a3c;
+}
+.contact_list li a {
+    text-decoration: none;
+}
+.contact_sm ul {
+    margin: 0;
+    padding: 0;
+}
+.contact_sm ul li {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+}
+.contact_sm > ul > li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 30px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+}
+.contact_sm > ul > li a, .contact_sm > ul > li a i {
+    color: #fff;
+    transition: all 0.5s;
+}
+.contact_sm > ul > li a:hover, .contact_sm > ul > li a i:hover {
+    color: #ff5a3c;
+}
