@@ -1,4 +1,5 @@
 import React from 'react'
+import "./CommercialInspection.css"
 import m3mLogo from "../../../images/m3m-logo.png"
 import emaarLogo from "../../../images/emaar-logo.png"
 
@@ -53,11 +54,23 @@ function CommercialInspection() {
             title : "Emaar",
             image : emaarLogo,
         },
+        {
+            title : "Emaar",
+            image : emaarLogo,
+        },
+        {
+            title : "Emaar",
+            image : emaarLogo,
+        },
+        {
+            title : "Emaar",
+            image : emaarLogo,
+        },
     ]
 
   return (
     <>
-    <section className="project_area">
+    <section className="commercial_inspection_logo_area">
         <div className="container">
           <div className="row">
             <div className="site_title_box text-center">
@@ -65,7 +78,7 @@ function CommercialInspection() {
             </div>
           </div>
 
-          <div className="row">
+          <div className="row commercial_inspection_logo_row">
             {CommercialInspectionLogo.map((CommercialLogo, index) => (
               <div className="col-lg-2" key={index}>
                 <div className="Commerciallogo_item">

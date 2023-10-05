@@ -1,5 +1,6 @@
 import React from "react";
 // import CountUp from "react-countup";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Home.css";
 import banner_image from "../../images/banner-img.png";
 import homeAbout from "../../images/home-about.png";
@@ -16,6 +17,23 @@ import TestimonialSlider from "../shared/testimonials-slider/TestimonialSlider";
 function Home() {
   return (
     <>
+    <HelmetProvider>
+        <Helmet>
+          <title>Home Inspection by Experts - Housemaster Home inspection india</title>
+          <meta
+            name="description"
+            content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
+          />
+          <link rel="canonical" href="https://www.housemaster.in/" />
+
+          <meta property="og:title" content="Home Inspection by Experts - Housemaster Home inspection india" />
+          <meta
+            property="og:description"
+            content='Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india'
+          />
+        </Helmet>
+      </HelmetProvider>
+
       <section className="home_banner">
         <div id="carouselExampleCaptions" className="carousel slide">
           <div className="carousel-inner">

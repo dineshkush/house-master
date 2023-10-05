@@ -96,7 +96,7 @@ function Header(props) {
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/about-us">
+                      <NavLink className="nav-link" to="/about">
                         About
                       </NavLink>
                     </li>
@@ -116,8 +116,8 @@ function Header(props) {
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink className="dropdown-item" to="/services/water-leakage">
-                          Water Leakage
+                          <NavLink className="dropdown-item" to="/services/damp-seepage-inspection">
+                          Damp / Seepage Detection
                           </NavLink>
                         </li>
                         <li>

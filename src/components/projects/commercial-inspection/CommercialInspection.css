@@ -1,0 +1,19 @@
+.commercial_inspection_logo_area {
+    padding: 60px 0px;
+    background-color: #f2f6f7;
+}
+.commercial_inspection_logo_row .col-lg-2 {
+    padding: 35px 34px;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.commercial_inspection_logo_row .col-lg-2:nth-child(6), .commercial_inspection_logo_row .col-lg-2:nth-child(12) {
+    border-right: none;
+}
+.commercial_inspection_logo_row .col-lg-2:nth-last-child(-n + 3) {
+    border-bottom: none;
+}

@@ -1,12 +1,30 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import "./WaterLeakage.css";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import "./DampSeepageInspection.css";
 import homeAbout from "../../../images/home-about.png";
 import serviceIcon from "../../../images/service-icon.png";
 
-function WaterLeakage() {
+function DampSeepageInspection() {
   return (
     <>
+    <HelmetProvider>
+        <Helmet>
+          <title>Water Leakage/ Seepage Detection | Housemaster | Gurugram</title>
+          <meta
+            name="description"
+            content="Seepage source detection, water leakage solution, dampness soultion, roof leakage solution and identification of real source"
+          />
+          <link rel="canonical" href="https://www.housemaster.in/services/damp-seepage-inspection" />
+
+          <meta property="og:title" content="Water Leakage/ Seepage Detection | Housemaster | Gurugram" />
+          <meta
+            property="og:description"
+            content='Seepage source detection, water leakage solution, dampness soultion, roof leakage solution and identification of real source'
+          />
+        </Helmet>
+      </HelmetProvider>
+      
       <section className="inner_banner">
         <div className="container">
           <div className="row">
@@ -211,4 +229,4 @@ function WaterLeakage() {
   );
 }
 
-export default WaterLeakage;
+export default DampSeepageInspection;
