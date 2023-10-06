@@ -43,7 +43,7 @@ function App() {
           <Route path="/faqs" exact element={<Faqs />} />
           <Route path="/projects" exact element={<Projects />} />
           <Route path="/payment" exact element={<Payment phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />} />
-          <Route path="/book-inspection" exact element={<BookInspection />} />
+          <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />} />
         </Routes>
 
         <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
