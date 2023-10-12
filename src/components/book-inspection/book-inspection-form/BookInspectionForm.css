@@ -24,8 +24,3 @@
 .payment_form_area .row .payment_form {
 	padding: 30px 20px;
 }
-
-.booking_form_area ::-webkit-scrollbar {
-    width: 0; /* Remove scrollbar width */
-    height: 0; /* Remove scrollbar height */
-}

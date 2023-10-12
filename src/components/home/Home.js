@@ -2,7 +2,7 @@ import React from "react";
 // import CountUp from "react-countup";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
-import banner_image from "../../images/banner-img.png";
+import banner_image from "../../images/home-inspaction-banner.svg";
 import homeAbout from "../../images/home-about.png";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";

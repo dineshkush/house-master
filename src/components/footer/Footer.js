@@ -14,9 +14,10 @@ function Footer(props) {
               </div>
               <div className="footer_about">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                  dolore nam atque enim, adipisci eaque ea et cupiditate, modi,
-                  sequi eveniet fuga commodi.
+                  Housemaster is a home inspection company founded by alumni of
+                  IIT Roorkee. It provides wide range of house related services
+                  like home inspection, property documents verification,
+                  commercial inspection etc.
                 </p>
                 <Link to="/about-us" className="site_btn">
                   Read More
@@ -80,6 +81,10 @@ function Footer(props) {
               <div className="footer_contact">
                 <ul className="foot_contact">
                   <li>
+                    <i class="fa-solid fa-location-arrow"></i> 1st Floor,
+                    Landmark cyber Park, sec-67, Gurgaon, Haryana
+                  </li>
+                  <li>
                     <i className="fa-solid fa-phone"></i>{" "}
                     <a href={`tel:${props.phone}`}>{props.phone}</a>
                   </li>
@@ -120,29 +125,27 @@ function Footer(props) {
       </div>
 
       <div className="copyright_footer">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 col-12">
-                <div className="copyright_text">
-                  <p>
-                  © Copyright 2023 - House Master | All Rights Reserved
-                  </p>
-                </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-12">
+              <div className="copyright_text">
+                <p>© Copyright 2023 - House Master | All Rights Reserved</p>
               </div>
-              <div className="col-lg-6 col-12 align-self-center">
-                <div className="copyright_menu text-end">
-                  <ul className="go-top">
-                    <li>
-                      <Link to="/about-us">Terms & Conditions</Link>
-                    </li>
-                    <li>
-                      <Link to="/about-us">Privacy & Policy</Link>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div className="col-lg-6 col-12 align-self-center">
+              <div className="copyright_menu text-end">
+                <ul className="go-top">
+                  <li>
+                    <Link to="/about-us">Terms & Conditions</Link>
+                  </li>
+                  <li>
+                    <Link to="/about-us">Privacy & Policy</Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </footer>
   );
