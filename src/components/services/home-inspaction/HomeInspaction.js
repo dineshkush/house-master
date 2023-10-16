@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./HomeInspaction.css";
-import homeAbout from "../../../images/home-about.png";
+import homeInspactionMain from "../../../images/homeInspactionMain.png";
+import homeInspactionSecond from "../../../images/homeInspactionSecond.png";
 import homeInspection from "../../../images/home-inspection-img.webp";
 import serviceIcon from "../../../images/service-icon.png";
 
@@ -41,11 +42,11 @@ function HomeInspaction() {
         </div>
       </section>
 
-      <section className="pt-4 pb-4">
+      <section className="homeInspaction_section">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={homeInspactionMain} alt="About Us" className="img-fluid" />
             </div>
             <div className="col-lg-6">
               <div className="about_content">
@@ -76,7 +77,7 @@ function HomeInspaction() {
         </div>
       </section>
 
-      <section className="pt-4 pb-4">
+      <section className="prepurchase_section">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -103,7 +104,7 @@ function HomeInspaction() {
               </div>
             </div>
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={homeInspactionSecond} alt="About Us" className="img-fluid" />
             </div>
           </div>
         </div>

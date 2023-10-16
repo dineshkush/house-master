@@ -3,7 +3,12 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
 import banner_image from "../../images/home-inspaction-banner.svg";
-import homeAbout from "../../images/home-about.png";
+// import homeMain from "";
+import homeAbout from "../../images/home-inspaction-about.png";
+import homeInspactionService from "../../images/home-inspaction-service.jpg";
+import waterLeakageService from "../../images/water-leakage-service.jpg"
+import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg"
+import IndustryEnergyService from "../../images/industry-energy-service.jpg"
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
 import homeInspaction from "../../images/Home-Inspection-Image.png";
@@ -267,13 +272,13 @@ function Home() {
                           earlier—can put ....
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabIndex="0">
+                        <Link className="btn site_btn" to="/services/home-inspaction" tabIndex="0">
                           Read More
                         </Link>
                       </div>
                       <div className="col-lg-6">
                         <img
-                          src={banner_image}
+                          src={homeInspactionService}
                           alt="House"
                           className="img-fluid"
                         />
@@ -301,13 +306,13 @@ function Home() {
                           Don’t let this happen to your investment.
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabIndex="0">
+                        <Link className="btn site_btn" to="/services/damp-seepage-inspection" tabIndex="0">
                           Read More
                         </Link>
                       </div>
                       <div className="col-lg-6">
                         <img
-                          src={banner_image}
+                          src={waterLeakageService}
                           alt="House"
                           className="img-fluid"
                         />
@@ -340,13 +345,13 @@ function Home() {
                           any issues have been found.
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabIndex="0">
+                        <Link className="btn site_btn" to="/services/electrical-safety" tabIndex="0">
                           Read More
                         </Link>
                       </div>
                       <div className="col-lg-6">
                         <img
-                          src={banner_image}
+                          src={electricalSafetyInspection}
                           alt="House"
                           className="img-fluid"
                         />
@@ -377,13 +382,13 @@ function Home() {
                           Consectetur dolor iste eaque. Incidunt, similique!
                         </p>
 
-                        <Link className="btn site_btn" to="/" tabIndex="0">
+                        <Link className="btn site_btn" to="/services/industry-energy" tabIndex="0">
                           Read More
                         </Link>
                       </div>
                       <div className="col-lg-6">
                         <img
-                          src={banner_image}
+                          src={IndustryEnergyService}
                           alt="House"
                           className="img-fluid"
                         />
@@ -511,7 +516,7 @@ function Home() {
             </div>
             <div className="col-lg-6">
               <div className="btn-box text-end">
-                <a href="/" className="btn site_btn">
+                <a href="/book-inspection" className="btn site_btn">
                   Rent Properties
                 </a>
               </div>
