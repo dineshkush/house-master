@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./AboutUs.css";
-import homeAbout from "../../images/home-about.png";
+import aboutImage from "../../images/about-image.png";
 
 function AboutUs() {
   return (
@@ -21,6 +21,7 @@ function AboutUs() {
           content='Founders of Housemaster home inspections "Pankaj Panchal and Prem Singh" are from IIT Roorkee  having post graduation in "Structure Dynamics and Seismic Vulnerability and Risk Assessment". both are also having good experience in building design and construction with different parametrs and considera'
         />
       </Helmet>
+      
       <section className="inner_banner">
         <div className="container">
           <div className="row">
@@ -41,7 +42,7 @@ function AboutUs() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={aboutImage} alt="About Us" className="img-fluid" />
             </div>
             <div className="col-lg-6">
               <div className="about_content">
@@ -78,7 +79,7 @@ function AboutUs() {
       <section className="more_about_sec">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <div className="about_content">
                 <div className="site_title_box">
                   <h6 className="sub_title">About Us</h6>
@@ -95,9 +96,6 @@ function AboutUs() {
                   seismic inspection etc.
                 </p>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
             </div>
           </div>
         </div>

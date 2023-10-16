@@ -1,10 +1,23 @@
+.damp_seepage_inspection_section {
+    padding: 50px 0px;
+}
 .video_section {
     padding: 50px 0px;
-    background-color: #f2f6f7;
 }
 .water_leakage_services .service_item {
     min-height: 530px;
 }
 .service_item {
     min-height: auto;
+}
+.causes_common_symptoms_area {
+    padding: 60px 0px;
+    background-color: #f2f6f7;
+}
+.health_issues_area {
+    padding: 60px 0px;
+    background-color: #f2f6f7;
+}
+.more_content_sec {
+    padding: 60px 0px;
 }

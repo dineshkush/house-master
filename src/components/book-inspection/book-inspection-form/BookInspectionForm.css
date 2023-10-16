@@ -1,0 +1,26 @@
+.booking_form_area .row .booking_form {
+    padding: 30px 20px;
+    max-height: 560px;
+    overflow-y: scroll;
+}
+.booking_form_area {
+	padding: 60px 0px;
+}
+.booking_form_area .row {
+	background-color: #0b2c3d;
+	box-shadow: 0px 0px 13px rgba(0,0,0,0.1);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.booking_form_area .booking_form .row {    
+	background-color: transparent;
+	box-shadow: none;
+    border-radius: 0px;
+    overflow: hidden;
+}
+.booking_form_area .row .col-lg-6:first-child {
+    background-color: #fff;
+}
+.payment_form_area .row .payment_form {
+	padding: 30px 20px;
+}

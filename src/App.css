@@ -27,6 +27,11 @@ h4 {
   line-height: 34px;
   font-weight: 800;
 }
+h5 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 800;
+}
 .site_btn {
   background-color: #ff5a3c;
   color: #fff;
@@ -160,6 +165,31 @@ h4 {
   margin-bottom: 8px;
 }
 .site_list ul li::before {
+  position: absolute;
+  content: "";
+  left: -30px;
+  width: 15px;
+  height: 1px;
+  background-color: #ff5a3c;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.site_list2 ul {
+  padding-left: 30px;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+}
+.site_list2 ul li {
+  position: relative;
+  margin-bottom: 8px;
+  flex: 0 0 auto;
+  width: 33%;
+  display: inline-block;
+}
+.site_list2 ul li::before {
   position: absolute;
   content: "";
   left: -30px;
