@@ -15,7 +15,7 @@ function ContactDetails({
       <div className="contact_details">
         <ul className="contact_list">
           <li>
-            <i class="fa-solid fa-location-arrow"></i> 1st Floor, Landmark cyber
+            <i className="fa-solid fa-location-arrow"></i> 1st Floor, Landmark cyber
             Park, sec-67, Gurgaon, Haryana
           </li>
           <li>

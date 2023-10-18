@@ -1,71 +1,119 @@
-import React from "react";
+import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom"; 
+import emailjs from "emailjs-com";
 import "./PaymentForm.css";
 // import Button from "react-bootstrap/Button";
 // import Form from "react-bootstrap/Form";
 
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-
 function PaymentForm() {
+
+  // const navigate = useNavigate();
+
+  const [messageSend, setMessageSend] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const [emailData, setEmailData] = useState({
+    name: "",
+    email: "",
+    paymentType: "",
+    amountPerQuotation: "",
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(emailData.email)) {
+      console.error("Invalid email format");
+      return;
+    }
+
+    setIsSending(true);
+
+    emailjs
+      .send(
+        "service_fqyaffm",
+        "template_1m0hksf",
+        emailData,
+        "IcEchkqZMhhopM8vK"
+      )
+      .then(
+        (response) => {
+          setMessageSend("Email sent successfully");
+          // console.log("Email sent successfully", response);
+          // navigate("/");
+        },
+        (error) => {
+          setMessageError("Email sent successfully");
+          // console.error("Email sending failed", error);
+        }
+      )
+
+      .finally(() => {
+        setIsSending(false); // Email sending completed, change button text back
+      });
+  };
+
+  const validateEmail = (email) => {
+    // Define a simple regex pattern for email validation
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    return emailPattern.test(email);
+  };
+
+  const handleChange = (e) => {
+    setEmailData({
+      ...emailData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
   return (
     <>
       <div className="payment_form">
         <h3 className="mb-3">Pay Now</h3>
-        <Formik
-          initialValues={{
-            name: "",
-            email: "",
-            paymentType: "",
-            amountPerQuotation: "",
-          }}
-          validationSchema={Yup.object({
-            name: Yup.string().required("Name is required"),
-            email: Yup.string()
-              .email("Invalid email address")
-              .required("Email is required"),
-            paymentType: Yup.string().required("Payment type is required"),
-            amountPerQuotation: Yup.string().required("Amount is required"),
-          })}
-          onSubmit={(values) => {
-            console.log(values); // Handle form submission here
-          }}
-        >
-          <Form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name *
               </label>
-              <Field
+              <input
                 type="text"
                 name="name"
                 id="name"
+                value={emailData.name}
+                onChange={handleChange}
                 className="form-control"
               />
-              <ErrorMessage name="name" component="div" className="error" />
+              {/* <ErrorMessage name="name" component="div" className="error" /> */}
             </div>
 
             <div className="mb-3">
               <label htmlFor="email" className="form-label">
                 Email *
               </label>
-              <Field
+              <input
                 type="email"
                 name="email"
+                value={emailData.email}
+                onChange={handleChange}
                 id="email"
                 className="form-control"
               />
-              <ErrorMessage name="email" component="div" className="error" />
+              {/* <ErrorMessage name="email" component="div" className="error" /> */}
             </div>
 
             <div className="mb-3">
               <label htmlFor="paymentType" className="form-label">
                 Payment Type *
               </label>
-              <Field
+              <select
                 as="select"
                 name="paymentType"
                 id="paymentType"
                 className="form-select"
+                value={emailData.paymentType}
+                onChange={handleChange}
               >
                 <option value="" disabled>
                   Select Type
@@ -75,36 +123,38 @@ function PaymentForm() {
                   Balance or Complete Payment
                 </option>
                 <option value="pre-visit-payment">Pre-Visit Payment</option>
-              </Field>
-              <ErrorMessage
+              </select>
+              {/* <ErrorMessage
                 name="paymentType"
                 component="div"
                 className="error"
-              />
+              /> */}
             </div>
 
             <div className="mb-3">
               <label htmlFor="amountPerQuotation" className="form-label">
                 Enter Amount as Per Quotation *
               </label>
-              <Field
+              <input
                 type="text"
                 name="amountPerQuotation"
                 id="amountPerQuotation"
                 className="form-control"
+                value={emailData.amountPerQuotation}
+                onChange={handleChange}
               />
-              <ErrorMessage
+              {/* <ErrorMessage
                 name="amountPerQuotation"
                 component="div"
                 className="error"
-              />
+              /> */}
             </div>
 
-            <button type="submit" className="btn site_btn">
-              Submit
+            <button type="submit" className="btn site_btn" disabled={isSending}>
+            {isSending ? "Sending..." : "Submit"}
             </button>
-          </Form>
-        </Formik>
+            <p className="formmessage">{messageSend} {messageError}</p>
+          </form>
       </div>
     </>
   );
