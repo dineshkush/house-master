@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
-import MainLogo from "../../images/logo.webp";
+import MainLogo from "../../logo.webp";
 
 function Header(props) {
   return (
