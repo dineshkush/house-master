@@ -1,40 +1,57 @@
 import React from "react";
 import "./ProjectTiles.css";
-import ireoVictoryValley from "../../../images/ireo-victory-valley-image.jpg";
+import ireoVictoryValley from "../../../images/projects-img/ireo-victory-valley.webp";
+import ireoSkyon from "../../../images/projects-img/ireo-skyon.webp";
+import m3mGolfEstate from "../../../images/projects-img/m3m-golf-estate.webp";
+import bestechParkview from "../../../images/projects-img/bestech-parkview.webp";
+import emaarPalmHeights from "../../../images/projects-img/emaar-palm-heights.webp";
+import adaniSamsara from "../../../images/projects-img/adani-samsara.gif";
+import theHermitage from "../../../images/projects-img/the-hermitage.webp";
+import theSuncity from "../../../images/projects-img/the-suncity.gif";
+import mapskoMountVille from "../../../images/projects-img/mapsko-mount-ville.webp";
+import vipulWorld from "../../../images/projects-img/vipul-world.webp";
 
 function ProjectTiles() {
   const projectTiles = [
     {
       image: ireoVictoryValley,
-      title: "Project 1",
+      title: "Ireo Victory Valley",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 2",
+      image: ireoSkyon,
+      title: "Ireo Skyon",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 3",
+      image: m3mGolfEstate,
+      title: "M3M Golf Estate",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 4",
+      image: bestechParkview,
+      title: "Bestech Parkview",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 5",
+      image: emaarPalmHeights,
+      title: "Emaar Palm Heights",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 6",
+      image: adaniSamsara,
+      title: "Adani Samsara",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 7",
+      image: theHermitage,
+      title: "The Hermitage",
     },
     {
-      image: ireoVictoryValley,
-      title: "Project 8",
+      image: theSuncity,
+      title: "The Suncity",
+    },
+    {
+      image: mapskoMountVille,
+      title: "Mapsko Mount Ville",
+    },
+    {
+      image: vipulWorld,
+      title: "Vipul World",
     },
   ];
 

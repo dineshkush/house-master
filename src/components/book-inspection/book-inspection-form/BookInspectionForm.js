@@ -1,17 +1,109 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./BookInspectionForm.css";
+import emailjs from "emailjs-com";
 
 function BookInspectionForm() {
+
+  const [messageSend, setMessageSend] = useState("");
+  const [messageError, setMessageError] = useState("");
+  const [isSending, setIsSending] = useState(false);
+
+  const [emailData, setEmailData] = useState({
+    name: "",
+    address: "",
+    city: "",
+    area: "",
+    paymentType:"",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [selectedItems, setSelectedItems] = useState([])
+  const selectChangeHandler = (e) => {
+    const itemName = e.target.name;
+
+    // Check if the item is selected (checked) or deselected (unchecked)
+    if (e.target.checked) {
+      // If selected, add it to the selectedItems array
+      setSelectedItems([...selectedItems, itemName]);
+    } else {
+      // If deselected, remove it from the selectedItems array
+      setSelectedItems(selectedItems.filter(item => item !== itemName));
+    }
+    console.log("Selected Items:" + selectedItems.join(', '))
+    
+  }
+
+  useEffect(() => {
+    setSelectedItems(selectedItems)
+  }, [selectedItems])
+  console.log(selectedItems.join(', '))
+  
+
+  const bookingFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(emailData.email)) {
+      console.error("Invalid email format");
+      return;
+    }
+    emailData.selectedItems = selectedItems.join(', ');
+    setIsSending(true);
+
+    emailjs
+      .send(
+        "service_jf6shcl",
+        "template_k2o4xw9",
+        emailData,
+        "template_5wisxmm"
+      )
+      .then(
+        (response) => {
+          setMessageSend("Email sent successfully");
+          // console.log("Email sent successfully", response);
+          window.location.href = "https://rzp.io/l/lzR6iNS";
+        },
+        (error) => {
+          setMessageError("Email sending failed");
+          // console.error("Email sending failed", error);
+        }
+      )
+
+      .finally(() => {
+        setIsSending(false); // Email sending completed, change button text back
+      });
+  };
+
+  const validateEmail = (email) => {
+    // Define a simple regex pattern for email validation
+    const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    return emailPattern.test(email);
+  };
+
+  const bookingFormChange = (e) => {
+    setEmailData({
+      ...emailData,
+      [e.target.name]: e.target.value, 
+    });
+  };
+
+  
+
+
   return (
     <div className="booking_form">
       <h3 className="mb-3">Book Expert Visit</h3>
-      <form>
+      <form onSubmit={bookingFormSubmit}>
         <div className="row">
           <div className="mb-3 col-lg-12">
             <label htmlFor="name" className="form-label">
               Name *
             </label>
-            <input type="text" className="form-control" id="name" required />
+            <input type="text" className="form-control" name="name" id="name"
+            
+            value={emailData.name}
+            onChange={bookingFormChange}
+            required />
           </div>
           <div className="mb-3 col-lg-12">
             <label htmlFor="address" className="form-label">
@@ -20,7 +112,10 @@ function BookInspectionForm() {
             <textarea
               className="form-control"
               id="address"
-              rows="2"
+              name="address"
+              rows="2"              
+              value={emailData.address}
+              onChange={bookingFormChange}
               required
             ></textarea>
           </div>
@@ -28,13 +123,22 @@ function BookInspectionForm() {
             <label htmlFor="city" className="form-label">
               City *
             </label>
-            <input type="text" className="form-control" id="city" required />
+            <input type="text" className="form-control" 
+            id="city"   
+            name="city"                      
+            value={emailData.city}
+            onChange={bookingFormChange}
+            required />
           </div>
           <div className="mb-3 col-lg-6">
             <label htmlFor="area" className="form-label">
               Area (sq.ft) *
             </label>
-            <input type="text" className="form-control" id="area" required />
+            <input type="text" className="form-control" id="area"                        
+            value={emailData.area}
+            onChange={bookingFormChange}
+            name="area"
+            required />
           </div>
           <div className="mb-3">
             <label htmlFor="paymentType" className="form-label">
@@ -43,9 +147,12 @@ function BookInspectionForm() {
             <select
               className="form-select"
               aria-label="Default select example"
-              id="paymentType"
+              id="paymentType" 
+              name="paymentType"                       
+              value={emailData.paymentType}
+              onChange={bookingFormChange}
             >
-              <option selected disabled>
+              <option value="" disabled>
                 Select Type
               </option>
               <option value="Residential / Bungalow / Apartment">
@@ -62,23 +169,34 @@ function BookInspectionForm() {
             <label htmlFor="phone" className="form-label">
               Phone *
             </label>
-            <input type="tel" className="form-control" id="phone" required />
+            <input type="tel" className="form-control" id="phone"  
+            name="phone"                     
+              value={emailData.phone}
+              onChange={bookingFormChange}
+              required />
           </div>
           <div className="mb-3 col-lg-6">
             <label htmlFor="email" className="form-label">
               Email *
             </label>
-            <input type="email" className="form-control" id="email" required />
+            <input type="email" className="form-control" id="email"
+            name="email"                      
+              value={emailData.email}
+              onChange={bookingFormChange}
+              required />
           </div>
           <div className="mb-3">
-            <label htmlFor="address" className="form-label">
+            <label htmlFor="message" className="form-label">
               Let us know what you need help with...
             </label>
-            <textarea className="form-control" id="address" rows="3"></textarea>
+            <textarea className="form-control" id="message"
+            name="message"
+            value={emailData.message}
+            onChange={bookingFormChange} rows="3"></textarea>
           </div>
 
           <div className="mb-3">
-            <label htmlFor="address" className="form-label">
+            <label htmlFor="service" className="form-label">
               Choose your Service
             </label>
             <div className="form-check">
@@ -86,6 +204,8 @@ function BookInspectionForm() {
                 className="form-check-input"
                 type="checkbox"
                 id="seepageCheckbox"
+                name="Seepage Leakage Detection"
+                onChange={selectChangeHandler}
               />
               <label className="form-check-label" htmlFor="seepageCheckbox">
                 Seepage/Leakage Detection
@@ -96,6 +216,8 @@ function BookInspectionForm() {
                 className="form-check-input"
                 type="checkbox"
                 id="electricalCheckbox"
+                name="Electrical Inspection"
+                onChange={selectChangeHandler}
               />
               <label className="form-check-label" htmlFor="electricalCheckbox">
                 Electrical Inspection
@@ -106,6 +228,8 @@ function BookInspectionForm() {
                 className="form-check-input"
                 type="checkbox"
                 id="documentCheckbox"
+                name="Document Verification"
+                onChange={selectChangeHandler}
               />
               <label className="form-check-label" htmlFor="documentCheckbox">
                 Document Verification
@@ -116,6 +240,8 @@ function BookInspectionForm() {
                 className="form-check-input"
                 type="checkbox"
                 id="pmcCheckbox"
+                name="PMC Consultation"
+                onChange={selectChangeHandler}
               />
               <label className="form-check-label" htmlFor="pmcCheckbox">
                 PMC Consultation
@@ -126,15 +252,18 @@ function BookInspectionForm() {
                 className="form-check-input"
                 type="checkbox"
                 id="vastuCheckbox"
+                name="Vastu"
+                onChange={selectChangeHandler}
               />
               <label className="form-check-label" htmlFor="vastuCheckbox">
                 Vastu
               </label>
             </div>
           </div>
-          <button type="submit" className="btn site_btn">
-            Submit
-          </button>
+          <button type="submit" className="btn site_btn" disabled={isSending}>
+            {isSending ? "Sending..." : "Submit"}
+            </button>
+            <p className="formmessage">{messageSend} {messageError}</p>
         </div>
       </form>
     </div>

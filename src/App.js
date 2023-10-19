@@ -13,6 +13,7 @@ import Projects from "./components/projects/Projects";
 import Payment from "./components/payment/Payment";
 import BookInspection from "./components/book-inspection/BookInspection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/scrollToTop";
 
 const phoneNumber = '+919896442289';
 const emailId = 'info@housemaster.in';
@@ -31,9 +32,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop />
         <Header phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
 
         <Routes>
+          
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<AboutUs />} />
           <Route path="/services/home-inspaction" exact element={<HomeInspaction />} />

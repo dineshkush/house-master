@@ -36,7 +36,7 @@ function Footer(props) {
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/about-us">About Us</Link>
+                    <Link to="/about">About Us</Link>
                   </li>
                   <li>
                     <Link to="/projects">Projects</Link>
@@ -59,7 +59,7 @@ function Footer(props) {
                     <Link to="/services/home-inspaction">Home Inspaction</Link>
                   </li>
                   <li>
-                    <Link to="/services/water-leakage">Water Leakage</Link>
+                    <Link to="/services/damp-seepage-inspection">Damp / Seepage Detection</Link>
                   </li>
                   <li>
                     <Link to="/services/electrical-safety">
@@ -81,7 +81,7 @@ function Footer(props) {
               <div className="footer_contact">
                 <ul className="foot_contact">
                   <li>
-                    <i class="fa-solid fa-location-arrow"></i> 1st Floor,
+                    <i className="fa-solid fa-location-arrow"></i> 1st Floor,
                     Landmark cyber Park, sec-67, Gurgaon, Haryana
                   </li>
                   <li>
