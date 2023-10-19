@@ -19,7 +19,7 @@ function Footer(props) {
                   like home inspection, property documents verification,
                   commercial inspection etc.
                 </p>
-                <Link to="/about-us" className="site_btn">
+                <Link to="/about" className="site_btn">
                   Read More
                 </Link>
               </div>

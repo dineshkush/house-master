@@ -1,3 +1,6 @@
+.home_banner {
+	position: relative;
+}
 .home_banner .carousel-inner .carousel-item {
     background-color: #f2f6f7;
 }
@@ -63,7 +66,23 @@
 .home_banner .carousel-indicators [data-bs-target] {
     background-color: #071c1f;
 }
-
+.recognizedby_img {
+	position: absolute;
+	right: 130px;
+	top: 20px;
+	z-index: 9;
+}
+.recognizedby_img h4 {
+	color: #ff5a3c;
+	font-size: 20px;
+	line-height: 25px;
+}
+.recognizedby_img h4 img {
+	display: block;
+	margin-left: 70px;
+	width: 195px;
+	filter: brightness(0);
+}
 .counter_area .row {
     box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
     padding: 40px;

@@ -6,9 +6,9 @@ import banner_image from "../../images/home-inspaction-banner.svg";
 // import homeMain from "";
 import homeAbout from "../../images/home-inspaction-about.png";
 import homeInspactionService from "../../images/home-inspaction-service.jpg";
-import waterLeakageService from "../../images/water-leakage-service.jpg"
-import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg"
-import IndustryEnergyService from "../../images/industry-energy-service.jpg"
+import waterLeakageService from "../../images/water-leakage-service.jpg";
+import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg";
+import IndustryEnergyService from "../../images/industry-energy-service.jpg";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
 import homeInspaction from "../../images/Home-Inspection-Image.png";
@@ -17,27 +17,38 @@ import { Link } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import TestimonialSlider from "../shared/testimonials-slider/TestimonialSlider";
+import startupIndia from "../../images/startupindia-logo.webp";
 // import React from "react";
 
 function Home() {
   return (
     <>
-        <Helmet>
-          <title>Home Inspection by Experts - Housemaster Home inspection india</title>
-          <meta
-            name="description"
-            content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
-          />
-          <link rel="canonical" href="https://www.housemaster.in/" />
+      <Helmet>
+        <title>
+          Home Inspection by Experts - Housemaster Home inspection india
+        </title>
+        <meta
+          name="description"
+          content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
+        />
+        <link rel="canonical" href="https://www.housemaster.in/" />
 
-          <meta property="og:title" content="Home Inspection by Experts - Housemaster Home inspection india" />
-          <meta
-            property="og:description"
-            content='Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india'
-          />
-        </Helmet>
+        <meta
+          property="og:title"
+          content="Home Inspection by Experts - Housemaster Home inspection india"
+        />
+        <meta
+          property="og:description"
+          content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
+        />
+      </Helmet>
 
       <section className="home_banner">
+        <div className="recognizedby_img">
+          <h4>
+            Recognized by <img src={startupIndia} alt="Startup India" />
+          </h4>
+        </div>
         <div id="carouselExampleCaptions" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -219,7 +230,7 @@ function Home() {
                   earlier.
                 </p>
 
-                <Link className="btn site_btn" to="/about-us" tabIndex="0">
+                <Link className="btn site_btn" to="/about" tabIndex="0">
                   Read More
                 </Link>
                 <Link className="btn site_btn" to="/" tabIndex="0">
@@ -272,7 +283,11 @@ function Home() {
                           earlier—can put ....
                         </p>
 
-                        <Link className="btn site_btn" to="/services/home-inspaction" tabIndex="0">
+                        <Link
+                          className="btn site_btn"
+                          to="/services/home-inspaction"
+                          tabIndex="0"
+                        >
                           Read More
                         </Link>
                       </div>
@@ -306,7 +321,11 @@ function Home() {
                           Don’t let this happen to your investment.
                         </p>
 
-                        <Link className="btn site_btn" to="/services/damp-seepage-inspection" tabIndex="0">
+                        <Link
+                          className="btn site_btn"
+                          to="/services/damp-seepage-inspection"
+                          tabIndex="0"
+                        >
                           Read More
                         </Link>
                       </div>
@@ -345,7 +364,11 @@ function Home() {
                           any issues have been found.
                         </p>
 
-                        <Link className="btn site_btn" to="/services/electrical-safety" tabIndex="0">
+                        <Link
+                          className="btn site_btn"
+                          to="/services/electrical-safety"
+                          tabIndex="0"
+                        >
                           Read More
                         </Link>
                       </div>
@@ -382,7 +405,11 @@ function Home() {
                           Consectetur dolor iste eaque. Incidunt, similique!
                         </p>
 
-                        <Link className="btn site_btn" to="/services/industry-energy" tabIndex="0">
+                        <Link
+                          className="btn site_btn"
+                          to="/services/industry-energy"
+                          tabIndex="0"
+                        >
                           Read More
                         </Link>
                       </div>
@@ -402,105 +429,6 @@ function Home() {
         </div>
       </section>
 
-      {/* <section className="services_sec">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="site_title_box text-center">
-                <h6 className="sub_title">Our Services</h6>
-                <h3 className="main_heading">Our Main Focus</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="col-lg-3">
-              <div className="service_item">
-                <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div>
-                <div className="service_info">
-                  <h3>
-                    Home <br />
-                    Inspaction
-                  </h3>
-                  <p>
-                    over 1 million+ homes for sale available on the website, we
-                    can match you with a house you will want to call home.
-                  </p>
-                  <Link className="text_btn" to="/">
-                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3">
-              <div className="service_item">
-                <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div>
-                <div className="service_info">
-                  <h3>
-                    Water <br />
-                    Leakage
-                  </h3>
-                  <p>
-                    over 1 million+ homes for sale available on the website, we
-                    can match you with a house you will want to call home.
-                  </p>
-                  <Link className="text_btn" to="/">
-                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3">
-              <div className="service_item">
-                <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div>
-                <div className="service_info">
-                  <h3>
-                    Electrical Safety <br />
-                    Inspection
-                  </h3>
-                  <p>
-                    over 1 million+ homes for sale available on the website, we
-                    can match you with a house you will want to call home.
-                  </p>
-                  <Link className="text_btn" to="/">
-                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-3">
-              <div className="service_item">
-                <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div>
-                <div className="service_info">
-                  <h3>
-                    Industry energy <br />
-                    and safety
-                  </h3>
-                  <p>
-                    over 1 million+ homes for sale available on the website, we
-                    can match you with a house you will want to call home.
-                  </p>
-                  <Link className="text_btn" to="/">
-                    Find A Home <i className="fa-solid fa-arrow-right-long"></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section className="cta-section">
         <div
           className="pattern-layer"
@@ -516,9 +444,9 @@ function Home() {
             </div>
             <div className="col-lg-6">
               <div className="btn-box text-end">
-                <a href="/book-inspection" className="btn site_btn">
-                  Rent Properties
-                </a>
+                <Link to="/book-inspection" className="btn site_btn">
+                  Book Inspection
+                </Link>
               </div>
             </div>
           </div>
