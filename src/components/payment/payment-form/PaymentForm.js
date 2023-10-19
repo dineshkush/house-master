@@ -32,19 +32,19 @@ function PaymentForm() {
 
     emailjs
       .send(
-        "service_fqyaffm",
-        "template_1m0hksf",
+        "service_jf6shcl",
+        "template_265g9fi",
         emailData,
-        "IcEchkqZMhhopM8vK"
+        "mEkdQ2vp13ZtJ5Iib"
       )
       .then(
         (response) => {
           setMessageSend("Email sent successfully");
           // console.log("Email sent successfully", response);
-          // navigate("/");
+          window.location.href = "https://rzp.io/l/lzR6iNS";
         },
         (error) => {
-          setMessageError("Email sent successfully");
+          setMessageError("Email sending failed");
           // console.error("Email sending failed", error);
         }
       )

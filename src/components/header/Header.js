@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
+import MainLogo from "../../images/logo.webp";
 
 function Header(props) {
   return (
@@ -72,7 +73,7 @@ function Header(props) {
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                  Logo
+                  <img src={MainLogo} alt="House Master" />
                 </Link>
                 <button
                   className="navbar-toggler"
