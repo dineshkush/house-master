@@ -1,70 +1,73 @@
 import React from 'react'
 import "./CommercialInspection.css"
-import m3mLogo from "../../../images/m3m-logo.png"
-import emaarLogo from "../../../images/emaar-logo.png"
+import airtelLogo from "../../../images/project-logo/airtel-logo.jpg"
+import bestechLogo from "../../../images/project-logo/bestech-logo.jpg"
+import cpwdLogo from "../../../images/project-logo/cpwd-logo.jpg"
+import dlfLogo from "../../../images/project-logo/dlf-logo.jpg"
+import emaarLogo from "../../../images/project-logo/emaar-logo.jpg"
+import futureTechLogo from "../../../images/project-logo/future-tech-logo.jpg"
+import ireoLogo from "../../../images/project-logo/ireo-logo.jpg"
+import laghuUdyogBharatiLogo from "../../../images/project-logo/laghu-udyog-bharati-logo.jpg"
+import m3mLogo from "../../../images/project-logo/m3m-logo.jpg"
+import nbccLogo from "../../../images/project-logo/nbcc-logo.jpg"
+import savoySuitesLogo from "../../../images/project-logo/savoy-suites-logo.jpg"
+import suncityLogo from "../../../images/project-logo/suncity-logo.jpg"
+import ushaLogo from "../../../images/project-logo/usha-logo.jpg"
 
 function CommercialInspection() {
 
     const CommercialInspectionLogo = [
         {
-            title : "M3M",
-            image : m3mLogo,
+            title : "Airtel",
+            image : airtelLogo,
+        },
+        {
+            title : "Bestech",
+            image : bestechLogo,
+        },
+        {
+            title : "CPWD",
+            image : cpwdLogo,
+        },
+        {
+            title : "DLF",
+            image : dlfLogo,
         },
         {
             title : "Emaar",
             image : emaarLogo,
         },
         {
-            title : "M3M",
-            image : m3mLogo,
+            title : "Future Tech",
+            image : futureTechLogo,
         },
         {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "Ireo",
+            image : ireoLogo,
         },
         {
-            title : "M3M",
-            image : m3mLogo,
-        },
-        {
-            title : "Emaar",
-            image : emaarLogo,
-        },
-        {
-            title : "M3M",
-            image : m3mLogo,
-        },
-        {
-            title : "Emaar",
-            image : emaarLogo,
-        },
-        {
-            title : "M3M",
-            image : m3mLogo,
-        },
-        {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "Laghu Udyog Bharati",
+            image : laghuUdyogBharatiLogo,
         },
         {
             title : "M3M",
             image : m3mLogo,
         },
         {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "NBCC",
+            image : nbccLogo,
         },
         {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "Savoy Suites",
+            image : savoySuitesLogo,
         },
         {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "Suncity",
+            image : suncityLogo,
         },
         {
-            title : "Emaar",
-            image : emaarLogo,
+            title : "USHA",
+            image : ushaLogo,
         },
     ]
 
