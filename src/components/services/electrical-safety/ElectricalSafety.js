@@ -154,6 +154,67 @@ function ElectricalSafety() {
           </div>
         </div>
       </section>
+
+      <section className="electrical_problems_sec">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-12">
+              <div className="about_content">
+                <div className="site_title_box">
+                  <h3 className="main_heading">
+                  Common Symptoms of Home Electrical Problems – Warning Signals
+                  </h3>
+                </div>
+                <div className="site_list">
+                  <ul>
+                    <li>electrical inspection on the present condition of the electrical system comprising of Power / UPS socket, electrical switchboards, D.B accessories, etc.</li>
+                    <li>Condition of wirings (findings include faulty / loosely connected / old /under gauge wire which may</li>
+                    <li>result in electrical leakages and short circuits)</li>
+                    <li>Earthing System inspection.</li>
+                    <li>Three phase Load Distribution</li>
+                    <li>Inspection of the three-phase meter /sub meter (For ensuring that there is no fault at the meter)</li>
+                    <li>Electrical system Thermal Imaging Inspection.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="inspection_benefits_sec">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-12">
+              <div className="about_content">
+                <div className="site_title_box">
+                  <h3 className="main_heading">
+                  Electrical system inspection benefits
+                  </h3>
+                </div>
+                <div className="site_list">
+                  <ul>
+                    <li>Reduced Energy Expenses</li>
+                    <li>identify Problems</li>
+                    <li>Increased Employee Comfort</li>
+                    <li>Personalized Recommendations</li>
+                    <li>Show Environmental Concern</li>
+                    <li>Increased Property Value</li>
+                    <li>Longer Equipment Lifespan</li>
+                    <li>Reduce over budget and expenses on the electrical systems</li>
+                    <li>It helps you to lower energy bills.</li>
+                    <li>It enables you to increase the comfort of those in the facility.</li>
+                    <li>It helps you to increase the life span of the equipment in your facility.</li>
+                    <li>It discovers any unaccounted consumption that may exist at the facility</li>
+                    <li>profitability through optimization of energy expenditure</li>
+                    <li>productivity through optimization of equipment and processes performance, thanks to the rationalization of energy use.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
