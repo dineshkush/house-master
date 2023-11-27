@@ -58,12 +58,11 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-lg-7">
                       <div className="banner_content">
-                        <h3>
-                          Find Your Dream <br /> House By Us
-                        </h3>
+                        <h3>Perfection's Just a Check Away</h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore.
+                          India’s most-detailed property inspection - a Property
+                          Check - finds issues before you ever pay for them.
+                          Money and sanity protection guaranteed.
                         </p>
                         <Link
                           className="btn btn-effect-1 site_btn"
@@ -78,8 +77,7 @@ function Home() {
                       <img
                         src={banner_image}
                         alt="House"
-                        className="img-fluid"
-                      />
+                        className="img-fluid" />
                     </div>
                   </div>
                 </div>
@@ -92,19 +90,29 @@ function Home() {
                   <div className="row align-items-center">
                     <div className="col-lg-7">
                       <div className="banner_content">
-                        <h3>
-                          Find Your Dream <br /> House By Us
-                        </h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore.
-                        </p>
+                        <h3>Seepage/leakage/dampness solutions</h3>
+                        <div className="site_list">
+                          <ul>
+                            <li>Pipe line leakage location detection.</li>
+                            <li>wall seepage source detection.</li>
+                            <li>ceiling seepage source detection.</li>
+                            <li>Seepage due to terrace area or tank area.</li>
+                            <li>basement seepage source detection.</li>
+                            <li>
+                              water drippings issue source identification.
+                            </li>
+                            <li>
+                              seepage or leakage due to building structure
+                              defect etc.
+                            </li>
+                          </ul>
+                        </div>
                         <Link
                           className="btn btn-effect-1 site_btn"
-                          to="/book-inspection"
+                          to="/services/damp-seepage-inspection"
                           tabIndex="0"
                         >
-                          Make An Enquiry
+                          Read More
                         </Link>
                       </div>
                     </div>
@@ -112,8 +120,7 @@ function Home() {
                       <img
                         src={banner_image}
                         alt="House"
-                        className="img-fluid"
-                      />
+                        className="img-fluid" />
                     </div>
                   </div>
                 </div>
@@ -127,18 +134,17 @@ function Home() {
                     <div className="col-lg-7">
                       <div className="banner_content">
                         <h3>
-                          Find Your Dream <br /> House By Us
+                        Electrical inspection and testing
                         </h3>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing
-                          elit, sed do eiusmod tempor incididunt ut labore.
+                        Electrical Safety Audit is performed by enquiry, inspection, testing and verification of electrical components and systems.
                         </p>
                         <Link
                           className="btn btn-effect-1 site_btn"
-                          to="/book-inspection"
+                          to="/services/electrical-safety"
                           tabIndex="0"
                         >
-                          Make An Enquiry
+                          Read More
                         </Link>
                       </div>
                     </div>
@@ -146,8 +152,7 @@ function Home() {
                       <img
                         src={banner_image}
                         alt="House"
-                        className="img-fluid"
-                      />
+                        className="img-fluid" />
                     </div>
                   </div>
                 </div>

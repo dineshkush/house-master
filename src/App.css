@@ -69,8 +69,8 @@ h5 {
   width: 100%;
 }
 .main_heading {
-  font-size: 50px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 50px;
   margin-bottom: 20px;
   font-weight: 800;
   text-transform: capitalize;
@@ -201,19 +201,23 @@ h5 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.two_col_list li {
+  width: 50%;
+  float: left;
+}
 .inner_banner {
   background-color: #0b2c3d;
   padding: 50px 0px;
 }
 .inner_banner_content h2, .inner_banner_content h1 {
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 800;
   color: #fff !important;
-  line-height: 50px;
+  line-height: 44px;
 }
 .inner_banner_content p {
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 28px;
   margin-bottom: 0px;
   color: #fff;
 }
