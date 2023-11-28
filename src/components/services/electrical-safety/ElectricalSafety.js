@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./ElectricalSafety.css";
-import homeAbout from "../../../images/home-about.png";
+// import homeAbout from "../../../images/home-about.png";
+import ProtectionAgainst from "../../../images/protection-against-img.png";
+import ElectricShock from "../../../images/electric-shock-img.png";
+import ElectronicAppliance from "../../../images/electronic-appliance-img.png";
+
 
 function ElectricalSafety() {
   return (
@@ -55,7 +59,7 @@ function ElectricalSafety() {
 
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={ProtectionAgainst} alt="About Us" className="img-fluid" />
             </div>
             <div className="col-lg-6">
               <div className="about_content">
@@ -93,13 +97,13 @@ function ElectricalSafety() {
               </div>
             </div>
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={ElectricShock} alt="About Us" className="img-fluid" />
             </div>
           </div>
 
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <img src={homeAbout} alt="About Us" className="img-fluid" />
+              <img src={ElectronicAppliance} alt="About Us" className="img-fluid" />
             </div>
             <div className="col-lg-6">
               <div className="about_content">

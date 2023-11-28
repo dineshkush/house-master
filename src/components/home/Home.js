@@ -8,7 +8,7 @@ import homeAbout from "../../images/home-inspaction-about.png";
 import homeInspactionService from "../../images/home-inspaction-service.jpg";
 import waterLeakageService from "../../images/water-leakage-service.jpg";
 import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg";
-import IndustryEnergyService from "../../images/industry-energy-service.jpg";
+// import IndustryEnergyService from "../../images/industry-energy-service.jpg";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
 import homeInspaction from "../../images/Home-Inspection-Image.png";
@@ -18,6 +18,9 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import TestimonialSlider from "../shared/testimonials-slider/TestimonialSlider";
 import startupIndia from "../../images/startupindia-logo.webp";
+import SeepageBannerImage from "../../images/seepage-banner-img.png";
+import ElectricalInspectionBanner from "../../images/electrical-inspection-banner.png";
+import EnergyAndSafetyImg from "../../images/EnergyAndSafetyImg.jpg";
 // import React from "react";
 
 function Home() {
@@ -118,7 +121,7 @@ function Home() {
                     </div>
                     <div className="col-lg-5">
                       <img
-                        src={banner_image}
+                        src={SeepageBannerImage}
                         alt="House"
                         className="img-fluid" />
                     </div>
@@ -150,7 +153,7 @@ function Home() {
                     </div>
                     <div className="col-lg-5">
                       <img
-                        src={banner_image}
+                        src={ElectricalInspectionBanner}
                         alt="House"
                         className="img-fluid" />
                     </div>
@@ -402,13 +405,7 @@ function Home() {
                             Industry Energy And Safety
                           </h3>
                         </div>
-                        <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Labore repudiandae fugit dolore accusamus.
-                          Veritatis ab natus magni pariatur dolor maiores
-                          laborum est. Ut dolor enim velit illo corrupti.
-                          Consectetur dolor iste eaque. Incidunt, similique!
-                        </p>
+                        <p>electrical inspection on the present condition of the electrical systemcomprising of Power / UPS socket, electrical switchboards, D.B accessories, etc.</p>
 
                         <Link
                           className="btn site_btn"
@@ -420,7 +417,7 @@ function Home() {
                       </div>
                       <div className="col-lg-6">
                         <img
-                          src={IndustryEnergyService}
+                          src={EnergyAndSafetyImg}
                           alt="House"
                           className="img-fluid"
                         />

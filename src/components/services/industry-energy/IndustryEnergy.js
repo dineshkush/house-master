@@ -1,7 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import homeInspactionMain from "../../../images/homeInspactionMain.png";
-import homeInspactionSecond from "../../../images/homeInspactionSecond.png";
+import ElectricalInspectionImg from "../../../images/ElectricalInspectionImg.jpg";
+import FireSafetyImg from "../../../images/Fire-Safety-img.jpg";
+import CivilPlumbingImg from "../../../images/CivilPlumbingImg.jpg";
+import "./IndustryEnergy.css";
 
 function IndustryEnergy() {
   return (
@@ -33,7 +35,7 @@ function IndustryEnergy() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <img
-                src={homeInspactionMain}
+                src={ElectricalInspectionImg}
                 alt="About Us"
                 className="img-fluid"
               />
@@ -41,26 +43,29 @@ function IndustryEnergy() {
             <div className="col-lg-6">
               <div className="about_content">
                 <div className="site_title_box">
-                  <h3 className="main_heading">
-                    A Home Is a Large Investment. Don't Go in Blind.
-                  </h3>
+                  <h3 className="main_heading">Electrical Inspection</h3>
                 </div>
                 <p>
-                  Buying a new home means purchasing every problem associated
-                  with it. In many cases, these seemingly insignificant problems
-                  may accumulate into more significant issues and hefty costs.
-                  Home inspection is a type of protective net that keeps you
-                  from sinking into a bad investment. Any issues spotted during
-                  a home inspection—which the seller didn’t disclose earlier—can
-                  put you in a better state for bargaining and negotiations.
+                  electrical inspection on the present condition of the
+                  electrical systemcomprising of Power / UPS socket, electrical
+                  switchboards, D.B accessories, etc.
                 </p>
-                <p>
-                  Whether you are buying or selling a house, we are here to help
-                  you identify any potential problems with the property. The
-                  typical inspection takes 3-6 hours. Using a range of
-                  investigative tools we will inspect your home from top to
-                  bottom.
-                </p>
+                <div className="site_list">
+                  <ul>
+                    <li>
+                      Condition of wirings (findings include faulty / loosely
+                      connected / old /under gauge wire which may
+                    </li>
+                    <li>result in electrical leakages and short circuits)</li>
+                    <li>Earthing Systeminspection.</li>
+                    <li>Three phase Load Distribution</li>
+                    <li>
+                      Inspection of the three-phase meter /sub meter (For
+                      ensuring that there is no fault at the meter)
+                    </li>
+                    <li>Electrical systemThermal Imaging Inspection.</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -73,29 +78,54 @@ function IndustryEnergy() {
             <div className="col-lg-6">
               <div className="about_content">
                 <div className="site_title_box">
-                  <h3 className="main_heading">Pre-Purchase Home Inspection</h3>
+                  <h3 className="main_heading">
+                    Electrical + Fire Safety Inspection
+                  </h3>
                 </div>
-                <p>
-                  This is an inspection typically requested by a home buyer as a
-                  condition of their offer to purchase. They are looking for
-                  information that will help them to determine the home's
-                  current condition including what more they might have to
-                  invest in the home after the purchase.
-                </p>
-
-                <p>
-                  Our home inspection is an investigative process whereby the
-                  inspector will examine visible, readily accessible aspects of
-                  a home's interior and exterior from top to bottom. The goal of
-                  the inspection is to uncover and itemize hazards and
-                  deficiencies and determine the useful life span, functionality
-                  and interactivity of the home's components.
-                </p>
+                <div className="site_list">
+                  <ul>
+                    <li>Full electrical as in TypeA</li>
+                    <li>
+                      Does the factory have an emergency plan in case of fire or
+                      other
+                    </li>
+                    <li>
+                      emergency? It should cover evacuation routes, assembly
+                      areas,
+                    </li>
+                    <li>
+                      fire extinguishers and first aid locations, telephone
+                      numbers for
+                    </li>
+                    <li>fire brigade and hospital, etc.</li>
+                    <li>
+                      Inspection and checks of wet riser,down comer,hose reel,
+                      automaticsprinklers system,yard hydrant,U.Gtank with draw
+                      connections, terracetank connection, flammable Liquids or
+                      gas location in the building
+                    </li>
+                    <li>
+                      Fire pump working condition and minimum 2 pumps are
+                      required.
+                    </li>
+                    <li>
+                      early warning system condition and manual operated
+                      electrical fire alarm system
+                    </li>
+                    <li>emergency lights, auto D.Gset connections</li>
+                    <li>
+                      hose boxeswith delivery house and branch, pipe refuge
+                      area, gate valve condition, pressure gauge, hose reel
+                      length, pipeline connection and its condition, fir exit
+                      plan, fire exitinguser condition
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="col-lg-6">
               <img
-                src={homeInspactionSecond}
+                src={FireSafetyImg}
                 alt="About Us"
                 className="img-fluid"
               />
@@ -107,19 +137,63 @@ function IndustryEnergy() {
       <section className="interior_and_exterior_sec">
         <div className="container">
           <div className="row">
-            <div className="col-lg-12 text-center">
+            <div className="col-lg-12">
               <div className="site_title_box">
-                <h3 className="main_heading">Home interior and exterior</h3>
+                <h3 className="main_heading">
+                  Electrical + Fire Safety + Civil & Plumbing Inspection
+                </h3>
               </div>
-              <p>
-                A home inspection involves a full examination of both the
-                interior and exterior of a home to identify any serious defects
-                in the construction quality, structure, foundation, and other
-                components. This inspection can help potential buyers make
-                informed decisions about purchasing a home and can also help
-                homeowners identify and address any potential problems before
-                they become major issues.
-              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <h4>Plumbing and Moisture Intrusion</h4>
+              <div className="site_list">
+                <ul>
+                  <li>
+                    Inspection Hot and cold water supply pipe line leakage
+                    testing
+                  </li>
+                  <li>Drain testing for the required area</li>
+                  <li>Civil defect testing for the required area</li>
+                  <li>Bathroomaccessories fittingand installationtesting</li>
+                  <li>Drain endoscopy</li>
+                  <li>
+                    Flooring and wall finishing of the water utility area
+                    testing ∙ Repair recommendation preparation
+                  </li>
+                  <li>Plumbing design study and review</li>
+                  <li>Drain pipes hydrostatictesting, if required</li>
+                  <li>House thermal scanning</li>
+                  <li>Infraredthermal scanning of seepage effectedwalls</li>
+                  <li>
+                    Moisture measurement of all seepage affectedwalls and area
+                  </li>
+                  <li>Pipe line scan if required</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <h4>Civil inspection</h4>
+              <div className="site_list">
+                <ul>
+                  <li>Wall cracks</li>
+                  <li>Slab cracks</li>
+                  <li>Flooring condition</li>
+                  <li>Door and door frame condition</li>
+                  <li>Structural overview and column beam condition</li>
+                  <li>Basement inspection</li>
+                  <li>Tankarea condition</li>
+                  <li>Front and main drainage system condition </li>
+                  <li>Building thermal scanning</li>
+                  <li>Stair area inspection</li>
+                  <li>
+                    Steel structure condition and thickness check about rusting
+                    issue
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -128,57 +202,100 @@ function IndustryEnergy() {
       <section className="interior_and_exterior_points">
         <div className="container">
           <div className="row">
-            <div className="col-lg-5">
-              <h4>Areas to be Inspected will Include:</h4>
-              <div className="site_list two_col_list">
+            <div className="col-lg-12">
+              <div className="site_title_box">
+                <h3 className="main_heading">Inspection Benefits</h3>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-6">
+              <h4>Electrical system inspection benefits</h4>
+              <div className="site_list">
                 <ul>
-                  <li>Rooms</li>
-                  <li>Living</li>
-                  <li>Dining</li>
-                  <li>Hall Areas</li>
-                  <li>Alleys</li>
-                  <li>Bathrooms</li>
-                  <li>Kitchen</li>
-                  <li>Basement</li>
-                  <li>Store room</li>
-                  <li>Balconies</li>
-                  <li>Front yard </li>
-                  <li>Backyard</li>
+                  <li>Reduced Energy Expenses</li>
+                  <li>identify Problems</li>
+                  <li>Increased Employee Comfort</li>
+                  <li>Personalized Recommendations</li>
+                  <li>Show Environmental Concern</li>
+                  <li>Increased Property Value</li>
+                  <li>Longer Equipment Lifespan</li>
+                  <li>
+                    Reduce over budget and expenses on the electrical systems
+                  </li>
+                  <li>It helps you to lower energy bills.</li>
+                  <li>
+                    It enables you to increase the comfort of those in the
+                    facility.
+                  </li>
+                  <li>
+                    It helps you to increase the life span of the equipment in
+                    your facility.
+                  </li>
+                  <li>
+                    It discovers any unaccounted consumption that may exist at
+                    the facility
+                  </li>
+                  <li>
+                    profitability through optimization of energy expenditure
+                  </li>
+                  <li>
+                    productivity through optimization of equipment and processes
+                  </li>
+                  <li>
+                    performance, thanks to the rationalization of energy use.
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div className="col-lg-7">
-              <h4>Systems & Components Inspection will include:</h4>
+            <div className="col-lg-6">
+              <h4>Fir safety benefits</h4>
               <div className="site_list">
                 <ul>
+                  <li>Identifying all significant fire hazards.</li>
+                  <li>Evaluation of the existing control measures.</li>
+                  <li>Determining the additional control measures required.</li>
                   <li>
-                    <strong>WALLS -</strong> Plaster & Paint, Wall Angle, Wall
-                    Edge, Gaps, Moisture Patches, cracks etc.
+                    Evaluation of the current fire detection and firefighting
+                    facilities.
+                  </li>
+                  <li>Testing of all fire safety equipment and precautions.</li>
+                  <li>
+                    Training and instruction to all occupants of premises about
+                    fire safety.
                   </li>
                   <li>
-                    <strong>FLOORS –</strong> Finishing, Cracks, Gaps, Skirts
-                    Thickness, Hollowness, Grouting, Leveling etc.
+                    The fire safety audit in India is done by experts in this
+                    field. They have years of experience, and hence, you will
+                    get the right recommendations about it.
                   </li>
                   <li>
-                    <strong>CEILING –</strong> Frame, Paint, Finishing, Chipped
-                    Mark, Moisture Patches, Cracks, Gaps etc.
+                    The audit report will have complete details about everything
+                    you need to do for your company’s safety.
                   </li>
                   <li>
-                    <strong>DOORS -</strong> Material, Finishing, Alignment,
-                    Gaps, Handle Lock, Hinges, Door Frame etc.
+                    The audit report is very simple and can be understood by
+                    anyone. You don’t need any expert knowledge to understand
+                    the audit report and follow what is recommended.
                   </li>
                   <li>
-                    <strong>WINDOWS –</strong> Paint, Scratches, Sill, Slope,
-                    Lock, Gaps, Operating Panel, Window Frame etc.
+                    As you keep following the recommendations given by the fire
+                    safety team, you will find it to be very helpful for you and
+                    your employees.
                   </li>
                   <li>
-                    <strong>BALCONY –</strong> Railing, Parapet Wall, Skirts,
-                    Drip Case, Tile Work, Grouting, Slope, Cracks etc.
+                    They provide you the records which are mandatory according
+                    to the fire and safety law in India.
                   </li>
                   <li>
-                    <strong>STAIRS –</strong> Stair Material, Step Size, Boarder
-                    Stone, Safety Railing, Lights, Skirts etc.
+                    When you stay safe, then you will be able to put your
+                    business ahead of the competitors in the present market.
+                  </li>
+                  <li>
+                    The audit will help you to check the existing equipment,
+                    service the equipment, its components, and also the expected
+                    recommendations will be told to you.
                   </li>
                 </ul>
               </div>
@@ -187,7 +304,45 @@ function IndustryEnergy() {
         </div>
       </section>
 
-      <section className="electrical_safety_inspection_sec">
+      <section className="Civil_plumbing_sec">
+        <div className="container">
+          <div className="row">
+            <div className="row">
+              <div className="col-lg-6">
+                <h4>Civil and plumbing inspection benefits</h4>
+                <div className="site_list">
+                  <ul>
+                    <li>To save human life and buildings</li>
+                    <li>To understand the condition of building</li>
+                    <li>To find critical areas to repair immediately</li>
+                    <li>To comply with statutory requirements</li>
+                    <li>
+                      To enhance life cycle of building by suggesting preventive
+                      and corrective measures like repairs and retrofitting
+                    </li>
+                    <li>Issue of seepage and leakages will be solved .</li>
+                    <li>Reduction in maintenance cost by every year</li>
+                    <li>
+                      The standard of every repair will be provided which will
+                      increase the repair life
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="col-lg-6">
+                <img
+                  src={CivilPlumbingImg}
+                  alt="Civil Plumbing"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="electrical_safety_inspection_sec">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
@@ -250,9 +405,9 @@ function IndustryEnergy() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="plumbing_inspection_sec">
+      {/* <section className="plumbing_inspection_sec">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-5">
@@ -294,7 +449,7 @@ function IndustryEnergy() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

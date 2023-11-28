@@ -217,14 +217,14 @@ function HomeInspaction() {
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            {/* <div className="col-lg-6">
             <img
                 src={homeInspactionSecond}
                 alt="About Us"
                 className="img-fluid"
               />
-            </div>
-            <div className="col-lg-6">
+            </div> */}
+            <div className="col-lg-12">
               <h4>A thorough electrical safety inspection includes:</h4>
               <div className="site_list">
                 <ul>
@@ -274,7 +274,7 @@ function HomeInspaction() {
       <section className="plumbing_inspection_sec">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-5">
+            <div className="col-lg-12">
               <h3>Plumbing and Moisture Intrusion Inspection-</h3>
               <div className="site_list">
                 <ul>
@@ -290,13 +290,13 @@ function HomeInspaction() {
               </div>
             </div>
 
-            <div className="col-lg-7">
+            {/* <div className="col-lg-7">
             <img
                 src={homeInspactionSecond}
                 alt="About Us"
                 className="img-fluid"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
