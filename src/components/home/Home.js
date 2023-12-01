@@ -1,14 +1,11 @@
 import React from "react";
-// import CountUp from "react-countup";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
 import banner_image from "../../images/home-inspaction-banner.svg";
-// import homeMain from "";
 import homeAbout from "../../images/home-inspaction-about.png";
 import homeInspactionService from "../../images/home-inspaction-service.jpg";
 import waterLeakageService from "../../images/water-leakage-service.jpg";
 import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg";
-// import IndustryEnergyService from "../../images/industry-energy-service.jpg";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
 import homeInspaction from "../../images/Home-Inspection-Image.png";
@@ -21,7 +18,6 @@ import startupIndia from "../../images/startupindia-logo.webp";
 import SeepageBannerImage from "../../images/seepage-banner-img.png";
 import ElectricalInspectionBanner from "../../images/electrical-inspection-banner.png";
 import EnergyAndSafetyImg from "../../images/EnergyAndSafetyImg.jpg";
-// import React from "react";
 
 function Home() {
   return (
@@ -55,7 +51,6 @@ function Home() {
         <div id="carouselExampleCaptions" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              {/* <img src={banner_image} className="d-block w-100" alt="First slide label" /> */}
               <div className="carousel-caption d-none d-md-block">
                 <div className="container">
                   <div className="row align-items-center">
@@ -87,7 +82,6 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              {/* <img src="https://cofynd-staging.s3.ap-south-1.amazonaws.com/images/original/a199c4b7d902da0b8202c096c5b13f2bba3b320a.jpg" className="d-block w-100" alt="Second slide label" /> */}
               <div className="carousel-caption d-none d-md-block">
                 <div className="container">
                   <div className="row align-items-center">
@@ -130,7 +124,6 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              {/* <img src="https://cofynd-staging.s3.ap-south-1.amazonaws.com/images/original/a199c4b7d902da0b8202c096c5b13f2bba3b320a.jpg" className="d-block w-100" alt="Third slide label" /> */}
               <div className="carousel-caption d-none d-md-block">
                 <div className="container">
                   <div className="row align-items-center">
@@ -241,7 +234,7 @@ function Home() {
                 <Link className="btn site_btn" to="/about" tabIndex="0">
                   Read More
                 </Link>
-                <Link className="btn site_btn" to="/" tabIndex="0">
+                <Link className="btn site_btn" to="/about" tabIndex="0">
                   Teams
                 </Link>
               </div>

@@ -245,11 +245,7 @@ function DampSeepageInspection() {
                 width="100%"
                 height="418"
                 src="https://www.youtube.com/embed/bnBm-vvvm-c"
-                title="Seepage source detection/ Seepage Inspection/ Water Leakage Detection/ Home Inspection/ HOUSEMASTER"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
+                title="Seepage source detection/ Seepage Inspection/ Water Leakage Detection/ Home Inspection/ HOUSEMASTER" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
           </div>
         </div>

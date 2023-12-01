@@ -54,9 +54,7 @@ function IndustryEnergy() {
                   <ul>
                     <li>
                       Condition of wirings (findings include faulty / loosely
-                      connected / old /under gauge wire which may
-                    </li>
-                    <li>result in electrical leakages and short circuits)</li>
+                      connected / old /under gauge wire which may result in electrical leakages and short circuits)</li>
                     <li>Earthing Systeminspection.</li>
                     <li>Three phase Load Distribution</li>
                     <li>

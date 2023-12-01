@@ -36,7 +36,7 @@
 }
 .footer_menu ul li a::before {
     position: absolute;
-    content: "//";
+    content: "";
     left: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);

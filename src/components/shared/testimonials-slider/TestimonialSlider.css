@@ -6,40 +6,34 @@
 }
 
 .slick-slider {
-    margin: 0 auto; /* Center the entire slider */
+    margin: 0 auto;
   }
   
   .slick-slide {
-    padding: 20px 15px; /* Add padding between slides */
+    padding: 20px 15px;
   }
-
-  * MySlickSlider.css */
-  /* Hide the arrows by default */
   .slick-prev,
   .slick-next {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
   }
   
-  /* Show the arrows on hover */
   .slick-slider:hover .slick-prev,
   .slick-slider:hover .slick-next {
     opacity: 1;
   }
-  
-  /* Customize the arrow icons */
   .slick-prev:before,
   .slick-next:before {
-    font-family: 'FontAwesome'; /* Use your custom icon font family or image */
-    font-size: 24px; /* Adjust icon size as needed */
+    font-family: 'FontAwesome';
+    font-size: 24px;
   }
   
   .slick-prev:before {
-    content: '\f104'; /* Unicode character for your left arrow icon or use background-image for custom images */
+    content: '\f104';
   }
   
   .slick-next:before {
-    content: '\f105'; /* Unicode character for your right arrow icon or use background-image for custom images */
+    content: '\f105';
   }
 .slick-slider .slick-arrow {
     border: 1px solid #000;
