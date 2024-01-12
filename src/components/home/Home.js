@@ -58,9 +58,7 @@ function Home() {
                       <div className="banner_content">
                         <h3>Perfection's Just a Check Away</h3>
                         <p>
-                          India’s most-detailed property inspection - a Property
-                          Check - finds issues before you ever pay for them.
-                          Money and sanity protection guaranteed.
+                        The most comprehensive assessment of properties in India - a Real Estate Evaluation - identifies concerns prior to any financial commitment. Assurance of safeguarding both your funds and peace of mind.
                         </p>
                         <Link
                           className="btn btn-effect-1 site_btn"
@@ -209,26 +207,14 @@ function Home() {
                 <div className="site_title_box">
                   <h6 className="sub_title">About Us</h6>
                   <h3 className="main_heading">
-                    The Leading Real Estate Rental Marketplace
+                    Indias first and best home inspection startup founded by alumni of IIT Roorkee
                   </h3>
                 </div>
                 <p>
-                  Housemaster is a home inspection company founded by alumni of
-                  IIT Roorkee. It provides wide range of house related services
-                  like home inspection, property documents verification,
-                  commercial inspection etc. In India its very difficult to get
-                  a perfect house from property seller. But Buying a new home
-                  and if there is any problem in the house means purchasing
-                  problem associated with it. In many cases, these seemingly
-                  insignificant problems may accumulate into more significant
-                  issues and hefty costs. Which may cause unwanted expenditure
-                  and stress in a healthy mind .
+                Housemaster is a home inspection company founded by alumni of IIT Roorkee. It  provides a wide range of house related services like home inspection, property leakage & seepage inspection, electrical inspection, energy audit , commercial inspection etc. In India its very difficult to get a perfect house from a property seller. But Buying a new home and if there is any problem in the  house means purchasing  problems associated with it. In many cases, these seemingly insignificant problems may accumulate into more significant issues and hefty costs. Which may cause unwanted expenditure and stress in a healthy mind.
                 </p>
                 <p>
-                  Home inspection is a type of protective net that keeps you
-                  from sinking into a bad investment. issues always spotted
-                  during a home inspection—which the seller didn’t disclose
-                  earlier.
+                Home inspection is a type of protective net that keeps you from sinking into a bad investment. issues always  spotted during a home inspection—which the seller didn’t disclose earlier.
                 </p>
 
                 <Link className="btn site_btn" to="/about" tabIndex="0">
@@ -274,14 +260,7 @@ function Home() {
                           </h3>
                         </div>
                         <p>
-                          Buying a new home means purchasing every problem
-                          associated with it. In many cases, these seemingly
-                          insignificant problems may accumulate into more
-                          significant issues and hefty costs. Home inspection is
-                          a type of protective net that keeps you from sinking
-                          into a bad investment. Any issues spotted during a
-                          home inspection—which the seller didn’t disclose
-                          earlier—can put ....
+                        Inspecting  a property is an important step when you're buying or selling a house. It involves thoroughly looking at the structure, systems, and overall condition of the home. The main goal is to find any possible issues or problems that could affect the safety, how well things work, or the value of the property.
                         </p>
 
                         <Link
@@ -309,17 +288,13 @@ function Home() {
                     <div className="row align-items-center">
                       <div className="col-lg-6">
                         <div className="site_title_box">
-                          <h6 className="sub_title">Water Leakage</h6>
+                          <h6 className="sub_title">Seepage/Leakage inspection</h6>
                           <h3 className="main_heading">
                             Water Leakage and Seepage Detection
                           </h3>
                         </div>
                         <p>
-                          For many home or business owners, their property is
-                          one of their most valuable investments. However, a
-                          simple plumbing leak can cause serious damage to your
-                          property—especially if it goes unnoticed for awhile.
-                          Don’t let this happen to your investment.
+                        Leakage and seepage inspection is a critical process to identify and address water-related issues in a structure.Source detection involves identifying the origin of leaks, whether from plumbing, roofs, or external elements.
                         </p>
 
                         <Link
@@ -356,13 +331,7 @@ function Home() {
                           </h3>
                         </div>
                         <p>
-                          An electrical inspection examines the state of the
-                          electrical wiring throughout your property, and checks
-                          if an installation meets safety standards. Once the
-                          inspection is completed, you are issued an Electrical
-                          Installation Condition Report (EICR). This outlines
-                          whether your installation is satisfactory, or whether
-                          any issues have been found.
+                        An electrical assessment assesses the condition of the electrical wiring in your property, verifying if the setup complies with safety regulations. After the assessment, you receive an Electrical Installation Condition Report (EICR), detailing whether your setup is deemed satisfactory or if any concerns have been identified
                         </p>
 
                         <Link
@@ -398,7 +367,7 @@ function Home() {
                             Industry Energy And Safety
                           </h3>
                         </div>
-                        <p>electrical inspection on the present condition of the electrical systemcomprising of Power / UPS socket, electrical switchboards, D.B accessories, etc.</p>
+                        <p>The industry of energy and safety is a multifaceted sector focused on ensuring secure and efficient energy production and consumption while prioritizing safety protocols. This field encompasses a wide range of activities, from developing sustainable energy sources to implementing safety measures in industrial processes</p>
 
                         <Link
                           className="btn site_btn"
