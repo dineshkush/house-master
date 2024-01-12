@@ -1,14 +1,15 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
-import banner_image from "../../images/home-inspaction-banner.svg";
-import homeAbout from "../../images/home-inspaction-about.png";
-import homeInspactionService from "../../images/home-inspaction-service.jpg";
+// import banner_image from "../../images/home-inspaction-banner.svg";
+import banner1 from "../../images/homepage-banner1.png";
+import homeAbout from "../../images/inspaction-about-img.png";
+import homeInspactionService from "../../images/home-inspaction-image.jpg";
 import waterLeakageService from "../../images/water-leakage-service.jpg";
 import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
-import homeInspaction from "../../images/Home-Inspection-Image.png";
+import homeInspaction from "../../images/Home-Inspection-pic.jpg";
 import Counter from "../shared/counter/Counter";
 import { Link } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
@@ -71,7 +72,7 @@ function Home() {
                     </div>
                     <div className="col-lg-5">
                       <img
-                        src={banner_image}
+                        src={banner1}
                         alt="House"
                         className="img-fluid" />
                     </div>

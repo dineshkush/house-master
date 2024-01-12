@@ -2,7 +2,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./AboutUs.css";
-import aboutImage from "../../images/about-image.png";
+import aboutImage from "../../images/inspaction-about-img.png";
 
 function AboutUs() {
   return (
