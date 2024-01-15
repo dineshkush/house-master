@@ -1,20 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 import MainLogo from "../../images/main-logo.jpg";
 
 function Header(props) {
-
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const handleDropdownToggle = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleDropdownClose = () => {
-    setDropdownOpen(false);
-  };
-
   return (
     <header className="header_area">
       <div className="top_header">
@@ -118,11 +107,10 @@ function Header(props) {
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
-                        onClick={handleDropdownToggle}
                       >
                         Services
                       </p>
-                      <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} onClick={handleDropdownClose}>
+                      <ul className="dropdown-menu">
                         <li>
                           <NavLink className="dropdown-item" to="/services/home-inspaction">
                           Home Inspaction
