@@ -83,7 +83,7 @@ function CommercialInspection() {
 
           <div className="row commercial_inspection_logo_row">
             {CommercialInspectionLogo.map((CommercialLogo, index) => (
-              <div className="col-lg-2" key={index}>
+              <div className="col-3 col-lg-2" key={index}>
                 <div className="Commerciallogo_item">
                   <img
                     src={CommercialLogo.image}

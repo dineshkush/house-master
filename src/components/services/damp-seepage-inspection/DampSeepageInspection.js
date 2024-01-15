@@ -2,12 +2,116 @@ import React from "react";
 // import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import "./DampSeepageInspection.css";
-import leakageAndSeepage from "../../../images/leakage-and-seepage-inspection-Image.png";
+// import leakageAndSeepage from "../../../images/leakage-and-seepage-inspection-Image.png";
 import healthIssuesImg from "../../../images/health-issues-img.jpg";
+import seepageInspection from "../../../images/seepage-inspection-img.png";
 
-// import serviceIcon from "../../../images/service-icon.png";
+import constructionfault from "../../../images/construction-fault.png";
+import pipeLineLeakage from "../../../images/pipe-line-leakage.png";
+import drainagePipeLine from "../../../images/drainage-pipe-line.png";
+import externalDamagesImg from "../../../images/external-damages-img.png";
+import washroomDownSlab from "../../../images/washroom-down-slab.png";
+import acDrainage from "../../../images/ac-drainage.png";
+import floorGrouting from "../../../images/floor-grouting.png";
+import condensationImg from "../../../images/condensation-img.png";
+import otherPlumbingFailures from "../../../images/other-plumbing-failures.png";
+
+
+
+import wallPaint from "../../../images/wall-paint.png";
+import wallpaperDamages from "../../../images/wallpaper-damages.png";
+import termitesImg from "../../../images/termites-img.png";
+import ceilingSeepage from "../../../images/ceiling-seepage.png";
+import darkPatches from "../../../images/dark-patches.png";
+import basementSeepage from "../../../images/basement-seepage.png";
+import moldGrowth from "../../../images/mold-growth.png";
+import rustingImg from "../../../images/rusting-img.png";
+import terraceIssues from "../../../images/terrace-issues.png";
+
+
 
 function DampSeepageInspection() {
+
+const leakageReasons = [
+  {
+    img : constructionfault,
+    title : "Construction Fault",
+  },
+  {
+    img : pipeLineLeakage,
+    title : "Water supply pipe line leakage",
+  },
+  {
+    img : drainagePipeLine,
+    title : "Drainage pipe line leakage",
+  },
+  {
+    img : externalDamagesImg,
+    title : "External damages",
+  },
+  {
+    img : washroomDownSlab,
+    title : "Washroom down slab issues",
+  },
+  {
+    img : acDrainage,
+    title : "A/C drainage leakage",
+  },
+  {
+    img : floorGrouting,
+    title : "Floor grouting",
+  },
+  {
+    img : condensationImg,
+    title : "Condensation",
+  },
+  {
+    img : otherPlumbingFailures,
+    title : "Other plumbing failures",
+  },
+]
+
+const commonSeepageIssues = [
+  {
+    img : wallPaint,
+    title : "Wall paint damage",
+  },
+  {
+    img : wallpaperDamages,
+    title : "Wallpaper damages",
+  },
+  {
+    img : termitesImg,
+    title : "Termites",
+  },
+  {
+    img : ceilingSeepage,
+    title : "Ceiling seepage",
+  },
+  {
+    img : darkPatches,
+    title : "Dark patches on wall/ceiling",
+  },
+  {
+    img : basementSeepage,
+    title : "Basement seepage",
+  },
+  {
+    img : moldGrowth,
+    title : "Mold growth",
+  },
+  {
+    img : rustingImg,
+    title : "Rusting",
+  },
+  {
+    img : terraceIssues,
+    title : "Terrace issues",
+  },
+]
+
+console.log(leakageReasons[0].img);
+
   return (
     <>
       <Helmet>
@@ -48,7 +152,7 @@ function DampSeepageInspection() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <img
-                src={leakageAndSeepage}
+                src={seepageInspection}
                 alt="About Us"
                 className="img-fluid"
               />
@@ -60,7 +164,7 @@ function DampSeepageInspection() {
                     Worried for Moisture, Damp or Seepage & Leakage
                   </h3>
                 </div>
-                <h5>The Invisible Silent Killer : Unsuspecting Criminal</h5>
+                <h5>First and only Indian company to detect the source of leaks, dampness, and seepage utilizing the thermal camera imaging technique</h5>
                 <p>
                   Moisture has long been important to building designers since
                   it is the single most important agent of building
@@ -71,27 +175,53 @@ function DampSeepageInspection() {
                   from physical or chemical damage. Yet, moisture problems are
                   so common in buildings, many people consider them inevitable.
                 </p>
-                {/* <h4>SIGNS OF A POTENTIAL LEAK</h4>
-                <p>Here are some of the things to look out for:</p>
-                <div className="site_list">
-                  <ul>
-                    <li>Puddles of water in your bathroom or other rooms</li>
-                    <li>Water stains on your walls or ceiling</li>
-                    <li>
-                      Sounds of trickling water when no water is being used
-                    </li>
-                    <li>
-                      Earthy or musty smell even after cleaning the bathroom
-                    </li>
-                  </ul>
-                </div> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="causes_common_symptoms_area">
+      <section className="leakage_reasons_section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h3>Reasons of leakage and seepage</h3>
+            </div>
+          </div>
+          <div className="row">
+            {leakageReasons.map((item, index) => (
+              <div className="col-lg-4" key={index}>
+                <div className="feature_item">
+                  <img src={item.img} className="img-fluid" alt={item.title} />
+                  <h4>{item.title}</h4>
+                </div>
+              </div>
+            ))}            
+          </div>
+        </div>
+      </section>
+
+      <section className="common_seepage_issues_section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <h3>Common seepage issues</h3>
+            </div>
+          </div>
+          <div className="row">
+            {commonSeepageIssues.map((item, index) => (
+              <div className="col-lg-4" key={index}>
+                <div className="feature_item">
+                  <img src={item.img} className="img-fluid" alt={item.title} />
+                  <h4>{item.title}</h4>
+                </div>
+              </div>
+            ))}            
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="causes_common_symptoms_area">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -127,7 +257,7 @@ function DampSeepageInspection() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="services_sec water_leakage_services">
         <div className="container">

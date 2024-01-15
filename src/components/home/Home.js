@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
-// import banner_image from "../../images/home-inspaction-banner.svg";
 import banner1 from "../../images/homepage-banner1.png";
 import homeAbout from "../../images/inspaction-about-img.png";
 import homeInspactionService from "../../images/home-inspaction-image.jpg";
@@ -9,7 +8,7 @@ import waterLeakageService from "../../images/water-leakage-service.jpg";
 import electricalSafetyInspection from "../../images/electrical-safety-inspection-service.jpg";
 import buildingBack from "../../images/building-back.png";
 import inspectionCoverage from "../../images/inspection-coverage-image.png";
-import homeInspaction from "../../images/Home-Inspection-pic.jpg";
+import homeInspaction from "../../images/Home-Inspection-pic.png";
 import Counter from "../shared/counter/Counter";
 import { Link } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
@@ -52,10 +51,10 @@ function Home() {
         <div id="carouselExampleCaptions" className="carousel slide">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-lg-7">
+                    <div className="col-12 col-lg-6">
                       <div className="banner_content">
                         <h3>Perfection's Just a Check Away</h3>
                         <p>
@@ -70,7 +69,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-lg-6 mobilehide">
                       <img
                         src={banner1}
                         alt="House"
@@ -81,10 +80,10 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-lg-7">
+                    <div className="col-12 col-lg-7">
                       <div className="banner_content">
                         <h3>Seepage/leakage/dampness solutions</h3>
                         <div className="site_list">
@@ -112,7 +111,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-lg-5 mobilehide">
                       <img
                         src={SeepageBannerImage}
                         alt="House"
@@ -123,10 +122,10 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <div className="carousel-caption d-none d-md-block">
+              <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-lg-7">
+                    <div className="col-12 col-lg-7">
                       <div className="banner_content">
                         <h3>
                         Electrical inspection and testing
@@ -143,7 +142,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-lg-5 mobilehide">
                       <img
                         src={ElectricalInspectionBanner}
                         alt="House"
@@ -178,17 +177,17 @@ function Home() {
       <section className="counter_area">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
+            <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
                 <Counter number={105} title="Area" countSign="+" />
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
                 <Counter number={5175} title="Inspection" />
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
                 <Counter number={468} title="Success Inspection" />
               </div>
@@ -403,8 +402,7 @@ function Home() {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <h2>
-                Looking to Buy a New Property or <br />
-                Sell an Existing One?
+              Inspecting Homes, Protecting Dreams – Your Trusted Partner in Property Assurance
               </h2>
             </div>
             <div className="col-lg-6">
@@ -430,7 +428,7 @@ function Home() {
           </div>
 
           <div className="row align-items-center mt-lg-4">
-            <div className="col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className="inspection_coverage_item text-end">
                 <h4>Home Quality Check</h4>
                 <p>
@@ -465,7 +463,7 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 mobilehide">
               <div className="inspection_coverage_image">
                 <img
                   src={inspectionCoverage}
@@ -474,7 +472,7 @@ function Home() {
                 />
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-12 col-lg-4">
               <div className="inspection_coverage_item text-start">
                 <h4>Brand Check</h4>
                 <p>

@@ -5,7 +5,7 @@ import testimonialsBack from "../../../images/testimonials-background.jpg";
 import adamJoseph from "../../../images/adam-joseph.jpg";
 
 function TestimonialSlider() {
-  var testimonialsSlider = {
+  const testimonialsSlider = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -13,11 +13,22 @@ function TestimonialSlider() {
     draggable: true,
     centerMode: true,
     centerPadding: '0',
-    dots: false, // Hide the navigation dots
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          dots: true,
+        },
+      },
+    ],
   };
 
   return (
-    <div
+    <section
       className="testimonial_section"
       style={{ backgroundImage: `url(${testimonialsBack})` }}
     >
@@ -139,7 +150,7 @@ function TestimonialSlider() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -26,6 +26,9 @@
 .header_social_media {
     text-align: right;
 }
+.navbar-brand img {
+    width: 300px;
+}
 .header_social_media ul {
     margin: 0;
     padding: 0;
@@ -99,4 +102,39 @@
 }
 .header_btn .site_btn.active {
     color: #fff !important;
+}
+
+@media (max-width: 480px) {
+    .top_bar_contact > ul {
+        display: flex;
+    }
+    .top_bar_contact > ul > li {
+        flex: 0 0 50%;
+        text-align: left;
+    }
+    .top_bar_contact > ul > li:last-child {
+        text-align: right;
+    }
+    .navbar-brand img {
+        width: 180px;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 43px;
+        z-index: 999;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+    }
+    .top_bar_contact > ul > li, .top_bar_contact > ul > li a {
+        margin: 0px 30px 0 0;
+        font-size: 10px;
+    }
+    .nav_header ul.navbar-nav li a, .nav_header ul.navbar-nav li p {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+    .nav_header ul.navbar-nav li.nav-item {
+        margin: 0px 10px 5px;
+    }
 }

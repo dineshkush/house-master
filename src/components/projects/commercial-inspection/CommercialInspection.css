@@ -16,3 +16,21 @@
 .commercial_inspection_logo_row .col-lg-2:nth-last-child(-n + 1) {
     border-bottom: none;
 }
+
+@media (max-width: 480px) {
+    .commercial_inspection_logo_area {
+        padding: 20px 0px;
+    }
+    .commercial_inspection_logo_row .col-lg-2 {
+        padding: 20px 24px;
+    }
+    .commercial_inspection_logo_row .col-lg-2:nth-child(4), .commercial_inspection_logo_row .col-lg-2:nth-child(8), .commercial_inspection_logo_row .col-lg-2:nth-child(12) {
+        border-right: none;
+    }
+    .commercial_inspection_logo_row .col-lg-2:nth-child(6) {
+        border-right: 1px solid rgba(0,0,0,0.1);
+    }
+    .commercial_inspection_logo_row .col-lg-2:nth-last-child(-n + 1) {
+        border-bottom: none;
+    }
+}

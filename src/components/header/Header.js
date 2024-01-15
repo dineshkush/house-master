@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
-import MainLogo from "../../logo.webp";
+import MainLogo from "../../images/main-logo.jpg";
 
 function Header(props) {
+
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleDropdownClose = () => {
+    setDropdownOpen(false);
+  };
+
   return (
     <header className="header_area">
       <div className="top_header">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className="top_bar_contact">
                 <ul>
                   <li>
@@ -25,7 +36,7 @@ function Header(props) {
                 </ul>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 mobilehide">
               <div className="header_social_media">
                 <ul>
                   <li>
@@ -73,14 +84,14 @@ function Header(props) {
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
                 <Link className="navbar-brand" to="/">
-                  <img src={MainLogo} alt="House Master" />
+                  <img src={MainLogo} alt="House Master" className="img-fluid" />
                 </Link>
                 <button
                   className="navbar-toggler"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
@@ -88,7 +99,7 @@ function Header(props) {
                 </button>
                 <div
                   className="collapse navbar-collapse justify-content-end"
-                  id="navbarNav"
+                  id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav">
                     <li className="nav-item">
@@ -107,10 +118,11 @@ function Header(props) {
                         role="button"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
+                        onClick={handleDropdownToggle}
                       >
                         Services
                       </p>
-                      <ul className="dropdown-menu">
+                      <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`} onClick={handleDropdownClose}>
                         <li>
                           <NavLink className="dropdown-item" to="/services/home-inspaction">
                           Home Inspaction

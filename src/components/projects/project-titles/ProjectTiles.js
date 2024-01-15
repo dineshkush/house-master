@@ -67,7 +67,7 @@ function ProjectTiles() {
 
           <div className="row">
             {projectTiles.map((project, index) => (
-              <div className="col-lg-3" key={index}>
+              <div className="col-6 col-lg-3" key={index}>
                 <div className="project_item">
                   <img
                     src={project.image}
