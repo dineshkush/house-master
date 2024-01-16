@@ -54,12 +54,13 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-12 col-lg-6">
+                    <div className="col-7 col-lg-6">
                       <div className="banner_content">
                         <h3>Perfection's Just a Check Away</h3>
-                        <p>
+                        <p className="mobilehide">
                         The most comprehensive assessment of properties in India - a Real Estate Evaluation - identifies concerns prior to any financial commitment. Assurance of safeguarding both your funds and peace of mind.
                         </p>
+                        <p className="desktophide">Professional home assessment, exposing potential issues & building health</p>
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/book-inspection"
@@ -69,7 +70,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-6 mobilehide">
+                    <div className="col-5 col-lg-6">
                       <img
                         src={banner1}
                         alt="House"
@@ -83,10 +84,10 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-12 col-lg-7">
+                    <div className="col-7 col-lg-7">
                       <div className="banner_content">
-                        <h3>Seepage/leakage/dampness solutions</h3>
-                        <div className="site_list">
+                        <h3>Seepage/ leakage/ dampness solutions</h3>
+                        <div className="site_list mobilehide">
                           <ul>
                             <li>Pipe line leakage location detection.</li>
                             <li>wall seepage source detection.</li>
@@ -102,6 +103,7 @@ function Home() {
                             </li>
                           </ul>
                         </div>
+                        <p className="desktophide">Non-destructive detection of seepage/dampness sources, using advanced technology for precise identification</p>
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/services/damp-seepage-inspection"
@@ -111,7 +113,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-5 mobilehide">
+                    <div className="col-5 col-lg-5">
                       <img
                         src={SeepageBannerImage}
                         alt="House"
@@ -125,14 +127,15 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-12 col-lg-7">
+                    <div className="col-7 col-lg-7">
                       <div className="banner_content">
                         <h3>
                         Electrical inspection and testing
                         </h3>
-                        <p>
+                        <p className="mobilehide">
                         Electrical Safety Audit is performed by enquiry, inspection, testing and verification of electrical components and systems.
                         </p>
+                        <p className="desktophide">Thorough electrical assessment ensuring safety, identifying issues, and recommending solutions for a secure and efficient system</p>
                         <Link
                           className="btn btn-effect-1 site_btn"
                           to="/services/electrical-safety"
@@ -142,7 +145,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-lg-5 mobilehide">
+                    <div className="col-5 col-lg-5">
                       <img
                         src={ElectricalInspectionBanner}
                         alt="House"
@@ -430,6 +433,7 @@ function Home() {
           <div className="row align-items-center mt-lg-4">
             <div className="col-12 col-lg-4">
               <div className="inspection_coverage_item text-end">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Home Quality Check</h4>
                 <p>
                   Construction quality inspection and testing which includes
@@ -438,6 +442,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-end">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Safety Check</h4>
                 <p>
                   safety inspection includes inspection balcony safety ,
@@ -446,6 +451,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-end">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Interior Quality Check</h4>
                 <p>
                   Interior quality inspection and testing which includes
@@ -455,6 +461,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-end">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Electric System Check</h4>
                 <p>
                   Electrical system comprising of Power / UPS socket, electrical
@@ -474,6 +481,7 @@ function Home() {
             </div>
             <div className="col-12 col-lg-4">
               <div className="inspection_coverage_item text-start">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Brand Check</h4>
                 <p>
                   Brand check of various fitting like W/C, plumbing fittings,
@@ -482,6 +490,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-start">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Dimension Check</h4>
                 <p>
                   Electrical Dimension check of rooms, tile work, wooden
@@ -490,6 +499,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-start">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Leakage & Seepage Check</h4>
                 <p>
                   Full house infrared thermal scanning for hidden seepage ,
@@ -499,6 +509,7 @@ function Home() {
               </div>
 
               <div className="inspection_coverage_item text-start">
+                <i class="fa-regular fa-square-check desktophide"></i>
                 <h4>Electric System Check</h4>
                 <p>
                   Electrical system comprising of Power / UPS socket, electrical
@@ -514,10 +525,10 @@ function Home() {
       <section className="home_inspection_sec">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 mobilehide">
               <img src={homeInspaction} alt="House" className="img-fluid" />
             </div>
-            <div className="col-lg-6">
+            <div className="col-12 col-lg-6">
               <div className="site_title_box">
                 <h6 className="sub_title">Home Inspection</h6>
                 <h3 className="main_heading">

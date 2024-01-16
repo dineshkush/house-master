@@ -15,3 +15,9 @@
 .inspection_benefits_sec {
     padding: 50px 0px;
 }
+
+@media (max-width: 480px) {
+    .electrical_safety_welcome {
+        padding: 30px 0px 20px;
+    }
+}

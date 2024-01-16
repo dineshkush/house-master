@@ -152,4 +152,7 @@
     .copyright_menu.text-end {
         text-align: center !important;
     }
+    .footer_menu ul li:hover a {
+        padding-left: 0px;
+    }
 }

@@ -64,4 +64,26 @@
     .damp_seepage_inspection_section img {
         margin-bottom: 20px;
     }
+    .leakage_reasons_section {
+        padding: 30px 0px 20px;
+        background-color: #f2f6f7;
+    }
+    .feature_item img {
+        height: 130px;
+    }
+    .feature_item h4 {
+        bottom: 10px;
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+    .common_seepage_issues_section {
+        padding: 30px 0px 20px;
+    }
+    .video_section {
+        padding: 20px 0px;
+    }
+    .video_section iframe {
+        height: 250px;
+        margin-top: 15px;
+    }
 }

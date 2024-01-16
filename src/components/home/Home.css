@@ -233,24 +233,29 @@
         padding-right: 0;
     }
     .banner_content h3 {
-        font-size: 18px;
-        line-height: 18px;
-        margin-bottom: 16px;
+        font-size: 13px;
+        line-height: 17px;
+        margin-bottom: 10px;
         font-weight: 800;
     }
     .recognizedby_img h4 {
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 7px;
+        line-height: 10px;
     }
     .recognizedby_img h4 img {
-        margin-left: 70px;
-        width: 95px;
+        margin-left: 30px;
+        width: 75px;
     }
     .recognizedby_img {
-        right: 20px;
+        right: 10px;
+        top: 10px;
     }
     .home_banner .carousel-caption .row {
-        min-height: 380px;
+        min-height: 270px;
+        padding-bottom: 70px;
+    }
+    .home_banner .carousel-control-next, .home_banner .carousel-control-prev {
+        top: 35% !important;
     }
     .banner_content {
         padding-right: 30px;
@@ -275,7 +280,8 @@
         margin-top: 10px;
     }
     .banner_content p {
-        padding-left: 10px;
+        padding-left: 0px;
+        border-left: none;
     }
     .counter_area .row {
         padding: 20px 10px;
@@ -296,13 +302,15 @@
         height: 30px;
     }
     .about_sec img {
-        width: 50%;
+        width: 60%;
+        margin: 0 auto;
+        display: block;
     }
     .about_content .site_btn {
         margin-top: 10px;
     }
     .services_area {
-        background-color: #f2f6f7;
+        background-color: #f0f5f6;
         padding: 40px 0px;
     }
     .services_tab {
@@ -347,6 +355,14 @@
     .inspection_coverage_item {
         margin-bottom: 20px;
         text-align: left !important;
+        position: relative;
+        padding-left: 25px;
+    }
+    .inspection_coverage_item i {
+        position: absolute;
+        left: 0;
+        font-size: 16px;
+        color: #ff5a3c;
     }
     .inspection_coverage_item h4 {
         font-size: 11px;

@@ -81,7 +81,7 @@ function ElectricalSafety() {
           </div>
 
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-2 order-md-1">
               <div className="about_content">
                 <div className="site_title_box">
                   <h3 className="main_heading">Electric Shock</h3>
@@ -96,7 +96,7 @@ function ElectricalSafety() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-1 order-md-2">
               <img src={ElectricShock} alt="About Us" className="img-fluid" />
             </div>
           </div>

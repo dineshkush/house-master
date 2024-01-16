@@ -226,10 +226,16 @@ h5 {
   margin-bottom: 0px;
   color: #fff;
 }
+.desktophide {
+  display: none;
+}
 
 @media (max-width: 480px) {
   .mobilehide {
     display: none;
+  }
+  .desktophide {
+    display: block;
   }
   *, body, p {
     font-size: 11px;
@@ -290,9 +296,19 @@ h5 {
     font-weight: 800;
   }
   
-  
   .electrical_safety_inspection_sec img {
     margin-bottom: 30px;
+  }
+  .service_item {
+    margin-bottom: 15px;
+    padding: 20px 4px 20px;
+  }
+  .service_item .service_info h3 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  .service_item .service_info .text_btn i {
+    font-size: 8px;
   }
   
 }

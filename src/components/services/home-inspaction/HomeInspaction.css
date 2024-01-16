@@ -28,6 +28,9 @@
 .plumbing_inspection_sec {
     padding: 20px 0px;
 }
+.btn_section {
+    margin-top: 30px;
+}
 
 @media (max-width: 480px) {
     .homeInspaction_section {
@@ -35,13 +38,19 @@
     }
     .homeInspaction_section img {
         width: 70%;
-        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 20px;
     }
     .prepurchase_section {
         padding: 30px 0px;
     }
     .prepurchase_section img {
         width: 70%;
-        margin-bottom: 20px;
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .services_sec {
+        background-color: #f2f6f7;
+        padding: 30px 0px;
     }
 }

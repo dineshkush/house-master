@@ -90,7 +90,7 @@ function HomeInspaction() {
       <section className="prepurchase_section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-2 order-md-1">
               <div className="about_content">
                 <div className="site_title_box">
                   <h3 className="main_heading">Pre-Purchase Home Inspection</h3>
@@ -113,7 +113,7 @@ function HomeInspaction() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 order-1 order-md-2">
               <img
                 src={homeInspactionSecond}
                 alt="About Us"
@@ -121,10 +121,21 @@ function HomeInspaction() {
               />
             </div>
           </div>
+
+          <div className="row btn_section">
+            <div className="col-lg-12 text-center">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a href="#InteriorAndExterior" type="button" class="btn site_btn">Interior And Exterior</a>
+                <a href="#Plumbing" type="button" class="btn site_btn">Plumbing</a>
+                <a href="#Electrical" type="button" class="btn site_btn">Electrical</a>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="interior_and_exterior_sec">
+      <section className="interior_and_exterior_sec" id="InteriorAndExterior">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
@@ -213,7 +224,7 @@ function HomeInspaction() {
         </div>
       </section>
 
-      <section className="electrical_safety_inspection_sec">
+      <section className="electrical_safety_inspection_sec" id="Electrical">
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
@@ -278,7 +289,7 @@ function HomeInspaction() {
         </div>
       </section>
 
-      <section className="plumbing_inspection_sec">
+      <section className="plumbing_inspection_sec" id="Plumbing">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
@@ -339,7 +350,7 @@ function HomeInspaction() {
           </div>
 
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -351,14 +362,14 @@ function HomeInspaction() {
                     leaks, seepage in wall, excessive moisture in wall or in
                     furniture, working of A.C , etc.
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -370,14 +381,14 @@ function HomeInspaction() {
                     which includes testing of air pollution, carbonmono oxide ,
                     sulpher detection, oxygen inside the house. etc
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -390,14 +401,14 @@ function HomeInspaction() {
                     furniture is more than 12% it will be harmfull for the life
                     of the wood.
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -410,14 +421,14 @@ function HomeInspaction() {
                     and this is used to detect the leakage .this leakage may
                     couse cancer.
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -429,14 +440,14 @@ function HomeInspaction() {
                     switches power supply, earthing wire, working conditions or
                     electric board etc.​​
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -447,14 +458,14 @@ function HomeInspaction() {
                     This device is used to test the sound level coming from
                     outside , from A.C and from any other appliance.
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -465,14 +476,14 @@ function HomeInspaction() {
                     It is used to check the electrical connection power switches
                     , main power box, inverter condition etc
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-3">
+            <div className="col-6 col-lg-3">
               <div className="service_item">
                 {/* <div className="service_icon">
                   <img src={serviceIcon} alt="Service Icon" />
@@ -483,7 +494,7 @@ function HomeInspaction() {
                     The water pressure gauge is used to check the proper water
                     pressure in tabs and in other water outlets.
                   </p>
-                  <Link className="text_btn" to="/">
+                  <Link className="text_btn" to="/book-inspection">
                     Find A Home <i className="fa-solid fa-arrow-right-long"></i>
                   </Link>
                 </div>

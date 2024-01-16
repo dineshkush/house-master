@@ -190,7 +190,7 @@ console.log(leakageReasons[0].img);
           </div>
           <div className="row">
             {leakageReasons.map((item, index) => (
-              <div className="col-lg-4" key={index}>
+              <div className="col-6 col-lg-4" key={index}>
                 <div className="feature_item">
                   <img src={item.img} className="img-fluid" alt={item.title} />
                   <h4>{item.title}</h4>
@@ -210,7 +210,7 @@ console.log(leakageReasons[0].img);
           </div>
           <div className="row">
             {commonSeepageIssues.map((item, index) => (
-              <div className="col-lg-4" key={index}>
+              <div className="col-6 col-lg-4" key={index}>
                 <div className="feature_item">
                   <img src={item.img} className="img-fluid" alt={item.title} />
                   <h4>{item.title}</h4>
