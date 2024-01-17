@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./Header.css";
 import MainLogo from "../../images/main-logo.jpg";
 
 function Header(props) {
+
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const handleNavbarToggle = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
+  const handleNavbarClose = () => {
+    setIsNavbarOpen(false);
+  };
+
   return (
     <header className="header_area">
       <div className="top_header">
@@ -76,28 +87,29 @@ function Header(props) {
                   <img src={MainLogo} alt="House Master" className="img-fluid" />
                 </Link>
                 <button
-                  className="navbar-toggler"
+                  className={`navbar-toggler ${isNavbarOpen ? '' : 'collapsed'}`}
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
+                  aria-expanded={isNavbarOpen}
                   aria-label="Toggle navigation"
+                  onClick={handleNavbarToggle}
                 >
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                  className="collapse navbar-collapse justify-content-end"
+                  className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`}
                   id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav">
                     <li className="nav-item">
-                      <NavLink className="nav-link" aria-current="page" to="/">
+                      <NavLink className="nav-link" aria-current="page" to="/" onClick={handleNavbarClose}>
                         Home
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/about">
+                      <NavLink className="nav-link" to="/about" onClick={handleNavbarClose}>
                         About
                       </NavLink>
                     </li>
@@ -112,44 +124,44 @@ function Header(props) {
                       </p>
                       <ul className="dropdown-menu">
                         <li>
-                          <NavLink className="dropdown-item" to="/services/home-inspaction">
+                          <NavLink className="dropdown-item" to="/services/home-inspaction" onClick={handleNavbarClose}>
                           Home Inspaction
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink className="dropdown-item" to="/services/damp-seepage-inspection">
+                          <NavLink className="dropdown-item" to="/services/damp-seepage-inspection" onClick={handleNavbarClose}>
                           Damp / Seepage Detection
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink className="dropdown-item" to="/services/electrical-safety">
+                          <NavLink className="dropdown-item" to="/services/electrical-safety" onClick={handleNavbarClose}>
                           Electrical Safety
                           </NavLink>
                         </li>
                         <li>
-                          <NavLink className="dropdown-item" to="/services/industry-energy">
+                          <NavLink className="dropdown-item" to="/services/industry-energy" onClick={handleNavbarClose}>
                           Industry Energy
                           </NavLink>
                         </li>
                       </ul>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/projects">
+                      <NavLink className="nav-link" to="/projects" onClick={handleNavbarClose}>
                         Projects
                       </NavLink>
                     </li>
                     <li className="nav-item">
-                      <NavLink className="nav-link" to="/faqs">
+                      <NavLink className="nav-link" to="/faqs" onClick={handleNavbarClose}>
                         Faq's
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">
-                      <NavLink className="nav-link site_btn" to="/payment">
+                      <NavLink className="nav-link site_btn" to="/payment" onClick={handleNavbarClose}>
                         Payment
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">
-                      <NavLink className="nav-link site_btn" to="/book-inspection">
+                      <NavLink className="nav-link site_btn" to="/book-inspection" onClick={handleNavbarClose}>
                         Book Inspection
                       </NavLink>
                     </li>
