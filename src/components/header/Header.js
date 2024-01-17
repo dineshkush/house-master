@@ -99,7 +99,7 @@ function Header(props) {
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                  className={`collapse navbar-collapse ${isNavbarOpen ? 'show' : ''}`}
+                  className={`collapse navbar-collapse justify-content-end ${isNavbarOpen ? 'show' : ''}`}
                   id="navbarSupportedContent"
                 >
                   <ul className="navbar-nav">
