@@ -121,15 +121,21 @@ function HomeInspaction() {
               />
             </div>
           </div>
-
-          <div className="row btn_section">
+        </div>
+      </section>
+      
+      <section className="homeInspaction_btn">
+        <div className="container">
+          <div className="row">
             <div className="col-lg-12 text-center">
-              <div class="btn-group" role="group" aria-label="Basic example">
+              <div className="site_title_box">
+                <h3 className="main_heading">Home Inspection Includes</h3>
+              </div>
+              <div class="btn-group btn_section" role="group" aria-label="Basic example">
                 <a href="#InteriorAndExterior" type="button" class="btn site_btn">Interior And Exterior</a>
                 <a href="#Plumbing" type="button" class="btn site_btn">Plumbing</a>
                 <a href="#Electrical" type="button" class="btn site_btn">Electrical</a>
               </div>
-              
             </div>
           </div>
         </div>
