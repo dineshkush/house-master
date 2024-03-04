@@ -27,10 +27,24 @@ import basementSeepage from "../../../images/basement-seepage.png";
 import moldGrowth from "../../../images/mold-growth.png";
 import rustingImg from "../../../images/rusting-img.png";
 import terraceIssues from "../../../images/terrace-issues.png";
-
-
+import { useState, useEffect } from "react";
+import { getSeo } from "../seoservices/seo";
 
 function DampSeepageInspection() {
+  const [seo, setSeo] = useState({})
+  const [loading, setLoading] = useState(false)
+  const currentUrl = window.location.href
+  const urlarr = currentUrl.split('/')
+  const path = urlarr[urlarr.length-1]
+  const handleFetchSeo  = async() => {
+    setLoading(true)
+    const response = await getSeo(path)
+    setSeo(response)
+    setLoading(false)
+  }
+  useEffect(() => {
+    handleFetchSeo()
+  },[])
 
 const leakageReasons = [
   {
@@ -114,7 +128,7 @@ console.log(leakageReasons[0].img);
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Water Leakage/ Seepage Detection | Housemaster | Gurugram</title>
         <meta
           name="description"
@@ -133,7 +147,29 @@ console.log(leakageReasons[0].img);
           property="og:description"
           content="Seepage source detection, water leakage solution, dampness soultion, roof leakage solution and identification of real source"
         />
-      </Helmet>
+      </Helmet> */}
+         <Helmet>
+        <title>{seo?.title}</title>
+        <meta name="description" content={seo?.description} />
+        <meta name="keywords" content={seo?.keywords} />
+        <meta property="og:title" content={seo?.open_graph?.title} />
+        <meta
+          property="og:description"
+          content={seo?.open_graph?.description}
+        />
+        <meta name="twitter:title" content={seo?.twitter?.title} />
+        <meta name="twitter:description" content={seo?.twitter?.description} />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content={seo?.robots} />
+        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
+        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
+        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
+        <meta
+          property="twitter:image:alt"
+          // content={workSpace?.images[0]?.alt}
+        /> 
+        <script type="application/ld+json">{seo?.script}</script>
+       </Helmet> 
 
       <section className="inner_banner">
         <div className="container">

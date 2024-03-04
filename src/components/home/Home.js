@@ -18,11 +18,26 @@ import startupIndia from "../../images/startupindia-logo.webp";
 import SeepageBannerImage from "../../images/seepage-banner-img.png";
 import ElectricalInspectionBanner from "../../images/electrical-inspection-banner.png";
 import EnergyAndSafetyImg from "../../images/EnergyAndSafetyImg.jpg";
-
+import { getSeo } from "../services/seoservices/seo";
+import { useState, useEffect } from "react";
 function Home() {
+  const [seo, setSeo] = useState({})
+  const [loading, setLoading] = useState(false)
+  const currentUrl = window.location.href
+  const urlarr = currentUrl.split('/')
+  const path = urlarr[urlarr.length-1]
+  const handleFetchSeo  = async() => {
+    setLoading(true)
+    const response = await getSeo('home')
+    setSeo(response)
+    setLoading(false)
+  }
+  useEffect(() => {
+    handleFetchSeo()
+  },[])
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>
           Home Inspection by Experts - Housemaster Home inspection india
         </title>
@@ -40,7 +55,29 @@ function Home() {
           property="og:description"
           content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
         />
-      </Helmet>
+      </Helmet> */}
+      <Helmet>
+        <title>{seo?.title}</title>
+        <meta name="description" content={seo?.description} />
+        <meta name="keywords" content={seo?.keywords} />
+        <meta property="og:title" content={seo?.open_graph?.title} />
+        <meta
+          property="og:description"
+          content={seo?.open_graph?.description}
+        />
+        <meta name="twitter:title" content={seo?.twitter?.title} />
+        <meta name="twitter:description" content={seo?.twitter?.description} />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content={seo?.robots} />
+        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
+        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
+        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
+        <meta
+          property="twitter:image:alt"
+          // content={workSpace?.images[0]?.alt}
+        /> 
+        <script type="application/ld+json">{seo?.script}</script>
+       </Helmet> 
 
       <section className="home_banner">
         <div className="recognizedby_img">

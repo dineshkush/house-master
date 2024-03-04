@@ -13,8 +13,24 @@ import nbccLogo from "../../../images/project-logo/nbcc-logo.jpg"
 import savoySuitesLogo from "../../../images/project-logo/savoy-suites-logo.jpg"
 import suncityLogo from "../../../images/project-logo/suncity-logo.jpg"
 import ushaLogo from "../../../images/project-logo/usha-logo.jpg"
-
+import { useState, useEffect } from 'react'
+import { getSeo } from '../../services/seoservices/seo'
+import { Helmet } from 'react-helmet-async'
 function CommercialInspection() {
+  const [seo, setSeo] = useState({})
+  const [loading, setLoading] = useState(false)
+  const currentUrl = window.location.href
+  const urlarr = currentUrl.split('/')
+  const path = urlarr[urlarr.length-1]
+  const handleFetchSeo  = async() => {
+    setLoading(true)
+    const response = await getSeo(path)
+    setSeo(response)
+    setLoading(false)
+  }
+  useEffect(() => {
+    handleFetchSeo()
+  },[])
 
     const CommercialInspectionLogo = [
         {
@@ -73,6 +89,28 @@ function CommercialInspection() {
 
   return (
     <>
+       <Helmet>
+        <title>{seo?.title}</title>
+        <meta name="description" content={seo?.description} />
+        <meta name="keywords" content={seo?.keywords} />
+        <meta property="og:title" content={seo?.open_graph?.title} />
+        <meta
+          property="og:description"
+          content={seo?.open_graph?.description}
+        />
+        <meta name="twitter:title" content={seo?.twitter?.title} />
+        <meta name="twitter:description" content={seo?.twitter?.description} />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content={seo?.robots} />
+        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
+        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
+        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
+        <meta
+          property="twitter:image:alt"
+          // content={workSpace?.images[0]?.alt}
+        /> 
+        <script type="application/ld+json">{seo?.script}</script>
+       </Helmet> 
     <section className="commercial_inspection_logo_area">
         <div className="container">
           <div className="row">

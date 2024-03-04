@@ -2,11 +2,26 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import ContactDetails from "../shared/contact-details/ContactDetails";
 import BookInspectionForm from "./book-inspection-form/BookInspectionForm";
-
+import { useState, useEffect } from "react";
+import { getSeo } from "../services/seoservices/seo";
 function BookInspection({ phone, email, facebook, twitter, instagram, dribbble }) {
+  const [seo, setSeo] = useState({})
+  const [loading, setLoading] = useState(false)
+  const currentUrl = window.location.href
+  const urlarr = currentUrl.split('/')
+  const path = urlarr[urlarr.length-1]
+  const handleFetchSeo  = async() => {
+    setLoading(true)
+    const response = await getSeo(path)
+    setSeo(response)
+    setLoading(false)
+  }
+  useEffect(() => {
+    handleFetchSeo()
+  },[])
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Book Inspection | Housemaster</title>
         <link
           rel="canonical"
@@ -14,7 +29,29 @@ function BookInspection({ phone, email, facebook, twitter, instagram, dribbble }
         />
 
         <meta property="og:title" content="Book Inspection | Housemaster" />
-      </Helmet>
+      </Helmet> */}
+         <Helmet>
+        <title>{seo?.title}</title>
+        <meta name="description" content={seo?.description} />
+        <meta name="keywords" content={seo?.keywords} />
+        <meta property="og:title" content={seo?.open_graph?.title} />
+        <meta
+          property="og:description"
+          content={seo?.open_graph?.description}
+        />
+        <meta name="twitter:title" content={seo?.twitter?.title} />
+        <meta name="twitter:description" content={seo?.twitter?.description} />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content={seo?.robots} />
+        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
+        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
+        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
+        <meta
+          property="twitter:image:alt"
+          // content={workSpace?.images[0]?.alt}
+        /> 
+        <script type="application/ld+json">{seo?.script}</script>
+       </Helmet> 
 
       <section className="booking_form_area">
         <div className="container">

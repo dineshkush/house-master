@@ -3,11 +3,26 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import "./AboutUs.css";
 import aboutImage from "../../images/inspaction-about-img.png";
-
+import { useState, useEffect } from "react";
+import { getSeo } from "../services/seoservices/seo";
 function AboutUs() {
+  const [seo, setSeo] = useState({})
+  const [loading, setLoading] = useState(false)
+  const currentUrl = window.location.href
+  const urlarr = currentUrl.split('/')
+  const path = urlarr[urlarr.length-1]
+  const handleFetchSeo  = async() => {
+    setLoading(true)
+    const response = await getSeo(path)
+    setSeo(response)
+    setLoading(false)
+  }
+  useEffect(() => {
+    handleFetchSeo()
+  },[])
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>ABOUT | Housemaster</title>
         <meta
           name="description"
@@ -20,7 +35,29 @@ function AboutUs() {
           property="og:description"
           content='Founders of Housemaster home inspections "Pankaj Panchal and Prem Singh" are from IIT Roorkee  having post graduation in "Structure Dynamics and Seismic Vulnerability and Risk Assessment". both are also having good experience in building design and construction with different parametrs and considera'
         />
-      </Helmet>
+      </Helmet> */}
+          <Helmet>
+        <title>{seo?.title}</title>
+        <meta name="description" content={seo?.description} />
+        <meta name="keywords" content={seo?.keywords} />
+        <meta property="og:title" content={seo?.open_graph?.title} />
+        <meta
+          property="og:description"
+          content={seo?.open_graph?.description}
+        />
+        <meta name="twitter:title" content={seo?.twitter?.title} />
+        <meta name="twitter:description" content={seo?.twitter?.description} />
+        <link rel="canonical" href={currentUrl} />
+        <meta name="robots" content={seo?.robots} />
+        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
+        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
+        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
+        <meta
+          property="twitter:image:alt"
+          // content={workSpace?.images[0]?.alt}
+        /> 
+        <script type="application/ld+json">{seo?.script}</script>
+       </Helmet> 
       
       <section className="inner_banner">
         <div className="container">
