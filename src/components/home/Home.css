@@ -28,9 +28,9 @@
     font-weight: 800;
 }
 .banner_content p {
-    padding-left: 30px;
+    /* padding-left: 30px; */
     color: #5c727d;
-    border-left: 1px solid #576466;
+    /* border-left: 1px solid #576466; */
 }
 .banner_content .site_btn {
     margin-top: 30px;
