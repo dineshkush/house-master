@@ -19,7 +19,7 @@
     min-height: 600px;
 }
 .banner_content {
-    padding-right: 200px;
+    padding-right: 50px;
 }
 .banner_content h3 {
     font-size: 40px;
@@ -70,7 +70,7 @@
 .recognizedby_img {
 	position: absolute;
 	right: 130px;
-	top: 20px;
+	top: 10px;
 	z-index: 9;
 }
 .recognizedby_img h4 {

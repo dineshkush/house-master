@@ -19,6 +19,9 @@ function ContactDetails({
             Park, sec-67, Gurgaon, Haryana
           </li>
           <li>
+            <i className="fa-solid fa-location-arrow"></i> 172-b/5755, ground floor, vande pushpa, LokMilan co-op Housing Society, Kannamwar Nagar I, Vikhroli, Mumbai, Maharashtra 400083
+          </li>
+          <li>
             <i className="fa-solid fa-phone"></i>{" "}
             <a href={`tel:${phone}`}>{phone}</a>
           </li>

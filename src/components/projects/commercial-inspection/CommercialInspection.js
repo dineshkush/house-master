@@ -13,6 +13,14 @@ import nbccLogo from "../../../images/project-logo/nbcc-logo.jpg"
 import savoySuitesLogo from "../../../images/project-logo/savoy-suites-logo.jpg"
 import suncityLogo from "../../../images/project-logo/suncity-logo.jpg"
 import ushaLogo from "../../../images/project-logo/usha-logo.jpg"
+import marutiSuzuki from "../../../images/project-logo/maruti-suzuki.png"
+import signatureGlobal from "../../../images/project-logo/signature-global.png"
+import indiabulls from "../../../images/project-logo/indiabulls.png"
+import sobha from "../../../images/project-logo/sobha.png"
+import mahindraLifespace from "../../../images/project-logo/mahindra-lifespace.png"
+import vatika from "../../../images/project-logo/vatika.png"
+import oberoi from "../../../images/project-logo/oberoi.png"
+import lodha from "../../../images/project-logo/lodha.png"
 import { useState, useEffect } from 'react'
 import { getSeo } from '../../services/seoservices/seo'
 import { Helmet } from 'react-helmet-async'
@@ -85,6 +93,38 @@ function CommercialInspection() {
             title : "USHA",
             image : ushaLogo,
         },
+        {
+            title : "Maruti Suzuki",
+            image : marutiSuzuki,
+        },
+        {
+            title : "Signature Global",
+            image : signatureGlobal,
+        },
+        {
+            title : "Indiabulls",
+            image : indiabulls,
+        },
+        {
+            title : "Sobha",
+            image : sobha,
+        },
+        {
+            title : "Mahindra Lifespace",
+            image : mahindraLifespace,
+        },
+        {
+            title : "Vatika",
+            image : vatika,
+        },
+        {
+            title : "oberoi",
+            image : oberoi,
+        },
+        {
+            title : "lodha",
+            image : lodha,
+        },
     ]
 
   return (
@@ -115,7 +155,7 @@ function CommercialInspection() {
         <div className="container">
           <div className="row">
             <div className="site_title_box text-center">
-              <h3 className="main_heading">Commercial Inspection</h3>
+              <h3 className="main_heading">Developers and Commercial Inspections</h3>
             </div>
           </div>
 

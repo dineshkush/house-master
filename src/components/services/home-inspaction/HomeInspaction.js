@@ -7,6 +7,8 @@ import homeInspactionSecond from "../../../images/homeInspactionSecond.png";
 import homeInspection from "../../../images/HMI-module-Image.jpg";
 import electricalSafetyInspection from "../../../images/electrical-safety-inspection.png";
 import plumbingAndMoisture from "../../../images/seepage-banner-img.png";
+import thermalCamera from "../../../images/thermal-camera-img.png";
+import tdsMeter from "../../../images/tds-meter.png";
 import { useState, useEffect } from "react";
 import { getSeo } from "../seoservices/seo";
 function HomeInspaction() {
@@ -14,8 +16,8 @@ function HomeInspaction() {
   const [loading, setLoading] = useState(false)
   const currentUrl = window.location.href
   const urlarr = currentUrl.split('/')
-  const path = urlarr[urlarr.length-1]
-  const handleFetchSeo  = async() => {
+  const path = urlarr[urlarr.length - 1]
+  const handleFetchSeo = async () => {
     setLoading(true)
     const response = await getSeo(path)
     setSeo(response)
@@ -23,7 +25,7 @@ function HomeInspaction() {
   }
   useEffect(() => {
     handleFetchSeo()
-  },[])
+  }, [])
   return (
     <>
       {/* <Helmet>
@@ -46,7 +48,7 @@ function HomeInspaction() {
           content="Housemaster home inspection provides wide range of house related services like home inspection, property documents verification, commercial inspection etc. In india its very difficult to get a perfect house from property seller. ut Buying a new home and if there is any problem in the house means pu"
         />
       </Helmet> */}
-        <Helmet>
+      <Helmet>
         <title>{seo?.title}</title>
         <meta name="description" content={seo?.description} />
         <meta name="keywords" content={seo?.keywords} />
@@ -64,10 +66,10 @@ function HomeInspaction() {
         {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
         <meta
           property="twitter:image:alt"
-          // content={workSpace?.images[0]?.alt}
-        /> 
+        // content={workSpace?.images[0]?.alt}
+        />
         <script type="application/ld+json">{seo?.script}</script>
-       </Helmet> 
+      </Helmet>
 
       <section className="inner_banner">
         <div className="container">
@@ -160,7 +162,7 @@ function HomeInspaction() {
           </div>
         </div>
       </section>
-      
+
       <section className="homeInspaction_btn">
         <div className="container">
           <div className="row">
@@ -170,8 +172,8 @@ function HomeInspaction() {
               </div>
               <div class="btn-group btn_section" role="group" aria-label="Basic example">
                 <a href="#InteriorAndExterior" type="button" class="btn site_btn">Interior And Exterior</a>
-                <a href="#Plumbing" type="button" class="btn site_btn">Plumbing</a>
-                <a href="#Electrical" type="button" class="btn site_btn">Electrical</a>
+                <a href="#Plumbing" type="button" class="btn site_btn">Plumbing Testing</a>
+                <a href="#Electrical" type="button" class="btn site_btn">Electrical Testing</a>
               </div>
             </div>
           </div>
@@ -279,7 +281,7 @@ function HomeInspaction() {
 
           <div className="row align-items-center">
             <div className="col-lg-6">
-            <img
+              <img
                 src={electricalSafetyInspection}
                 alt="Electrical Safety Inspection"
                 className="img-fluid"
@@ -352,7 +354,7 @@ function HomeInspaction() {
             </div>
 
             <div className="col-lg-6">
-            <img
+              <img
                 src={plumbingAndMoisture}
                 alt="Plumbing and Moisture"
                 className="img-fluid"
@@ -382,7 +384,7 @@ function HomeInspaction() {
 
       <section className="services_sec">
         <div className="container">
-          <div className="row">
+          <div className="row mb-3">
             <div className="col-lg-12">
               <div className="site_title_box text-center">
                 <h3 className="main_heading">
@@ -393,11 +395,65 @@ function HomeInspaction() {
           </div>
 
           <div className="row">
+            <div className="col-lg-4">
+              <h3>Infrared Thermal Camera</h3>
+              <div className="site_list">
+                <ul>
+                  <li>Moisture Meter</li>
+                  <li>Pipe Thickness Gauge</li>
+                  <li>Radiation Meter</li>
+                  <li>Automatic Pressure Pump</li>
+                  <li>Hydraulic Pressure Pump</li>
+                  <li>Pipe Line Scanner</li>
+                  <li>Connection Pipes</li>
+                  <li>Floor Joint Gauge</li>
+                  <li>Tile Hollowness Tester</li>
+                  <li>Floor Slope And Gradient Tester</li>
+                  <li>Drain Plugs</li>
+                  <li>Endoscopy Borescope Camera</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="tools-and-instruments-img">
+                <img
+                  src={thermalCamera}
+                  alt="About Us"
+                  className="img-fluid"
+                />
+                <img
+                  src={tdsMeter}
+                  alt="About Us"
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <h3>TDS Meter</h3>
+              <div className="site_list">
+                <ul>
+                  <li>PH Meter</li>
+                  <li>Screw Driver, Wrench ETC</li>
+                  <li>Multimeter</li>
+                  <li>Electric Outlet Tester</li>
+                  <li>Air Quality Tester</li>
+                  <li>Microwave Leakage Detector</li>
+                  <li>Sound Level Teater</li>
+                  <li>Water Pressure Tester</li>
+                  <li>Wire Camera</li>
+                  <li>Tapping ROD</li>
+                  <li>Vibration Meter</li>
+                  <li>Depth Scale</li>
+                  <li>Slope Scale</li>
+                  <li>Lesser Measuring Device</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="row">
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Thermal Infrared Camera</h3>
                   <p>
@@ -414,9 +470,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Air Quality Tester</h3>
                   <p>
@@ -433,9 +486,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Moisture meter</h3>
                   <p>
@@ -453,9 +503,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Microwave Leakage Detector</h3>
                   <p>
@@ -473,9 +520,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Electric Outlet Tester</h3>
                   <p>
@@ -492,9 +536,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Sound level Tester</h3>
                   <p>
@@ -510,9 +551,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Multimeter</h3>
                   <p>
@@ -528,9 +566,6 @@ function HomeInspaction() {
 
             <div className="col-6 col-lg-3">
               <div className="service_item">
-                {/* <div className="service_icon">
-                  <img src={serviceIcon} alt="Service Icon" />
-                </div> */}
                 <div className="service_info">
                   <h3>Water Pressure Tester</h3>
                   <p>
@@ -543,7 +578,7 @@ function HomeInspaction() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </>

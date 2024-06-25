@@ -10,12 +10,12 @@
     display: flex;
     justify-content: center;
 }
-.commercial_inspection_logo_row .col-lg-2:nth-child(6), .commercial_inspection_logo_row .col-lg-2:nth-child(12) {
+.commercial_inspection_logo_row .col-lg-2:nth-child(6), .commercial_inspection_logo_row .col-lg-2:nth-child(12), .commercial_inspection_logo_row .col-lg-2:nth-child(18) {
     border-right: none;
 }
-.commercial_inspection_logo_row .col-lg-2:nth-last-child(-n + 1) {
+/* .commercial_inspection_logo_row .col-lg-2:nth-last-child(-n + 1) {
     border-bottom: none;
-}
+} */
 
 @media (max-width: 480px) {
     .commercial_inspection_logo_area {

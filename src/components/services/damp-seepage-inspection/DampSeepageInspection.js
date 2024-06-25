@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import "./DampSeepageInspection.css";
 // import leakageAndSeepage from "../../../images/leakage-and-seepage-inspection-Image.png";
 import healthIssuesImg from "../../../images/health-issues-img.jpg";
-import seepageInspection from "../../../images/seepage-inspection-img.png";
+import seepageInspection from "../../../images/seepage-inspection-img.jpg";
 
 import constructionfault from "../../../images/construction-fault.png";
 import pipeLineLeakage from "../../../images/pipe-line-leakage.png";

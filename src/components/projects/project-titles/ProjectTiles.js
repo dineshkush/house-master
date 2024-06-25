@@ -10,6 +10,12 @@ import theHermitage from "../../../images/projects-img/the-hermitage.webp";
 import theSuncity from "../../../images/projects-img/the-suncity.gif";
 import mapskoMountVille from "../../../images/projects-img/mapsko-mount-ville.webp";
 import vipulWorld from "../../../images/projects-img/vipul-world.webp";
+import parasProject from "../../../images/projects-img/paras-project.jpg";
+import MahindraLuminare from "../../../images/projects-img/Mahindra-Luminare.jpg";
+import ireoGrandArch from "../../../images/projects-img/ireo-grand-arch.jpg";
+import dlfTheCrest from "../../../images/projects-img/dlf-the-crest.jpg";
+import dlfTheCamellias from "../../../images/projects-img/dlf-the-camellias.jpg";
+import centralParkGurgaon from "../../../images/projects-img/central-park-gurgaon.jpg";
 import { useState, useEffect } from "react";
 import { getSeo } from "../../services/seoservices/seo";
 import { Helmet } from "react-helmet-async";
@@ -68,6 +74,30 @@ function ProjectTiles() {
     {
       image: vipulWorld,
       title: "Vipul World",
+    },
+    {
+      image: parasProject,
+      title: "Paras",
+    },
+    {
+      image: MahindraLuminare,
+      title: "Mahindra Luminare",
+    },
+    {
+      image: ireoGrandArch,
+      title: "Ireo Grand Arch",
+    },
+    {
+      image: dlfTheCrest,
+      title: "DLF The Crest",
+    },
+    {
+      image: dlfTheCamellias,
+      title: "DLF The Camellias",
+    },
+    {
+      image: centralParkGurgaon,
+      title: "Central Park Gurgaon",
     },
   ];
 

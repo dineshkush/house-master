@@ -91,7 +91,7 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-7 col-lg-6">
+                    <div className="col-7 col-lg-5">
                       <div className="banner_content">
                         <h3>Perfection's Just a Check Away</h3>
                         <p className="mobilehide">
@@ -107,11 +107,11 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-5 col-lg-6">
+                    <div className="col-5 col-lg-7">
                       <img
                         src={banner1}
                         alt="House"
-                        className="img-fluid" />
+                        className="img-fluid banner_one_img" />
                     </div>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-7 col-lg-7">
+                    <div className="col-7 col-lg-6">
                       <div className="banner_content">
                         <h3>Seepage/ leakage/ dampness solutions</h3>
                         <div className="site_list mobilehide">
@@ -150,7 +150,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-5 col-lg-5">
+                    <div className="col-5 col-lg-6">
                       <img
                         src={SeepageBannerImage}
                         alt="House"
@@ -164,7 +164,7 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-7 col-lg-7">
+                    <div className="col-7 col-lg-6">
                       <div className="banner_content">
                         <h3>
                         Electrical inspection and testing
@@ -182,7 +182,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-5 col-lg-5">
+                    <div className="col-5 col-lg-6">
                       <img
                         src={ElectricalInspectionBanner}
                         alt="House"
@@ -219,17 +219,17 @@ function Home() {
           <div className="row">
             <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
-                <Counter number={105} title="Area" countSign="+" />
+                <Counter number={1035000} title="Inspected Area (sqft)" countSign="+" />
               </div>
             </div>
             <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
-                <Counter number={5175} title="Inspection" />
+                <Counter number={6789} title="Inspections" />
               </div>
             </div>
             <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
-                <Counter number={468} title="Success Inspection" />
+                <Counter number={99} title="Success Rate (%)"  countSign="+" />
               </div>
             </div>
           </div>
@@ -260,9 +260,9 @@ function Home() {
                 <Link className="btn site_btn" to="/about" tabIndex="0">
                   Read More
                 </Link>
-                <Link className="btn site_btn" to="/about" tabIndex="0">
+                {/* <Link className="btn site_btn" to="/about" tabIndex="0">
                   Teams
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -323,7 +323,7 @@ function Home() {
                 </Tab>
 
                 {/* tab 2 */}
-                <Tab eventKey="waterLeakage" title="Water Leakage">
+                <Tab eventKey="waterLeakage" title="Water Leakage Inspaction">
                   <div className="service_content">
                     <div className="row align-items-center">
                       <div className="col-lg-6">
