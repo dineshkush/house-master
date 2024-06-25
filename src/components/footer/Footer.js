@@ -132,7 +132,7 @@ function Footer(props) {
           <div className="row">
             <div className="col-lg-6 col-12">
               <div className="copyright_text">
-                <p>© Copyright 2023 - House Master | All Rights Reserved</p>
+                <p>© Copyright 2019 - House Master | All Rights Reserved</p>
               </div>
             </div>
             <div className="col-lg-6 col-12 align-self-center">
