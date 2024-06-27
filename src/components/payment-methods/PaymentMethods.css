@@ -1,0 +1,20 @@
+.payment_options {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.powered_by {
+    margin-bottom: 20px;
+}
+.powered_by p {
+    font-weight: 700;
+    color: #000;
+}
+.powered_by img {
+    width: 250px;
+}
+.payment_option {
+    margin-bottom: 20px;
+}
+.qr_img img {
+    width: 280px;
+}

@@ -411,6 +411,7 @@ function HomeInspaction() {
                   <li>Floor Slope And Gradient Tester</li>
                   <li>Drain Plugs</li>
                   <li>Endoscopy Borescope Camera</li>
+                  <li>Lesser Measuring Device</li>
                 </ul>
               </div>
             </div>
@@ -445,7 +446,6 @@ function HomeInspaction() {
                   <li>Vibration Meter</li>
                   <li>Depth Scale</li>
                   <li>Slope Scale</li>
-                  <li>Lesser Measuring Device</li>
                 </ul>
               </div>
             </div>

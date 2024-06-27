@@ -51,6 +51,9 @@
 .header_social_media > ul > li a:hover, .header_social_media > ul > li a i:hover {
     color: #ff5a3c;
 }
+.nav_header .navbar {
+    padding: 0px;
+}
 .nav_header .navbar-nav {
     padding: 10px 0px;
 }

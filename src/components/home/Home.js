@@ -91,7 +91,7 @@ function Home() {
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row align-items-center">
-                    <div className="col-7 col-lg-5">
+                    <div className="col-7 col-lg-6">
                       <div className="banner_content">
                         <h3>Perfection's Just a Check Away</h3>
                         <p className="mobilehide">
@@ -107,7 +107,7 @@ function Home() {
                         </Link>
                       </div>
                     </div>
-                    <div className="col-5 col-lg-7">
+                    <div className="col-5 col-lg-6">
                       <img
                         src={banner1}
                         alt="House"

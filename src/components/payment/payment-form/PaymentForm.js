@@ -41,7 +41,7 @@ function PaymentForm() {
         (response) => {
           setMessageSend("Email sent successfully");
           // console.log("Email sent successfully", response);
-          window.location.href = "https://rzp.io/l/lzR6iNS";
+          window.location.href = "/payment-methods";
         },
         (error) => {
           setMessageError("Email sending failed");

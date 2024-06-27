@@ -52,6 +52,7 @@ h5 {
   z-index: 1;
   margin-right: 15px;
   text-decoration: none;
+  border: 1px solid #ff5a3c;
 }
 .site_btn:after {
   width: 0%;
@@ -67,6 +68,7 @@ h5 {
 .site_btn:hover {
   color: #071c1f;
   background-color: #0b2c3d;
+  border: 1px solid #071c1f;
 }
 .site_btn:hover::after {
   width: 100%;
