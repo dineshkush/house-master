@@ -18,3 +18,9 @@
 .qr_img img {
     width: 280px;
 }
+
+@media (max-width:480px) {
+    .payment_item {
+        margin-top: 40px;
+    }
+}

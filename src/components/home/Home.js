@@ -246,8 +246,11 @@ function Home() {
               <div className="about_content">
                 <div className="site_title_box">
                   <h6 className="sub_title">About Us</h6>
-                  <h3 className="main_heading">
+                  {/* <h3 className="main_heading">
                     Indias first and best home inspection startup founded by alumni of IIT Roorkee
+                  </h3> */}
+                  <h3 className="main_heading">
+                  The Leading Real Estate Rental Marketplace
                   </h3>
                 </div>
                 <p>

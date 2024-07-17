@@ -7,7 +7,7 @@ import homeInspactionSecond from "../../../images/homeInspactionSecond.png";
 import homeInspection from "../../../images/HMI-module-Image.jpg";
 import electricalSafetyInspection from "../../../images/electrical-safety-inspection.png";
 import plumbingAndMoisture from "../../../images/seepage-banner-img.png";
-import thermalCamera from "../../../images/thermal-camera-img.png";
+import thermalCamera from "../../../images/metter-img.png";
 import tdsMeter from "../../../images/tds-meter.png";
 import { useState, useEffect } from "react";
 import { getSeo } from "../seoservices/seo";

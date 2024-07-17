@@ -289,6 +289,9 @@
     .counter_area .row {
         padding: 20px 10px;
     }
+    .counter_area .counter_item {
+        padding: 0px 10px;
+    }
     .counter_item span.counter {
         font-size: 14px;
         line-height: 15px;
