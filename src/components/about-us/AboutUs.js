@@ -10,8 +10,8 @@ function AboutUs() {
   const [loading, setLoading] = useState(false)
   const currentUrl = window.location.href
   const urlarr = currentUrl.split('/')
-  const path = urlarr[urlarr.length-1]
-  const handleFetchSeo  = async() => {
+  const path = urlarr[urlarr.length - 1]
+  const handleFetchSeo = async () => {
     setLoading(true)
     const response = await getSeo(path)
     setSeo(response)
@@ -19,7 +19,7 @@ function AboutUs() {
   }
   useEffect(() => {
     handleFetchSeo()
-  },[])
+  }, [])
   return (
     <>
       {/* <Helmet>
@@ -36,7 +36,7 @@ function AboutUs() {
           content='Founders of Housemaster home inspections "Pankaj Panchal and Prem Singh" are from IIT Roorkee  having post graduation in "Structure Dynamics and Seismic Vulnerability and Risk Assessment". both are also having good experience in building design and construction with different parametrs and considera'
         />
       </Helmet> */}
-          <Helmet>
+      <Helmet>
         <title>{seo?.title}</title>
         <meta name="description" content={seo?.description} />
         <meta name="keywords" content={seo?.keywords} />
@@ -54,11 +54,11 @@ function AboutUs() {
         {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
         <meta
           property="twitter:image:alt"
-          // content={workSpace?.images[0]?.alt}
-        /> 
+        // content={workSpace?.images[0]?.alt}
+        />
         <script type="application/ld+json">{seo?.script}</script>
-       </Helmet> 
-      
+      </Helmet>
+
       <section className="inner_banner">
         <div className="container">
           <div className="row">
@@ -86,7 +86,7 @@ function AboutUs() {
                 <div className="site_title_box">
                   <h6 className="sub_title">About Us</h6>
                   <h3 className="main_heading">
-                    The Leading Real Estate Rental Marketplace
+                    Housemaster home inspection
                   </h3>
                 </div>
                 <p>

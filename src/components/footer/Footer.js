@@ -75,7 +75,7 @@ function Footer(props) {
 
             <div className="col-lg-3">
               <div className="footer_title">
-                <h3>Our Services</h3>
+                <h3>Contact Info</h3>
               </div>
 
               <div className="footer_contact">

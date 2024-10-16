@@ -250,7 +250,7 @@ function Home() {
                     Indias first and best home inspection startup founded by alumni of IIT Roorkee
                   </h3> */}
                   <h3 className="main_heading">
-                  The Leading Real Estate Rental Marketplace
+                  Housemaster home inspection
                   </h3>
                 </div>
                 <p>
