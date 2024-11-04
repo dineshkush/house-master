@@ -7,7 +7,7 @@ function ContactDetails({
   facebook,
   twitter,
   instagram,
-  dribbble,
+  linkedin
 }) {
   return (
     <div className="payment_content">
@@ -34,23 +34,27 @@ function ContactDetails({
         <div className="contact_sm">
           <ul>
             <li>
-              <a href={facebook} title="Facebook">
+              <a
+                href={linkedin}
+                title="Linkedin"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href={facebook} title="Facebook" target="_blank">
                 <i className="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href={twitter} title="Twitter">
+              <a href={twitter} title="Twitter" target="_blank">
                 <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href={instagram} title="Instagram">
+              <a href={instagram} title="Instagram" target="_blank">
                 <i className="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href={dribbble} title="Dribbble">
-                <i className="fab fa-dribbble"></i>
               </a>
             </li>
           </ul>

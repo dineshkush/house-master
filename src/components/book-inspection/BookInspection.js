@@ -4,7 +4,7 @@ import ContactDetails from "../shared/contact-details/ContactDetails";
 import BookInspectionForm from "./book-inspection-form/BookInspectionForm";
 import { useState, useEffect } from "react";
 import { getSeo } from "../services/seoservices/seo";
-function BookInspection({ phone, email, facebook, twitter, instagram, dribbble }) {
+function BookInspection({ phone, email, facebook, twitter, instagram, linkedin }) {
   const [seo, setSeo] = useState({})
   const [loading, setLoading] = useState(false)
   const currentUrl = window.location.href
@@ -66,7 +66,7 @@ function BookInspection({ phone, email, facebook, twitter, instagram, dribbble }
                 facebook={facebook}
                 twitter={twitter}
                 instagram={instagram}
-                dribbble={dribbble}
+                linkedin={linkedin}
               />
             </div>
           </div>

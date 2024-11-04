@@ -41,8 +41,18 @@ function Header(props) {
                 <ul>
                   <li>
                     <a
+                      href={props.linkedin}
+                      title="Linkedin"
+                      target="_blank"
+                    >
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href={props.facebook}
                       title="Facebook"
+                      target="_blank"
                     >
                       <i className="fab fa-facebook-f"></i>
                     </a>
@@ -51,6 +61,7 @@ function Header(props) {
                     <a
                       href={props.twitter}
                       title="Twitter"
+                      target="_blank"
                     >
                       <i className="fab fa-twitter"></i>
                     </a>
@@ -59,16 +70,9 @@ function Header(props) {
                     <a
                       href={props.instagram}
                       title="Instagram"
+                      target="_blank"
                     >
                       <i className="fab fa-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={props.dribbble}
-                      title="Dribbble"
-                    >
-                      <i className="fab fa-dribbble"></i>
                     </a>
                   </li>
                 </ul>
@@ -125,22 +129,22 @@ function Header(props) {
                       <ul className="dropdown-menu">
                         <li>
                           <NavLink className="dropdown-item" to="/services/home-inspaction" onClick={handleNavbarClose}>
-                          Home Inspaction
+                            Home Inspaction
                           </NavLink>
                         </li>
                         <li>
                           <NavLink className="dropdown-item" to="/services/damp-seepage-inspection" onClick={handleNavbarClose}>
-                          Damp / Seepage Detection
+                            Damp / Seepage Detection
                           </NavLink>
                         </li>
                         <li>
                           <NavLink className="dropdown-item" to="/services/electrical-safety" onClick={handleNavbarClose}>
-                          Electrical Safety
+                            Electrical Safety
                           </NavLink>
                         </li>
                         <li>
                           <NavLink className="dropdown-item" to="/services/industry-energy" onClick={handleNavbarClose}>
-                          Industry Energy
+                            Industry Energy
                           </NavLink>
                         </li>
                       </ul>

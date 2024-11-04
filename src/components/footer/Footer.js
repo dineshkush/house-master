@@ -100,6 +100,11 @@ function Footer(props) {
                 <div className="footer_sm">
                   <ul>
                     <li>
+                      <a href={props.linkedin} title="Linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
                       <a href={props.facebook} title="Facebook">
                         <i className="fab fa-facebook-f"></i>
                       </a>
@@ -112,11 +117,6 @@ function Footer(props) {
                     <li>
                       <a href={props.instagram} title="Instagram">
                         <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href={props.dribbble} title="Dribbble">
-                        <i className="fab fa-dribbble"></i>
                       </a>
                     </li>
                   </ul>

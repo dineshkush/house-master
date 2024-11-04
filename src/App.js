@@ -19,21 +19,21 @@ const phoneNumber = '+919896442289';
 const emailId = 'info@housemaster.in';
 
 const socialMedia = [
-  "https://www.facebook.com/tuna-theme",
-  "https://www.twitter.com/tuna-theme",
-  "https://www.instagram.com/tuna-theme",
-  "https://www.dribble.com/tuna-theme"
+  "https://www.facebook.com/housemasterindia/",
+  "https://x.com/housemasterind1",
+  "https://www.instagram.com/housemaster_india/",
+  "https://in.linkedin.com/company/housemasters-india",
 ]
 
 function App() {
 
-  const [facebookLink, twitterLink, instagramLink, dribbbleLink] = socialMedia;
+  const [facebookLink, twitterLink, instagramLink, linkedin] = socialMedia;
   
   return (
     <>
       <BrowserRouter>
       <ScrollToTop />
-        <Header phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
+        <Header phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />
 
         <Routes>
           
@@ -45,12 +45,12 @@ function App() {
           <Route path="/services/industry-energy" exact element={<IndustryEnergy />} />
           <Route path="/faqs" exact element={<Faqs />} />
           <Route path="/projects" exact element={<Projects />} />
-          <Route path="/payment" exact element={<Payment phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />} />
+          <Route path="/payment" exact element={<Payment phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
           <Route path="/payment-methods" exact element={<PaymentMethods />} />
-          <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />} />
+          <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
         </Routes>
 
-        <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} dribbble={dribbbleLink} />
+        <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />
       </BrowserRouter>
     </>
   );
