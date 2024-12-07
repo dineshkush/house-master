@@ -14,6 +14,7 @@ import BookInspection from "./components/book-inspection/BookInspection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
 import PaymentMethods from "./components/payment-methods/PaymentMethods";
+import HomeInspectionLanding from "./components/landing-page/home-inspection/HomeInspectionLanding";
 
 const phoneNumber = '+919896442289';
 const emailId = 'info@housemaster.in';
@@ -39,7 +40,7 @@ function App() {
           
           <Route path="/" exact element={<Home />} />
           <Route path="/about" exact element={<AboutUs />} />
-          <Route path="/services/home-inspaction" exact element={<HomeInspaction />} />
+          <Route path="/services/home-inspection" exact element={<HomeInspaction />} />
           <Route path="/services/damp-seepage-inspection" exact element={<DampSeepageInspection />} />
           <Route path="/services/electrical-safety" exact element={<ElectricalSafety />} />
           <Route path="/services/industry-energy" exact element={<IndustryEnergy />} />

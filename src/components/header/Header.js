@@ -128,7 +128,7 @@ function Header(props) {
                       </p>
                       <ul className="dropdown-menu">
                         <li>
-                          <NavLink className="dropdown-item" to="/services/home-inspaction" onClick={handleNavbarClose}>
+                          <NavLink className="dropdown-item" to="/services/home-inspection" onClick={handleNavbarClose}>
                             Home Inspaction
                           </NavLink>
                         </li>
@@ -157,6 +157,11 @@ function Header(props) {
                     <li className="nav-item">
                       <NavLink className="nav-link" to="/faqs" onClick={handleNavbarClose}>
                         Faq's
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link" to="/book-inspection" onClick={handleNavbarClose}>
+                        Contact Us
                       </NavLink>
                     </li>
                     <li className="nav-item header_btn">
