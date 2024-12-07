@@ -14,7 +14,7 @@ import BookInspection from "./components/book-inspection/BookInspection";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
 import PaymentMethods from "./components/payment-methods/PaymentMethods";
-import HomeInspectionLanding from "./components/landing-page/home-inspection/HomeInspectionLanding";
+import Career from "./components/career/Career";
 
 const phoneNumber = '+919896442289';
 const emailId = 'info@housemaster.in';
@@ -49,6 +49,7 @@ function App() {
           <Route path="/payment" exact element={<Payment phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
           <Route path="/payment-methods" exact element={<PaymentMethods />} />
           <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
+          <Route path="/career" exact element={<Career />} />
         </Routes>
 
         <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />
