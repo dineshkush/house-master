@@ -15,6 +15,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/scrollToTop";
 import PaymentMethods from "./components/payment-methods/PaymentMethods";
 import Career from "./components/career/Career";
+import Services from "./components/services/Services";
 
 const phoneNumber = '+919896442289';
 const emailId = 'info@housemaster.in';
@@ -50,6 +51,7 @@ function App() {
           <Route path="/payment-methods" exact element={<PaymentMethods />} />
           <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
           <Route path="/career" exact element={<Career />} />
+          <Route path="/services" exact element={<Services />} />
         </Routes>
 
         <Footer phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />

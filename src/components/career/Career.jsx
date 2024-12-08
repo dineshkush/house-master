@@ -26,146 +26,76 @@ const Career = () => {
                                     <div className="row">
                                         <div className="mb-3 col-lg-12">
                                             <label htmlFor="name" className="form-label">
-                                                Name *
+                                                Full Name *
                                             </label>
                                             <input type="text" className="form-control" name="name" id="name"
                                                 required />
                                         </div>
-                                        <div className="mb-3 col-lg-12">
-                                            <label htmlFor="address" className="form-label">
-                                                Address *
-                                            </label>
-                                            <textarea
-                                                className="form-control"
-                                                id="address"
-                                                name="address"
-                                                rows="2"
-                                                required
-                                            ></textarea>
-                                        </div>
                                         <div className="mb-3 col-lg-6">
-                                            <label htmlFor="city" className="form-label">
-                                                City *
+                                            <label htmlFor="email" className="form-label">
+                                                Email Address *
                                             </label>
-                                            <input type="text" className="form-control"
-                                                id="city"
-                                                name="city"
+                                            <input type="email" className="form-control" id="email"
+                                                name="email"
                                                 required />
-                                        </div>
-                                        <div className="mb-3 col-lg-6">
-                                            <label htmlFor="area" className="form-label">
-                                                Area (sq.ft) *
-                                            </label>
-                                            <input type="text" className="form-control" id="area"
-                                                name="area"
-                                                required />
-                                        </div>
-                                        <div className="mb-3">
-                                            <label htmlFor="paymentType" className="form-label">
-                                                Property Type *
-                                            </label>
-                                            <select
-                                                className="form-select"
-                                                aria-label="Default select example"
-                                                id="paymentType"
-                                                name="paymentType"
-                                            >
-                                                <option value="" disabled>
-                                                    Select Type
-                                                </option>
-                                                <option value="Residential / Bungalow / Apartment">
-                                                    Residential / Bungalow / Apartment
-                                                </option>
-                                                <option value="School / Hospital / Hotels">
-                                                    School / Hospital / Hotels
-                                                </option>
-                                                <option value="pre-visit-payment">Commercial</option>
-                                                <option value="pre-visit-payment">Other</option>
-                                            </select>
                                         </div>
                                         <div className="mb-3 col-lg-6">
                                             <label htmlFor="phone" className="form-label">
-                                                Phone *
+                                                Phone Number *
                                             </label>
                                             <input type="tel" className="form-control" id="phone"
                                                 name="phone"
                                                 required />
                                         </div>
                                         <div className="mb-3 col-lg-6">
-                                            <label htmlFor="email" className="form-label">
-                                                Email *
+                                            <label htmlFor="jobRole" className="form-label">
+                                                Preferred Job Role
                                             </label>
-                                            <input type="email" className="form-control" id="email"
-                                                name="email"
-                                                required />
+                                            <input type="text" className="form-control" id="jobRole"
+                                                name="jobRole" />
                                         </div>
-                                        <div className="mb-3">
-                                            <label htmlFor="message" className="form-label">
-                                                Let us know what you need help with...
+                                        <div className="mb-3 col-lg-6">
+                                            <label htmlFor="yearsOfExperience" className="form-label">
+                                                Years of Experience
                                             </label>
-                                            <textarea className="form-control" id="message"
-                                                name="message" rows="3"></textarea>
+                                            <input type="text" className="form-control" id="yearsOfExperience"
+                                                name="yearsOfExperience" />
                                         </div>
-
-                                        <div className="mb-3">
-                                            <label htmlFor="service" className="form-label">
-                                                Choose your Service
+                                        <div className="mb-3 col-lg-6">
+                                            <label htmlFor="CurrentLocation" className="form-label">
+                                                Current Location
                                             </label>
-                                            <div className="form-check">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id="seepageCheckbox"
-                                                    name="Seepage Leakage Detection"
-                                                />
-                                                <label className="form-check-label" htmlFor="seepageCheckbox">
-                                                    Seepage/Leakage Detection
-                                                </label>
-                                            </div>
-                                            <div className="form-check">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id="electricalCheckbox"
-                                                    name="Electrical Inspection"
-                                                />
-                                                <label className="form-check-label" htmlFor="electricalCheckbox">
-                                                    Electrical Inspection
-                                                </label>
-                                            </div>
-                                            <div className="form-check">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id="documentCheckbox"
-                                                    name="Document Verification"
-                                                />
-                                                <label className="form-check-label" htmlFor="documentCheckbox">
-                                                    Document Verification
-                                                </label>
-                                            </div>
-                                            <div className="form-check">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id="pmcCheckbox"
-                                                    name="PMC Consultation"
-                                                />
-                                                <label className="form-check-label" htmlFor="pmcCheckbox">
-                                                    PMC Consultation
-                                                </label>
-                                            </div>
-                                            <div className="form-check">
-                                                <input
-                                                    className="form-check-input"
-                                                    type="checkbox"
-                                                    id="vastuCheckbox"
-                                                    name="Vastu"
-                                                />
-                                                <label className="form-check-label" htmlFor="vastuCheckbox">
-                                                    Vastu
-                                                </label>
-                                            </div>
+                                            <input type="text" className="form-control" id="CurrentLocation"
+                                                name="CurrentLocation" />
+                                        </div>
+                                        <div className="mb-3 col-lg-6">
+                                            <label htmlFor="HighestQualification" className="form-label">
+                                                Highest Qualification
+                                            </label>
+                                            <input type="text" className="form-control" id="HighestQualification"
+                                                name="HighestQualification" />
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <label class="input-group-text" for="UploadResume">Upload Resume</label>
+                                            <input type="file" class="form-control" id="UploadResume" name='UploadResume' />
+                                        </div>
+                                        <div className="mb-3 col-lg-12">
+                                            <label htmlFor="LinkedInProfile" className="form-label">
+                                                LinkedIn Profile
+                                            </label>
+                                            <input type="text" className="form-control" id="LinkedInProfile"
+                                                name="LinkedInProfile" />
+                                        </div>
+                                        <div className="mb-3 col-lg-12">
+                                            <label htmlFor="comment" className="form-label">
+                                                Why Do You Want to Join Us? *
+                                            </label>
+                                            <textarea
+                                                className="form-control"
+                                                id="comment"
+                                                name="comment"
+                                                rows="2"
+                                            ></textarea>
                                         </div>
                                         <button type="submit" className="btn site_btn">
                                             Submit
