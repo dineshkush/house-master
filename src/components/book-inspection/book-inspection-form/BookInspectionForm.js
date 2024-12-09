@@ -30,6 +30,78 @@ function BookInspectionForm() {
     }
   };
 
+  // useEffect(() => {
+  //   setSelectedItems(selectedItems)
+  // }, [selectedItems])
+  // console.log(selectedItems.join(', '))
+
+
+  // const bookingFormSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   if (!validateEmail(emailData.email)) {
+  //     setMessageError("Invalid email format");
+  //     return;
+  //   }
+  //   emailData.selectedItems = selectedItems.join(', ');
+  //   setIsSending(true);
+
+  //   emailjs
+  //     .send(
+  //       "service_jf6shcl",
+  //       "template_k2o4xw9",
+  //       emailData,
+  //       "template_5wisxmm"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         setMessageSend("Email sent successfully");
+  //         window.location.href = "/payment-methods";
+  //       },
+  //       (error) => {
+  //         setMessageError("Email sending failed");
+  //       }
+  //     )
+
+  //     .finally(() => {
+  //       setIsSending(false);
+  //     });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   if (!validateEmail(emailData.email)) {
+  //     console.error("Invalid email format");
+  //     return;
+  //   }
+
+  //   setIsSending(true);
+
+  //   emailjs
+  //     .send(
+  //       "service_jf6shcl",
+  //       "template_4lsqsm9",
+  //       emailData,
+  //       "mEkdQ2vp13ZtJ5Iib"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         setMessageSend("Email sent successfully");
+  //         // console.log("Email sent successfully", response);
+  //         window.location.href = "/payment-methods";
+  //       },
+  //       (error) => {
+  //         setMessageError("Email sending failed");
+  //         // console.error("Email sending failed", error);
+  //       }
+  //     )
+
+  //     .finally(() => {
+  //       setIsSending(false); // Email sending completed, change button text back
+  //     });
+  // };
+
   const bookingFormSubmit = (e) => {
     e.preventDefault();
 
@@ -73,6 +145,7 @@ function BookInspectionForm() {
 
 
   const validateEmail = (email) => {
+    // Define a simple regex pattern for email validation
     const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     return emailPattern.test(email);
   };
