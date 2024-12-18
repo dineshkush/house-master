@@ -1,0 +1,81 @@
+header.main_header {
+    padding: 10px 0px;
+    align-items: center;
+}
+
+.main_header .logo img {
+    width: 270px;
+}
+
+.banner_area {
+    padding: 0px 0px;
+}
+
+.banner_form {
+    background-color: #0b2c3d;
+    padding: 70px 20px;
+}
+
+.banner_form h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.counter_area .row {
+    margin-top: 10px;
+}
+
+.plan_item {
+    background-color: #0b2c3d;
+    padding: 15px 20px;
+    height: 100%;
+}
+
+.plan_item .plan_head h5 {
+    color: #fff;
+}
+
+.plan_item .plan_body ul li {
+    color: #fff;
+}
+
+.footer_area {
+    background-color: #0b2c3d;
+    padding: 25px 20px;
+}
+
+.footer_area p,
+.footer_area a {
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 480px) {
+    .main_header .logo img {
+        width: 180px;
+    }
+
+    .banner_form h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .choose_item {
+        margin-bottom: 10px;
+    }
+
+    .plan_space {
+        margin-bottom: 10px;
+    }
+
+    .inspection_video {
+        margin-bottom: 10px;
+    }
+
+    .footer_email {
+        margin-top: 5px;
+        text-align: left !important;
+    }
+}
