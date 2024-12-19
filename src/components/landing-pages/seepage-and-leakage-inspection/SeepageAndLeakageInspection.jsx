@@ -1,15 +1,58 @@
-import React from 'react'
-import './SeepageAndLeakageInspection.css'
+import React, { useState } from "react";
+import "./SeepageAndLeakageInspection.css";
 import MainLogo from "../../../images/main-logo.jpg";
 import seepageAndLeakage from "../../../images/seepage-and-leakage-inspection-landing.png";
 import buildingBack from "../../../images/building-back.png";
-import Counter from '../../shared/counter/Counter';
-import { Link } from 'react-router-dom';
+import Counter from "../../shared/counter/Counter";
+import { Link } from "react-router-dom";
 
 const SeepageAndLeakageInspection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    city: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const requestBody = JSON.stringify([
+      [formData.name, formData.phone, formData.city],
+    ]);
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      redirect: "follow",
+      body: requestBody,
+    };
+
+    try {
+      const response = await fetch(
+        "https://v1.nocodeapi.com/pankaj3434/google_sheets/epIjAmVlSxdjuxjI?tabId=SeepageAndLeakageForm",
+        requestOptions
+      );
+      const result = await response.text();
+      console.log(result);
+
+      alert("Form submitted successfully!");
+      // Reset the form after submission
+      setFormData({ name: "", phone: "", city: "" });
+    } catch (error) {
+      alert("There was an error submitting the form. Please try again.");
+      console.log("Error:", error);
+    }
+  };
   return (
     <>
-
       <header className="main_header">
         <div className="container">
           <div className="row">
@@ -20,7 +63,9 @@ const SeepageAndLeakageInspection = () => {
             </div>
             <div className="col-6">
               <div className="text-end">
-                <a className="site_btn" href="tel:+919896442289">Call Us</a>
+                <a className="site_btn" href="tel:+919896442289">
+                  Call Us
+                </a>
               </div>
             </div>
           </div>
@@ -31,20 +76,41 @@ const SeepageAndLeakageInspection = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-8 col-12">
-              <img src={seepageAndLeakage} alt="" className='img-fluid' />
+              <img src={seepageAndLeakage} alt="" className="img-fluid" />
             </div>
             <div className="col-md-4 col-12">
               <div className="banner_form">
                 <h3>Book your inspection</h3>
-                <form id="contact-form">
+                <form id="contact-form" onSubmit={handleSubmit}>
                   <div className="mb-4">
-                    <input type="text" className="form-control" id="name" name="name" placeholder="Full Name" />
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Full Name"
+                    />
                   </div>
                   <div className="mb-4">
-                    <input type="tel" className="form-control" id="phone" name="phone" placeholder="Phone" />
+                    <input
+                      type="tel"
+                      className="form-control"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Phone"
+                    />
                   </div>
                   <div className="mb-4">
-                    <select class="form-control">
+                    <select
+                      class="form-control"
+                      name="city"
+                      value={formData.city}
+                      onChange={handleChange}
+                    >
                       <option selected>Select City</option>
                       <option value="Gurugram">Gurugram</option>
                       <option value="Delhi">Delhi</option>
@@ -53,7 +119,9 @@ const SeepageAndLeakageInspection = () => {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <button type="submit" className="site_btn">Submit</button>
+                    <button type="submit" className="site_btn">
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>
@@ -93,19 +161,27 @@ const SeepageAndLeakageInspection = () => {
             <div className="col-md-3 col-12 choose_item">
               <div className="text-center border rounded pt-2 px-2">
                 <h5>Advanced Detection Technology</h5>
-                <p>We use modern tools to identify hidden leaks and seepage sources.</p>
+                <p>
+                  We use modern tools to identify hidden leaks and seepage
+                  sources.
+                </p>
               </div>
             </div>
             <div className="col-md-3 col-12 choose_item">
               <div className="text-center border rounded pt-2 px-2">
                 <h5>Comprehensive Analysis</h5>
-                <p>From walls to underground piping, we inspect every potential problem area.</p>
+                <p>
+                  From walls to underground piping, we inspect every potential
+                  problem area.
+                </p>
               </div>
             </div>
             <div className="col-md-3 col-12 choose_item">
               <div className="text-center border rounded pt-2 px-2">
                 <h5>Expert Recommendations</h5>
-                <p>Get actionable solutions tailored to your property’s needs.</p>
+                <p>
+                  Get actionable solutions tailored to your property’s needs.
+                </p>
               </div>
             </div>
             <div className="col-md-3 col-12">
@@ -118,62 +194,109 @@ const SeepageAndLeakageInspection = () => {
         </div>
       </section>
 
-      <section className="pt-5 pb-5" style={{ backgroundColor: '#f7f8f9' }}>
+      <section className="pt-5 pb-5" style={{ backgroundColor: "#f7f8f9" }}>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <h3>Save on costly repairs by addressing issues early.</h3>
-              <p>Our Leakage & Seepage Inspection Services cover every aspect of water-related damage to provide a
-                comprehensive analysis of your property. Here's what we meticulously inspect:</p>
+              <p>
+                Our Leakage & Seepage Inspection Services cover every aspect of
+                water-related damage to provide a comprehensive analysis of your
+                property. Here's what we meticulously inspect:
+              </p>
               <ul>
-                <li><strong>Pipeline Leakage Location Identification:</strong> We detect hidden leaks in
-                  underground and internal pipelines to prevent water loss and property damage.</li>
-                <li><strong>Seepage Source Identification:</strong> Our experts locate the exact source of
-                  seepage in walls, ceilings, or floors to address the root cause.</li>
-                <li><strong>Leakage Location Identification:</strong> We identify and diagnose leakage points in
-                  plumbing, fittings, or structural elements.</li>
-                <li><strong>Wall Dampness Source Detection:</strong> Analyze damp patches and determine the
-                  cause, whether it's seepage, poor waterproofing, or external water penetration.</li>
-                <li><strong>Ceiling or Roof Leakage Source & Location Check:</strong> We examine ceilings and
-                  roofs for cracks, improper drainage, or sealing issues causing leaks.</li>
-                <li><strong>Floor Leakage Location Finding:</strong> Identify water accumulation or seepage
-                  under tiles or flooring materials that can weaken structural stability.</li>
-                <li><strong>Water Leak Location Finding:</strong> Trace the origin of water leaks, whether from
-                  pipes, tanks, or external infiltration.</li>
-                <li><strong>Mold Cause and Source Finding:</strong> We not only detect mold but pinpoint the
-                  underlying cause of its growth to prevent recurrence.</li>
+                <li>
+                  <strong>Pipeline Leakage Location Identification:</strong> We
+                  detect hidden leaks in underground and internal pipelines to
+                  prevent water loss and property damage.
+                </li>
+                <li>
+                  <strong>Seepage Source Identification:</strong> Our experts
+                  locate the exact source of seepage in walls, ceilings, or
+                  floors to address the root cause.
+                </li>
+                <li>
+                  <strong>Leakage Location Identification:</strong> We identify
+                  and diagnose leakage points in plumbing, fittings, or
+                  structural elements.
+                </li>
+                <li>
+                  <strong>Wall Dampness Source Detection:</strong> Analyze damp
+                  patches and determine the cause, whether it's seepage, poor
+                  waterproofing, or external water penetration.
+                </li>
+                <li>
+                  <strong>
+                    Ceiling or Roof Leakage Source & Location Check:
+                  </strong>{" "}
+                  We examine ceilings and roofs for cracks, improper drainage,
+                  or sealing issues causing leaks.
+                </li>
+                <li>
+                  <strong>Floor Leakage Location Finding:</strong> Identify
+                  water accumulation or seepage under tiles or flooring
+                  materials that can weaken structural stability.
+                </li>
+                <li>
+                  <strong>Water Leak Location Finding:</strong> Trace the origin
+                  of water leaks, whether from pipes, tanks, or external
+                  infiltration.
+                </li>
+                <li>
+                  <strong>Mold Cause and Source Finding:</strong> We not only
+                  detect mold but pinpoint the underlying cause of its growth to
+                  prevent recurrence.
+                </li>
               </ul>
             </div>
             <div className="col-md-12">
               <h3>Additional Inspections We Offer</h3>
               <ul>
-                <li><strong>External Water Intrusion Detection:</strong> Evaluate window frames, doors, and
-                  exterior walls for gaps or weak points allowing rainwater or groundwater to enter.</li>
-                <li><strong>Bathroom and Kitchen Leak Checks:</strong> Examine wet areas for concealed leaks in
-                  plumbing and drainage systems.</li>
-                <li><strong>Waterproofing Efficiency Assessment:</strong> Inspect the quality and durability of
-                  waterproofing in basements, terraces, or other critical areas.</li>
-                <li><strong>HVAC Systems Condensation Leak Check:</strong> Detect leaks caused by faulty or
-                  poorly maintained air conditioning and ventilation systems.</li>
-                <li><strong>Tank and Reservoir Inspections:</strong> Check water tanks or reservoirs for cracks,
-                  overflow, and seepage.</li>
-                <li><strong>Foundation Leak Inspection:</strong> Analyze foundation walls and underground areas
-                  for seepage that could lead to long-term structural issues.</li>
+                <li>
+                  <strong>External Water Intrusion Detection:</strong> Evaluate
+                  window frames, doors, and exterior walls for gaps or weak
+                  points allowing rainwater or groundwater to enter.
+                </li>
+                <li>
+                  <strong>Bathroom and Kitchen Leak Checks:</strong> Examine wet
+                  areas for concealed leaks in plumbing and drainage systems.
+                </li>
+                <li>
+                  <strong>Waterproofing Efficiency Assessment:</strong> Inspect
+                  the quality and durability of waterproofing in basements,
+                  terraces, or other critical areas.
+                </li>
+                <li>
+                  <strong>HVAC Systems Condensation Leak Check:</strong> Detect
+                  leaks caused by faulty or poorly maintained air conditioning
+                  and ventilation systems.
+                </li>
+                <li>
+                  <strong>Tank and Reservoir Inspections:</strong> Check water
+                  tanks or reservoirs for cracks, overflow, and seepage.
+                </li>
+                <li>
+                  <strong>Foundation Leak Inspection:</strong> Analyze
+                  foundation walls and underground areas for seepage that could
+                  lead to long-term structural issues.
+                </li>
               </ul>
-
             </div>
           </div>
         </div>
       </section>
 
       <section className="cta-section">
-        <div className="pattern-layer" style={{ backgroundImage: `url(${buildingBack})` }}
+        <div
+          className="pattern-layer"
+          style={{ backgroundImage: `url(${buildingBack})` }}
         ></div>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
               <h2>
-                IIT Roorkee Alumni Initiative: Delivering Unmatched Home Inspection Expertise for Safer Living
+                IIT Roorkee Alumni Initiative: Delivering Unmatched Home
+                Inspection Expertise for Safer Living
               </h2>
             </div>
             <div className="col-lg-6">
@@ -192,7 +315,10 @@ const SeepageAndLeakageInspection = () => {
           <div className="row">
             <div className="col-md-6 col-12">
               <h4>Why It Matters?</h4>
-              <p>Water-related issues can silently escalate into serious problems. Our inspections ensure:</p>
+              <p>
+                Water-related issues can silently escalate into serious
+                problems. Our inspections ensure:
+              </p>
               <ul>
                 <li>Early problem detection</li>
                 <li>Improved property durability</li>
@@ -203,10 +329,18 @@ const SeepageAndLeakageInspection = () => {
             <div className="col-md-6 col-12">
               <h4>Who Should Opt for Our Service?</h4>
               <ul>
-                <li><strong>Homeowners:</strong> Address leaks before they escalate into major problems.</li>
-                <li><strong>Buyers:</strong> Ensure the property is free from hidden moisture issues.</li>
-                <li><strong>Builders and Contractors:</strong> Verify the quality of construction for
-                  waterproofing and sealing.</li>
+                <li>
+                  <strong>Homeowners:</strong> Address leaks before they
+                  escalate into major problems.
+                </li>
+                <li>
+                  <strong>Buyers:</strong> Ensure the property is free from
+                  hidden moisture issues.
+                </li>
+                <li>
+                  <strong>Builders and Contractors:</strong> Verify the quality
+                  of construction for waterproofing and sealing.
+                </li>
               </ul>
             </div>
 
@@ -223,10 +357,22 @@ const SeepageAndLeakageInspection = () => {
             <div className="col-md-6 col-12">
               <h4>Our Process</h4>
               <ul>
-                <li><strong>Inspection:</strong> Detailed assessment using advanced equipment.</li>
-                <li><strong>Source Detection:</strong> Pinpoint exact leakage and seepage points.</li>
-                <li><strong>Reporting:</strong> Comprehensive, easy-to-understand report with images.</li>
-                <li><strong>Solutions:</strong> Customized recommendations to resolve issues effectively.</li>
+                <li>
+                  <strong>Inspection:</strong> Detailed assessment using
+                  advanced equipment.
+                </li>
+                <li>
+                  <strong>Source Detection:</strong> Pinpoint exact leakage and
+                  seepage points.
+                </li>
+                <li>
+                  <strong>Reporting:</strong> Comprehensive, easy-to-understand
+                  report with images.
+                </li>
+                <li>
+                  <strong>Solutions:</strong> Customized recommendations to
+                  resolve issues effectively.
+                </li>
               </ul>
             </div>
           </div>
@@ -237,16 +383,21 @@ const SeepageAndLeakageInspection = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-12">
-              <p>Contact Us : <a href="tel:+919896442289">+91 989 644 2289</a></p>
+              <p>
+                Contact Us : <a href="tel:+919896442289">+91 989 644 2289</a>
+              </p>
             </div>
             <div className="col-md-6 col-12 text-end footer_email">
-              <p>Mail Us : <a href="mailto:info@housemaster.in">info@housemaster.in</a></p>
+              <p>
+                Mail Us :{" "}
+                <a href="mailto:info@housemaster.in">info@housemaster.in</a>
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default SeepageAndLeakageInspection
+export default SeepageAndLeakageInspection;
