@@ -57,6 +57,10 @@ header.main_header {
         width: 180px;
     }
 
+    .banner_form {
+        padding: 20px 20px;
+    }
+
     .banner_form h3 {
         font-size: 20px;
         line-height: 24px;

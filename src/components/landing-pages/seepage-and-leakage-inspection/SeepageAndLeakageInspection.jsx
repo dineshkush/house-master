@@ -173,7 +173,7 @@ const SeepageAndLeakageInspection = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <h2>
-              IIT Roorkee Alumni Initiative: Delivering Unmatched Home Inspection Expertise for Safer Living
+                IIT Roorkee Alumni Initiative: Delivering Unmatched Home Inspection Expertise for Safer Living
               </h2>
             </div>
             <div className="col-lg-6">
