@@ -51,12 +51,11 @@ const RouteConfig = () => {
                         <Route path="/book-inspection" exact element={<BookInspection phone={phoneNumber} email={emailId} facebook={facebookLink} twitter={twitterLink} instagram={instagramLink} linkedin={linkedin} />} />
                         <Route path="/career" exact element={<Career />} />
 
-                        <Route path="/services" element={<Services />}>
-                            <Route path="home-inspection" exact element={<HomeInspaction />} />
-                            <Route path="damp-seepage-inspection" exact element={<DampSeepageInspection />} />
-                            <Route path="electrical-safety" exact element={<ElectricalSafety />} />
-                            <Route path="industry-energy" exact element={<IndustryEnergy />} />
-                        </Route>
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/services/home-inspection" exact element={<HomeInspaction />} />
+                        <Route path="/services/damp-seepage-inspection" exact element={<DampSeepageInspection />} />
+                        <Route path="/services/electrical-safety" exact element={<ElectricalSafety />} />
+                        <Route path="/services/industry-energy" exact element={<IndustryEnergy />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

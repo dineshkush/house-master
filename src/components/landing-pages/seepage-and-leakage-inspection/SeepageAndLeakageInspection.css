@@ -13,7 +13,7 @@ header.main_header {
 
 .banner_form {
     background-color: #0b2c3d;
-    padding: 70px 20px;
+    padding: 95px 20px;
 }
 
 .banner_form h3 {
@@ -43,11 +43,18 @@ header.main_header {
         width: 180px;
     }
     .banner_form {
-        padding: 20px 20px;
+        padding: 10px 20px;
     }
     .banner_form h3 {
         font-size: 20px;
         line-height: 24px;
+        margin-bottom: 10px;
+    }
+    #contact-form .form-control {
+        padding: 6px 7px !important;
+    }
+    #contact-form .mb-4 {
+        margin-bottom: 10px !important;
     }
 
     .choose_item {

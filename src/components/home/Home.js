@@ -224,7 +224,7 @@ function Home() {
             </div>
             <div className="col-4 col-lg-4">
               <div className="counter_item text-center">
-                <Counter number={6789} title="Inspections" />
+                <Counter number={16789} title="Inspections" />
               </div>
             </div>
             <div className="col-4 col-lg-4">
