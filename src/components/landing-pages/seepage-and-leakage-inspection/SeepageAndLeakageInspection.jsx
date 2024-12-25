@@ -110,6 +110,7 @@ const SeepageAndLeakageInspection = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Full Name"
+                      required
                     />
                   </div>
                   <div className="mb-4">
@@ -121,6 +122,7 @@ const SeepageAndLeakageInspection = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="Phone"
+                      required
                     />
                   </div>
                   <div className="mb-4">
@@ -129,6 +131,7 @@ const SeepageAndLeakageInspection = () => {
                       name="city"
                       value={formData.city}
                       onChange={handleChange}
+                      required
                     >
                       <option selected>Select City</option>
                       <option value="Gurugram">Gurugram</option>

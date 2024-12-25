@@ -56,24 +56,12 @@ const HomeInspection = () => {
         <>
             <Helmet>
                 <title>Leakage Location Detection | Ceiling, Roof & Pipeline Leakage Solutions Seepage Source & Water Leakage Detection | Accurate & Reliable Services Roof, Ceiling & Pipeline Leakage Detection | Expert Water Solutions Comprehensive Water Leakage Detection | Seepage Source Experts Ceiling, Roof & Pipeline Leakage Detection Services | Trusted Experts Water Leakage & Seepage Source Detection | Protect Your Property Today Accurate Roof Leakage & Seepage Detection | Prevent Water Damage Pipeline & Ceiling Leakage Detection | Expert Seepage Solutions Advanced Water Leakage Detection | Ceiling, Roof & Pipeline Coverage Roof, Ceiling, Pipeline & Seepage Detection | Affordable Water Solutions</title>
-                {/* <meta
-              name="description"
-              content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
-            /> */}
-                {/* <meta
-              name="description"
-              content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
-            /> */}
                 <link rel="canonical" href="https://housemaster.in/seepage-and-leakage-inspection" />
 
                 <meta
                     property="og:title"
                     content="Leakage Location Detection | Ceiling, Roof & Pipeline Leakage Solutions Seepage Source & Water Leakage Detection | Accurate & Reliable Services Roof, Ceiling & Pipeline Leakage Detection | Expert Water Solutions Comprehensive Water Leakage Detection | Seepage Source Experts Ceiling, Roof & Pipeline Leakage Detection Services | Trusted Experts Water Leakage & Seepage Source Detection | Protect Your Property Today Accurate Roof Leakage & Seepage Detection | Prevent Water Damage Pipeline & Ceiling Leakage Detection | Expert Seepage Solutions Advanced Water Leakage Detection | Ceiling, Roof & Pipeline Coverage Roof, Ceiling, Pipeline & Seepage Detection | Affordable Water Solutions"
                 />
-                {/* <meta
-              property="og:description"
-              content="Housemaster offers a complete range of building and full home inspection services, leakage & seepage source detection. Whether you are thinking of buying a new one or simply planning renovations, it is important to know its actual condition in order to reduce the risk of surprises after moving in. home inspection india"
-            /> */}
             </Helmet>
             <header className="main_header">
                 <div className="container">
@@ -101,7 +89,7 @@ const HomeInspection = () => {
                             <img src={getHealthReport} alt="" className="img-fluid" />
                         </div>
                         <div className="col-md-4 col-12">
-                            <div className="banner_form">
+                            <div className="banner_form_box">
                                 <h3>Book your inspection</h3>
                                 <form id="contact-form" onSubmit={handleSubmit}>
                                     <div className="mb-4">
@@ -113,6 +101,7 @@ const HomeInspection = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             placeholder="Full Name"
+                                            required
                                         />
                                     </div>
                                     <div className="mb-4">
@@ -124,6 +113,7 @@ const HomeInspection = () => {
                                             value={formData.phone}
                                             onChange={handleChange}
                                             placeholder="Phone"
+                                            required
                                         />
                                     </div>
                                     <div className="mb-4">
@@ -132,6 +122,7 @@ const HomeInspection = () => {
                                             name="city"
                                             value={formData.city}
                                             onChange={handleChange}
+                                            required
                                         >
                                             <option selected>Select City</option>
                                             <option value="Gurugram">Gurugram</option>
