@@ -7,6 +7,7 @@ import Counter from "../../shared/counter/Counter";
 import { Link } from "react-router-dom";
 
 const HomeInspection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -20,10 +21,10 @@ const HomeInspection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const now = new Date();
     const formattedDate = now.toISOString().split("T")[0];
     const formattedTime = now.toLocaleTimeString();
-
     const requestBody = JSON.stringify([
       [
         formattedDate,
@@ -43,21 +44,27 @@ const HomeInspection = () => {
       redirect: "follow",
       body: requestBody,
     };
-
     try {
       const response = await fetch(
         "https://v1.nocodeapi.com/pankaj3434/google_sheets/epIjAmVlSxdjuxjI?tabId=HomeInspectionForm",
         requestOptions
       );
-      const result = await response.text();
-      console.log(result);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
       alert("Form submitted successfully!");
-      // Reset the form after submission
-      setFormData({ name: "", phone: "", city: "" });
+      setFormData({
+        name: "",
+        phone: "",
+        city: "",
+      });
     } catch (error) {
       alert("There was an error submitting the form. Please try again.");
-      console.log("Error:", error);
+      console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
@@ -115,12 +122,12 @@ const HomeInspection = () => {
                   </div>
                   <div className="mb-4">
                     <select
-                      class="form-control"
+                      className="form-control"
                       name="city"
                       value={formData.city}
                       onChange={handleChange}
                     >
-                      <option selected>Select City</option>
+                      <option value="">Select City</option>
                       <option value="Gurugram">Gurugram</option>
                       <option value="Delhi">Delhi</option>
                       <option value="Noida">Noida</option>
@@ -128,8 +135,12 @@ const HomeInspection = () => {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <button type="submit" className="site_btn">
-                      Submit
+                    <button
+                      type="submit"
+                      className="site_btn"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
                   </div>
                 </form>
