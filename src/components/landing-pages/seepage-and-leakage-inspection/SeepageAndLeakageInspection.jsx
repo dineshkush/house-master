@@ -20,9 +20,18 @@ const SeepageAndLeakageInspection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const now = new Date();
+    const formattedDate = now.toISOString().split("T")[0];
+    const formattedTime = now.toLocaleTimeString();
 
     const requestBody = JSON.stringify([
-      [formData.name, formData.phone, formData.city],
+      [
+        formattedDate,
+        formattedTime,
+        formData.name,
+        formData.phone,
+        formData.city,
+      ],
     ]);
 
     var myHeaders = new Headers();

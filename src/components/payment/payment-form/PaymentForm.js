@@ -20,8 +20,13 @@ function PaymentForm() {
   });
 
   const handleSubmitSheet = async () => {
+    const now = new Date();
+    const formattedDate = now.toISOString().split("T")[0];
+    const formattedTime = now.toLocaleTimeString();
     const requestBody = JSON.stringify([
       [
+        formattedDate,
+        formattedTime,
         emailData.name,
         emailData.email,
         emailData.paymentType,

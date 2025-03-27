@@ -104,8 +104,13 @@ function BookInspectionForm() {
 
   const handleSubmit = async () => {
     const selectedServices = selectedItems.join(", ");
+    const now = new Date();
+    const formattedDate = now.toISOString().split("T")[0];
+    const formattedTime = now.toLocaleTimeString();
     const requestBody = JSON.stringify([
       [
+        formattedDate,
+        formattedTime,
         emailData.name,
         emailData.address,
         emailData.city,
@@ -133,11 +138,9 @@ function BookInspectionForm() {
         "https://v1.nocodeapi.com/pankaj3434/google_sheets/epIjAmVlSxdjuxjI?tabId=BookInspection",
         requestOptions
       );
-      const result = await response.text();
-      console.log(result);
+      await response.text();
 
       alert("Form submitted successfully!");
-      // Reset the form after submission
       setEmailData({
         name: "",
         address: "",
