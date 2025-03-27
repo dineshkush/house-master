@@ -68,8 +68,9 @@ function PaymentForm() {
       return;
     }
 
-    setIsSending(true);
     handleSubmitSheet();
+
+    setIsSending(true);
     emailjs
       .send(
         "service_jf6shcl",

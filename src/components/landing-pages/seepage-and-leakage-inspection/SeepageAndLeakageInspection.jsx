@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 const SeepageAndLeakageInspection = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -19,12 +20,55 @@ const SeepageAndLeakageInspection = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const now = new Date();
+  //   const formattedDate = now.toISOString().split("T")[0];
+  //   const formattedTime = now.toLocaleTimeString();
+
+  //   const requestBody = JSON.stringify([
+  //     [
+  //       formattedDate,
+  //       formattedTime,
+  //       formData.name,
+  //       formData.phone,
+  //       formData.city,
+  //     ],
+  //   ]);
+
+  //   var myHeaders = new Headers();
+  //   myHeaders.append("Content-Type", "application/json");
+
+  //   var requestOptions = {
+  //     method: "POST",
+  //     headers: myHeaders,
+  //     redirect: "follow",
+  //     body: requestBody,
+  //   };
+
+  //   try {
+  //     const response = await fetch(
+  //       "https://v1.nocodeapi.com/pankaj3434/google_sheets/epIjAmVlSxdjuxjI?tabId=SeepageAndLeakageForm",
+  //       requestOptions
+  //     );
+  //     const result = await response.text();
+  //     console.log(result);
+
+  //     alert("Form submitted successfully!");
+  //     // Reset the form after submission
+  //     setFormData({ name: "", phone: "", city: "" });
+  //   } catch (error) {
+  //     alert("There was an error submitting the form. Please try again.");
+  //     console.log("Error:", error);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const now = new Date();
     const formattedDate = now.toISOString().split("T")[0];
     const formattedTime = now.toLocaleTimeString();
-
     const requestBody = JSON.stringify([
       [
         formattedDate,
@@ -44,33 +88,47 @@ const SeepageAndLeakageInspection = () => {
       redirect: "follow",
       body: requestBody,
     };
-
     try {
       const response = await fetch(
         "https://v1.nocodeapi.com/pankaj3434/google_sheets/epIjAmVlSxdjuxjI?tabId=SeepageAndLeakageForm",
         requestOptions
       );
-      const result = await response.text();
-      console.log(result);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
       alert("Form submitted successfully!");
-      // Reset the form after submission
-      setFormData({ name: "", phone: "", city: "" });
+      setFormData({
+        name: "",
+        phone: "",
+        city: "",
+      });
     } catch (error) {
       alert("There was an error submitting the form. Please try again.");
-      console.log("Error:", error);
+      console.error("Error:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
   return (
     <>
       <Helmet>
-        <title>Water Leakage Detection: Non-Destructive & Thermal Imaging Methods</title>
+        <title>
+          Water Leakage Detection: Non-Destructive & Thermal Imaging Methods
+        </title>
         <meta
           name="description"
           content="Advance water leakage detection service for ceiling, roof & pipeline issues. Reliable solutions to prevent water damage and seepage. Contact us today"
         />
-        <meta name="keywords" content="Leakage location detection, Ceiling leakage detection, Roof leakage detection, Pipeline leakage detection, Water leakage detection, Seepage source detection, Accurate leakage detection, Reliable leakage solutions, Seepage experts, Water leakage solutions, Prevent water damage, Comprehensive leakage detection, Advanced water detection, Affordable water solutions, Ceiling leakage solutions, Roof leakage solutions, Pipeline leakage solutions, Seepage detection services, Trusted leakage experts" />
-        <link rel="canonical" href="https://housemaster.in/seepage-and-leakage-inspection" />
+        <meta
+          name="keywords"
+          content="Leakage location detection, Ceiling leakage detection, Roof leakage detection, Pipeline leakage detection, Water leakage detection, Seepage source detection, Accurate leakage detection, Reliable leakage solutions, Seepage experts, Water leakage solutions, Prevent water damage, Comprehensive leakage detection, Advanced water detection, Affordable water solutions, Ceiling leakage solutions, Roof leakage solutions, Pipeline leakage solutions, Seepage detection services, Trusted leakage experts"
+        />
+        <link
+          rel="canonical"
+          href="https://housemaster.in/seepage-and-leakage-inspection"
+        />
 
         <meta
           property="og:title"
@@ -136,13 +194,12 @@ const SeepageAndLeakageInspection = () => {
                   </div>
                   <div className="mb-4">
                     <select
-                      class="form-control"
+                      className="form-control"
                       name="city"
                       value={formData.city}
                       onChange={handleChange}
-                      required
                     >
-                      <option selected>Select City</option>
+                      <option value="">Select City</option>
                       <option value="Gurugram">Gurugram</option>
                       <option value="Delhi">Delhi</option>
                       <option value="Noida">Noida</option>
@@ -150,8 +207,12 @@ const SeepageAndLeakageInspection = () => {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <button type="submit" className="site_btn">
-                      Submit
+                    <button
+                      type="submit"
+                      className="site_btn"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Submit"}
                     </button>
                   </div>
                 </form>
@@ -236,26 +297,97 @@ const SeepageAndLeakageInspection = () => {
                 property. Here's what we meticulously inspect:
               </p> */}
               <ul>
-                <li><strong>Pipeline Leakage Location Detection:</strong> Detects hidden leaks in underground and internal pipelines to prevent water loss and property damage.</li>
-                <li><strong>Seepage Source Detection:</strong> Experts locate the exact source of seepage in walls, ceilings, or floors, addressing the root cause with accurate leakage detection.</li>
-                <li><strong>Leakage Location Detection:</strong> Identify and diagnose leakage points in plumbing, fittings, or structural elements with reliable leakage solutions.</li>
-                <li><strong>Wall Dampness Source Detection:</strong> Analyze damp patches and determine whether the cause is seepage, poor waterproofing, or external water penetration.</li>
-                <li><strong>Ceiling or Roof Leakage Detection:</strong> Examine ceilings and roofs for cracks, improper drainage, or sealing issues causing leaks. Provide ceiling and roof leakage solutions.</li>
-                <li><strong>Floor Leakage Location Detection:</strong> Identify water accumulation or seepage under tiles or flooring materials that can weaken structural stability.</li>
-                <li><strong>Water Leak Location Detection:</strong> Trace the origin of water leaks from pipes, tanks, or external infiltration with advanced water detection techniques.</li>
-                <li><strong>Mold Cause and Source Detection:</strong> Detect mold and pinpoint the underlying cause of its growth to prevent recurrence with seepage detection services.</li>
-                <li><strong>Seepage Experts:</strong> Trusted for accurate seepage source detection and reliable water leakage solutions.</li>
-                <li><strong>Prevent Water Damage:</strong> Provide reliable leakage solutions to prevent costly water damage and protect your property.</li>
-                <li><strong>Affordable Water Solutions:</strong> Offer affordable water solutions without compromising on quality or reliability.</li>
-                <li><strong>Comprehensive Leakage Detection:</strong> Provide comprehensive leakage detection services, ensuring long-term prevention of water damage.</li>
-                <li><strong>Advanced Water Detection:</strong> Use advanced water detection techniques to find and fix leaks before they cause significant damage.</li>
-                <li><strong>Ceiling Leakage Solutions:</strong> Provide effective solutions for ceiling leakage, preventing further damage and maintaining structural integrity.</li>
-                <li><strong>Roof Leakage Solutions:</strong> Offer roof leakage solutions that address the root cause of the issue and prevent future leaks.</li>
-                <li><strong>Pipeline Leakage Solutions:</strong> Provide pipeline leakage solutions to detect and fix leaks in underground and internal pipelines efficiently.</li>
-                <li><strong>Seepage Detection Services:</strong> Offer expert seepage detection services to find the source of water intrusion and prevent further damage.</li>
-                <li><strong>Trusted Leakage Experts:</strong> Count on our experienced team for accurate and reliable leakage detection and solutions.</li>
+                <li>
+                  <strong>Pipeline Leakage Location Detection:</strong> Detects
+                  hidden leaks in underground and internal pipelines to prevent
+                  water loss and property damage.
+                </li>
+                <li>
+                  <strong>Seepage Source Detection:</strong> Experts locate the
+                  exact source of seepage in walls, ceilings, or floors,
+                  addressing the root cause with accurate leakage detection.
+                </li>
+                <li>
+                  <strong>Leakage Location Detection:</strong> Identify and
+                  diagnose leakage points in plumbing, fittings, or structural
+                  elements with reliable leakage solutions.
+                </li>
+                <li>
+                  <strong>Wall Dampness Source Detection:</strong> Analyze damp
+                  patches and determine whether the cause is seepage, poor
+                  waterproofing, or external water penetration.
+                </li>
+                <li>
+                  <strong>Ceiling or Roof Leakage Detection:</strong> Examine
+                  ceilings and roofs for cracks, improper drainage, or sealing
+                  issues causing leaks. Provide ceiling and roof leakage
+                  solutions.
+                </li>
+                <li>
+                  <strong>Floor Leakage Location Detection:</strong> Identify
+                  water accumulation or seepage under tiles or flooring
+                  materials that can weaken structural stability.
+                </li>
+                <li>
+                  <strong>Water Leak Location Detection:</strong> Trace the
+                  origin of water leaks from pipes, tanks, or external
+                  infiltration with advanced water detection techniques.
+                </li>
+                <li>
+                  <strong>Mold Cause and Source Detection:</strong> Detect mold
+                  and pinpoint the underlying cause of its growth to prevent
+                  recurrence with seepage detection services.
+                </li>
+                <li>
+                  <strong>Seepage Experts:</strong> Trusted for accurate seepage
+                  source detection and reliable water leakage solutions.
+                </li>
+                <li>
+                  <strong>Prevent Water Damage:</strong> Provide reliable
+                  leakage solutions to prevent costly water damage and protect
+                  your property.
+                </li>
+                <li>
+                  <strong>Affordable Water Solutions:</strong> Offer affordable
+                  water solutions without compromising on quality or
+                  reliability.
+                </li>
+                <li>
+                  <strong>Comprehensive Leakage Detection:</strong> Provide
+                  comprehensive leakage detection services, ensuring long-term
+                  prevention of water damage.
+                </li>
+                <li>
+                  <strong>Advanced Water Detection:</strong> Use advanced water
+                  detection techniques to find and fix leaks before they cause
+                  significant damage.
+                </li>
+                <li>
+                  <strong>Ceiling Leakage Solutions:</strong> Provide effective
+                  solutions for ceiling leakage, preventing further damage and
+                  maintaining structural integrity.
+                </li>
+                <li>
+                  <strong>Roof Leakage Solutions:</strong> Offer roof leakage
+                  solutions that address the root cause of the issue and prevent
+                  future leaks.
+                </li>
+                <li>
+                  <strong>Pipeline Leakage Solutions:</strong> Provide pipeline
+                  leakage solutions to detect and fix leaks in underground and
+                  internal pipelines efficiently.
+                </li>
+                <li>
+                  <strong>Seepage Detection Services:</strong> Offer expert
+                  seepage detection services to find the source of water
+                  intrusion and prevent further damage.
+                </li>
+                <li>
+                  <strong>Trusted Leakage Experts:</strong> Count on our
+                  experienced team for accurate and reliable leakage detection
+                  and solutions.
+                </li>
               </ul>
-
             </div>
             <div className="col-md-12">
               <h3>Additional Inspections We Offer</h3>
