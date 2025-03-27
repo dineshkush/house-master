@@ -22,12 +22,6 @@ function Payment({ phone, email, facebook, twitter, instagram, linkedin }) {
   },[])
   return (
     <>
-      {/* <Helmet>
-        <title>PAYMENT | Housemaster</title>
-        <link rel="canonical" href="https://www.housemaster.in/payment" />
-
-        <meta property="og:title" content="PAYMENT | Housemaster" />
-      </Helmet> */}
        <Helmet>
         <title>{seo?.title}</title>
         <meta name="description" content={seo?.description} />
@@ -41,12 +35,8 @@ function Payment({ phone, email, facebook, twitter, instagram, linkedin }) {
         <meta name="twitter:description" content={seo?.twitter?.description} />
         <link rel="canonical" href={currentUrl} />
         <meta name="robots" content={seo?.robots} />
-        {/* <meta property="og:image" content={workSpace?.images[0]?.image} /> */}
-        {/* <meta property="og:image:alt" content={workSpace?.images[0]?.alt} /> */}
-        {/* <meta property="twitter:image" content={workSpace?.images[0]?.image} /> */}
         <meta
           property="twitter:image:alt"
-          // content={workSpace?.images[0]?.alt}
         /> 
         <script type="application/ld+json">{seo?.script}</script>
        </Helmet> 

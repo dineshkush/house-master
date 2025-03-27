@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import "./PaymentForm.css";
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
 
 function PaymentForm() {
-  // const navigate = useNavigate();
-
   const [messageSend, setMessageSend] = useState("");
   const [messageError, setMessageError] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -53,7 +48,6 @@ function PaymentForm() {
       console.log(result);
 
       alert("Form submitted successfully!");
-      // Reset the form after submission
       setEmailData({
         name: "",
         email: "",
@@ -86,22 +80,19 @@ function PaymentForm() {
       .then(
         (response) => {
           setMessageSend("Email sent successfully");
-          // console.log("Email sent successfully", response);
           window.location.href = "/payment-methods";
         },
         (error) => {
           setMessageError("Email sending failed");
-          // console.error("Email sending failed", error);
         }
       )
 
       .finally(() => {
-        setIsSending(false); // Email sending completed, change button text back
+        setIsSending(false);
       });
   };
 
   const validateEmail = (email) => {
-    // Define a simple regex pattern for email validation
     const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
     return emailPattern.test(email);
   };
@@ -129,8 +120,8 @@ function PaymentForm() {
               value={emailData.name}
               onChange={handleChange}
               className="form-control"
+              required
             />
-            {/* <ErrorMessage name="name" component="div" className="error" /> */}
           </div>
 
           <div className="mb-3">
@@ -144,8 +135,8 @@ function PaymentForm() {
               onChange={handleChange}
               id="email"
               className="form-control"
+              required
             />
-            {/* <ErrorMessage name="email" component="div" className="error" /> */}
           </div>
 
           <div className="mb-3">
@@ -159,6 +150,7 @@ function PaymentForm() {
               className="form-select"
               value={emailData.paymentType}
               onChange={handleChange}
+              required
             >
               <option value="" disabled>
                 Select Type
@@ -169,11 +161,6 @@ function PaymentForm() {
               </option>
               <option value="pre-visit-payment">Pre-Visit Payment</option>
             </select>
-            {/* <ErrorMessage
-                name="paymentType"
-                component="div"
-                className="error"
-              /> */}
           </div>
 
           <div className="mb-3">
@@ -187,12 +174,8 @@ function PaymentForm() {
               className="form-control"
               value={emailData.amountPerQuotation}
               onChange={handleChange}
+              required
             />
-            {/* <ErrorMessage
-                name="amountPerQuotation"
-                component="div"
-                className="error"
-              /> */}
           </div>
 
           <button type="submit" className="btn site_btn" disabled={isSending}>

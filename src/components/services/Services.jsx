@@ -1,6 +1,6 @@
 import React from 'react'
 import './Services.css'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import HomeInspectionImage from "../../../src/images/HomeInspectionImage.png";
 import PreHandoverInspectionImage from "../../../src/images/PreHandoverInspectionImage.png";
 import LeakageSeepageImage from "../../../src/images/LeakageSeepageImage.png";
@@ -77,6 +77,8 @@ const Services = () => {
                     </div>
                 </div>
             </section>
+
+            <Outlet />
         </>
     )
 }
